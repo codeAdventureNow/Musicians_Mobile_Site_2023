@@ -20,7 +20,7 @@ export default function Home() {
           since 2009.
         </h3>
         <Image
-          src='/images/HomeShyna.jpg'
+          src='/images/HomeShy.jpg'
           alt='home music lesson'
           width={500}
           height={500}
