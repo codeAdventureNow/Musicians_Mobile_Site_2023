@@ -1,18 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap');
+
+.hero {
+  padding: 100px 0;
+  background-color: #f9f6f0;
+  color: #383838;
+  font-family: 'Poppins', sans-serif;
+}
 .container {
-  width: 80%;
-  max-width: 1100px;
+  width: 85%;
+  max-width: 1170px;
   margin: 0 auto;
   text-align: center;
 }
 
-.heading {
-  color: blue;
+.pre_heading {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 14px;
+  line-height: 0.7;
 }
 
-.hero {
-  padding: 150px 0;
-  background-color: #f9f6f0;
-  color: black;
+.hero_heading {
+  font-family: 'Kalam', cursive;
+  font-size: 50px;
+  line-height: 0.7;
+
+  margin: 50px 0;
+}
+
+.hero_headin_highlight {
+  color: #800000;
+}
+.hero_subheading {
+  font-family: 'Oxygen', sans-serif;
+
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
 }
 
 .lesson_links_list {
@@ -20,6 +44,12 @@
   justify-content: center;
   list-style: none;
   gap: 3rem;
+  font-size: 0.9rem;
+}
+
+.hero_image {
+  border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .lesson_link {

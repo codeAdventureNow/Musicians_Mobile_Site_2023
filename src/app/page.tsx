@@ -11,21 +11,31 @@ export default function Home() {
       </Head>
       <section className={HomePageStyle.hero}>
         <div className={HomePageStyle.container}>
-          <p>South Bay&apos;s Leading Service For Home Music Lessons!</p>
-          <h1 className={HomePageStyle.heading}>
-            Quality Music Teachers In-Home
+          <p className={HomePageStyle.pre_heading}>
+            South Bay&apos;s Leading Service For
+          </p>
+          <p className={HomePageStyle.pre_heading}>Home Music Lessons!</p>
+          <h1 className={HomePageStyle.hero_heading}>
+            Quality{' '}
+            <span className={HomePageStyle.hero_headin_highlight}>
+              Music Teachers
+            </span>{' '}
           </h1>
-          <h3>
-            Happily helping hundreds of South Bay Area families with music
-            lessons since 2009.
+          <h1 className={HomePageStyle.hero_heading}>In-Home</h1>
+          <h3 className={HomePageStyle.hero_subheading}>
+            Happily helping hundreds of South Bay Area families<br></br> with
+            music lessons since 2009.
           </h3>
+
           <Image
+            className={HomePageStyle.hero_image}
             src='/images/HomeShy.jpg'
             alt='home music lesson'
             width={500}
             height={500}
             layout='intrinsic'
           ></Image>
+
           <ul className={HomePageStyle.lesson_links_list}>
             <li>
               <a className={HomePageStyle.lesson_link} href='#'>
