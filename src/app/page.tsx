@@ -17,14 +17,16 @@ export default function Home() {
           <p className={HomePageStyle.pre_heading}>Home Music Lessons!</p>
           <h1 className={HomePageStyle.hero_heading}>
             Quality{' '}
-            <span className={HomePageStyle.hero_headin_highlight}>
+            <span className={HomePageStyle.hero_heading_highlight}>
               Music Teachers
             </span>{' '}
           </h1>
           <h1 className={HomePageStyle.hero_heading}>In-Home</h1>
           <h3 className={HomePageStyle.hero_subheading}>
-            Happily helping hundreds of South Bay Area families<br></br> with
-            music lessons since 2009.
+            <i>
+              Happily helping hundreds of South Bay Area families<br></br> with
+              music lessons since 2009.
+            </i>
           </h3>
 
           <Image

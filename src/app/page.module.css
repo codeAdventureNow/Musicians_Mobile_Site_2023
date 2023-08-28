@@ -15,27 +15,33 @@
 
 .pre_heading {
   font-family: 'Oxygen', sans-serif;
+
   font-size: 14px;
-  line-height: 0.7;
+  line-height: 0.6;
 }
 
 .hero_heading {
   font-family: 'Kalam', cursive;
   font-size: 50px;
   line-height: 0.7;
-
+  color: #3b0404;
   margin: 50px 0;
 }
 
-.hero_headin_highlight {
-  color: #800000;
+.hero_heading_highlight {
+  color: #b95c50;
+  color: #0054b4;
+  color: #f5deb3;
+  color: #d21f3c;
+  color: #8d021f;
+  color: #ff5a5f;
 }
 .hero_subheading {
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 40px;
+  font-size: 14px;
+  margin-bottom: 30px;
   line-height: 1.5;
 }
 
@@ -50,6 +56,8 @@
 .hero_image {
   border-radius: 5px;
   margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .lesson_link {
