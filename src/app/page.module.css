@@ -16,6 +16,8 @@
 .pre_heading {
   font-family: 'Oxygen', sans-serif;
   font-size: 12px;
+  font-size: max(1vw, 12px);
+  font-weight: 500;
   line-height: 1.4;
 }
 
@@ -25,7 +27,7 @@
   font-size: clamp(2.5rem, 3.5vw, 4rem);
   line-height: 1.2;
   color: #3b0404;
-  margin: 20px 0;
+  margin: 4% 0;
 }
 
 .hero_heading_highlight {
@@ -39,7 +41,7 @@
 .hero_subheading {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: max(1vw, 12px);
   margin-bottom: 30px;
   line-height: 1.4;
 }
@@ -53,6 +55,7 @@
   padding: 0;
   gap: 1rem;
   font-size: 12px;
+  font-size: max(1vw, 12px);
 }
 
 .hero_image {
