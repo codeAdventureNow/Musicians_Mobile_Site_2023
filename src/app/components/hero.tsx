@@ -6,17 +6,23 @@ export default function Hero() {
     <>
       <section className={HomePageStyle.hero}>
         <div className={HomePageStyle.container}>
-          <p className={HomePageStyle.pre_heading}>
-            South Bay&apos;s Leading Service For
-          </p>
-          <p className={HomePageStyle.pre_heading}>Home Music Lessons!</p>
+          <div className={HomePageStyle.pre_heading}>
+            <p>
+              South Bay&apos;s Leading Service For
+              <br />
+              Home Music Lessons!
+            </p>
+          </div>
+
           <h1 className={HomePageStyle.hero_heading}>
             Quality{' '}
             <span className={HomePageStyle.hero_heading_highlight}>
               Music Teachers
             </span>{' '}
+            <br />
+            In-Home
           </h1>
-          <h1 className={HomePageStyle.hero_heading}>In-Home</h1>
+
           <h3 className={HomePageStyle.hero_subheading}>
             <i>
               Happily helping hundreds of South Bay Area families<br></br> with
