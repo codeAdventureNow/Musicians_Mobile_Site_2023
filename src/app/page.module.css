@@ -22,7 +22,7 @@
 .hero_heading {
   font-family: 'Kalam', cursive;
   font-size: 2.5rem;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
   line-height: 1.2;
   color: #3b0404;
   margin: 20px 0;
@@ -57,7 +57,7 @@
 
 .hero_image {
   border-radius: 5px;
-  margin-bottom: 20px;
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
