@@ -1,7 +1,8 @@
 'use client';
 
-import HomePageStyle from '../page.module.css';
+import styles from './nav.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Nav() {
@@ -19,8 +20,8 @@ export default function Nav() {
   };
 
   return (
-    <header className={HomePageStyle.header}>
-      <div className={HomePageStyle.logo}>
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <Image
           width={100}
           height={100}
@@ -29,42 +30,46 @@ export default function Nav() {
           alt='musicians mobile logo'
         />
       </div>
-      <ul className={isActive ? 'navbar' : 'navbar open'}>
+      <ul
+        className={
+          isActive ? `${styles.navbar}` : `${styles.navbar} ${styles.open}`
+        }
+      >
         <li>
-          <a
-            className={activeLink === 'home' ? 'active' : ''}
+          <Link
+            className={activeLink === 'home' ? `${styles.active}` : ''}
             onClick={() => handleLinkClick('home')}
-            href='#Home'
+            href='/home'
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className={activeLink === 'about' ? 'active' : ''}
             onClick={() => handleLinkClick('about')}
-            href='#About'
+            href='/about'
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className={activeLink === 'music-teachers' ? 'active' : ''}
             onClick={() => handleLinkClick('music-teachers')}
             href='#Music Teachers'
           >
             Music Teachers
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             className={activeLink === 'faq' ? 'active' : ''}
             onClick={() => handleLinkClick('faq')}
             href='#FAQ'
           >
             FAQ
-          </a>
+          </Link>
         </li>
         <li>
           <a
@@ -77,9 +82,9 @@ export default function Nav() {
         </li>
       </ul>
       <div className='nav_cta'>
-        <a className='cta_button' rel='noreferrer' href='#'>
+        <Link className={styles.cta_button} rel='noreferrer' href='#'>
           Schedule A Free Lesson!
-        </a>
+        </Link>
         <br />
         <a href='tel:408-960-1100'>408-960-1100</a>
       </div>
