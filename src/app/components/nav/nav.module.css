@@ -1,7 +1,49 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  padding: 14px 2%;
+  background: white;
+  display: flex;
+}
+
+.navbar {
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 0;
+  margin: 0px 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
 .cta_button {
   background: #0091ea;
   color: white;
   border-radius: 0.8em;
   padding: 0.5em 0.75em;
   font-size: 0.75rem;
+}
+
+@media (min-width: 1090px) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .navbar {
+    display: flex;
+  }
+
+  .header {
+    padding: 14px 12%;
+    transition: 0.2s;
+  }
 }

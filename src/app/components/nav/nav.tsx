@@ -72,13 +72,13 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <a
+          <Link
             className={activeLink === 'contact' ? 'active' : ''}
             onClick={() => handleLinkClick('contact')}
             href='#Contact'
           >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       <div className='nav_cta'>
