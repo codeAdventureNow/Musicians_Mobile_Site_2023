@@ -25,6 +25,9 @@
   flex-direction: column;
   border-radius: 10px;
   transition: all 0.5s ease;
+  text-align: center;
+  margin-right: 25px;
+  color: #676767;
 }
 
 .navbar.open {
@@ -32,11 +35,14 @@
 }
 
 .navbar a {
-  color: var(--text-color);
+  color: #676767;
+  gap: 1rem;
   font-size: 0.8rem;
   font-weight: 400;
-  padding: 5px 0;
-  margin: 0px 10px;
+  padding: 15px 15px;
+
+  margin: 10px 10px;
+
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -45,14 +51,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  font-size: 0.7rem;
 }
 
 .cta_button {
   background: #0091ea;
   color: white;
-  border-radius: 0.8em;
+  border-radius: 0.6em;
   padding: 0.5em 0.75em;
-  font-size: 0.75rem;
 }
 
 #nav_icon1 {
@@ -77,7 +84,7 @@
   height: 2px;
   width: 60%;
   background: #d3531a;
-  background: green;
+  background: #ff5a5f;
   border-radius: 9px;
   opacity: 1;
   left: 0;

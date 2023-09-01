@@ -59,7 +59,7 @@ export default function Nav() {
             onClick={() => handleLinkClick('music-teachers')}
             href='#Music Teachers'
           >
-            Music Teachers
+            Teachers
           </Link>
         </li>
         <li>
@@ -86,7 +86,9 @@ export default function Nav() {
           Schedule A Free Lesson!
         </Link>
         <br />
-        <a href='tel:408-960-1100'>408-960-1100</a>
+        <a className={styles.phone} href='tel:408-960-1100'>
+          408-960-1100
+        </a>
       </div>
       <div
         onClick={toggleBurgerMenu}
