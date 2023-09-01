@@ -81,7 +81,7 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
-      <div className='nav_cta'>
+      <div className={styles.nav_cta}>
         <Link className={styles.cta_button} rel='noreferrer' href='#'>
           Schedule A Free Lesson!
         </Link>
@@ -91,7 +91,7 @@ export default function Nav() {
       <div
         onClick={toggleBurgerMenu}
         className={`nav-icon1 ${isOpen ? 'open' : ''}`}
-        id='nav-icon1'
+        id={styles.nav_icon1}
       >
         <span></span>
         <span></span>

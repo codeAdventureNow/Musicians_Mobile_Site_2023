@@ -1,3 +1,5 @@
+/* mobile first */
+
 .header {
   position: fixed;
   width: 100%;
@@ -13,6 +15,16 @@
 }
 
 .navbar {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 270px;
+  height: 29vh;
+  background: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 0.5s ease;
 }
 
 .navbar a {
@@ -25,6 +37,14 @@
   cursor: pointer;
 }
 
+.nav_cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid green;
+}
+
 .cta_button {
   background: #0091ea;
   color: white;
@@ -33,17 +53,110 @@
   font-size: 0.75rem;
 }
 
+#nav_icon1 {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  margin: 0px 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav_icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background: #d3531a;
+  background: green;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav_icon1 span:nth-child(1) {
+  top: 1px;
+}
+
+#nav_icon1 span:nth-child(2) {
+  top: 9px;
+}
+
+#nav_icon1 span:nth-child(3) {
+  top: 17px;
+}
+
+#nav_icon1.open span:nth-child(1) {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav_icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav_icon1.open span:nth-child(3) {
+  top: 9px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/* larger screens */
 @media (min-width: 1090px) {
   .logo {
     display: flex;
     align-items: center;
   }
+
   .navbar {
+    position: static;
+    width: 30%;
+    height: 30%;
     display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    transition: all 0.5s ease;
   }
 
   .header {
-    padding: 14px 12%;
+    padding: 14px 10%;
     transition: 0.2s;
+  }
+
+  .nav_cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid green;
+  }
+
+  .cta_button {
+    margin: 0;
+  }
+
+  #nav_icon1 {
+    display: none;
   }
 }
