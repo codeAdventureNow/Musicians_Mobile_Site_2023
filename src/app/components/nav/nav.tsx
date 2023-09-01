@@ -90,7 +90,7 @@ export default function Nav() {
       </div>
       <div
         onClick={toggleBurgerMenu}
-        className={`nav-icon1 ${isOpen ? 'open' : ''}`}
+        className={`nav-icon1 ${isOpen ? `${styles.open}` : ''}`}
         id={styles.nav_icon1}
       >
         <span></span>
