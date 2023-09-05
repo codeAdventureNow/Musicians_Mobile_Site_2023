@@ -58,8 +58,22 @@
 .cta_button {
   background: #0091ea;
   color: white;
-  border-radius: 0.6em;
+  border-radius: 1em;
   padding: 0.5em 0.75em;
+}
+
+.phone {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #676767;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.phone_icon {
+  color: #676767;
+  margin-right: 7px;
 }
 
 .cta_burgerMenu {

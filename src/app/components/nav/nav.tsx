@@ -4,6 +4,7 @@ import styles from './nav.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { BsFillTelephoneFill } from 'react-icons/fa';
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(true);
@@ -87,8 +88,18 @@ export default function Nav() {
             Schedule A Free Lesson!
           </Link>
           <br />
+
           <a className={styles.phone} href='tel:408-960-1100'>
-            408-960-1100
+            {' '}
+            <Image
+              width={20}
+              height={100}
+              layout='intrinsic'
+              src='/images/phone_icon.png'
+              alt='phone_icon'
+              className={styles.phone_icon}
+            />
+            <p>(408) 960-1100</p>
           </a>
         </div>
         <div
