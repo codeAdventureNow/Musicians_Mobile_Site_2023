@@ -81,23 +81,25 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
-      <div className={styles.nav_cta}>
-        <Link className={styles.cta_button} rel='noreferrer' href='#'>
-          Schedule A Free Lesson!
-        </Link>
-        <br />
-        <a className={styles.phone} href='tel:408-960-1100'>
-          408-960-1100
-        </a>
-      </div>
-      <div
-        onClick={toggleBurgerMenu}
-        className={`nav-icon1 ${isOpen ? `${styles.open}` : ''}`}
-        id={styles.nav_icon1}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className={styles.cta_burgerMenu}>
+        <div className={styles.nav_cta}>
+          <Link className={styles.cta_button} rel='noreferrer' href='#'>
+            Schedule A Free Lesson!
+          </Link>
+          <br />
+          <a className={styles.phone} href='tel:408-960-1100'>
+            408-960-1100
+          </a>
+        </div>
+        <div
+          onClick={toggleBurgerMenu}
+          className={`nav-icon1 ${isOpen ? `${styles.open}` : ''}`}
+          id={styles.nav_icon1}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
   );
