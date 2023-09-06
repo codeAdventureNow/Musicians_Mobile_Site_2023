@@ -6,7 +6,7 @@ export default function HomePage() {
     <>
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.pre_heading}>
+          <div className={styles.hero_pre_heading}>
             <p>
               South Bay&apos;s Leading Service For
               <br />
@@ -39,7 +39,7 @@ export default function HomePage() {
             layout='intrinsic'
           ></Image>
 
-          <ul className={styles.lesson_links_list}>
+          <ul className={styles.hero_lesson_links_list}>
             <li>
               <a className={styles.lesson_link} href='#'>
                 Piano Lessons

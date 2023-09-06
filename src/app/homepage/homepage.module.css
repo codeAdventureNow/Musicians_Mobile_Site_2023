@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-.pre_heading {
+.hero_pre_heading {
   font-family: 'Oxygen', sans-serif;
   font-size: 12px;
   font-size: max(1vw, 12px);
@@ -45,11 +45,6 @@
 }
 
 .hero_heading_highlight {
-  color: #b95c50;
-  color: #0054b4;
-  color: #f5deb3;
-  color: #d21f3c;
-  color: #8d021f;
   color: #ff5a5f;
 }
 .hero_subheading {
@@ -60,7 +55,7 @@
   line-height: 1.4;
 }
 
-.lesson_links_list {
+.hero_lesson_links_list {
   display: flex;
   justify-content: center;
   align-items: center;
