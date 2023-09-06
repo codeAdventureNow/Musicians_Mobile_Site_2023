@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <Link href='/home'>
+      <Link href='/homepage'>
         <HomePage />
       </Link>
       <Link href='/about'>
