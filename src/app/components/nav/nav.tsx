@@ -4,7 +4,6 @@ import styles from './nav.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { BsFillTelephoneFill } from 'react-icons/fa';
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(true);
