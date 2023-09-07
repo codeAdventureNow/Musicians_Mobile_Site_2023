@@ -1,9 +1,11 @@
+'use client';
 import styles from './homepage.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <>
+    <div>
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.hero_pre_heading}>
@@ -41,45 +43,57 @@ export default function HomePage() {
 
           <ul className={styles.hero_lesson_links_list}>
             <li>
-              <a className={styles.lesson_link} href='#'>
+              <Link className={styles.lesson_link} href='#'>
                 Piano Lessons
-              </a>
+              </Link>
             </li>
             <li>
-              <a className={styles.lesson_link} href='#'>
+              <Link className={styles.lesson_link} href='#'>
                 Guitar Lessons
-              </a>
+              </Link>
             </li>
             <li>
-              <a className={styles.lesson_link} href='#'>
+              <Link className={styles.lesson_link} href='#'>
                 Voice Lessons
-              </a>
+              </Link>
             </li>
             <li>
-              <a className={styles.lesson_link} href='#'>
+              <Link className={styles.lesson_link} href='#'>
                 Drum Lessons
-              </a>
+              </Link>
             </li>
             <li>
-              <a className={styles.lesson_link} href='#'>
+              <Link className={styles.lesson_link} href='#'>
                 Violin Lessons
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </section>
+
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            Pro{' '}
-            <span className={styles.hero_heading_highlight}>
-              Music Teachers
-            </span>{' '}
+          <div className={styles.section_text}>
+            <h2 className={styles.section_heading}>
+              Professional{' '}
+              <span className={styles.hero_heading_highlight}>
+                Music Teachers
+              </span>{' '}
+              <br />
+              In-Home
+            </h2>
+            <p className={styles.section_paragraph}>
+              Musicians Mobile brings quality, background-checked music teachers
+              straight to your home.{' '}
+            </p>
             <br />
-            In-Home
-          </h2>
+            <p className={styles.section_paragraph}>
+              Save the drive on the 85 so your family can safely spend more time
+              on what matters most.{' '}
+            </p>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

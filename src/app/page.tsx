@@ -9,9 +9,8 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <Link href='/homepage'>
-        <HomePage />
-      </Link>
+      <HomePage />
+
       <Link href='/about'>
         <About />
       </Link>

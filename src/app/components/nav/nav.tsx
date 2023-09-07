@@ -82,6 +82,7 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
+
       <div className={styles.cta_burgerMenu}>
         <div className={styles.nav_cta}>
           <Link className={styles.cta_button} rel='noreferrer' href='#'>
