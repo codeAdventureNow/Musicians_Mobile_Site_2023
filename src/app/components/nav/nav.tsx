@@ -57,7 +57,7 @@ export default function Nav() {
           <Link
             className={activeLink === 'music-teachers' ? 'active' : ''}
             onClick={() => handleLinkClick('music-teachers')}
-            href='#Music Teachers'
+            href='/teachers'
           >
             Teachers
           </Link>
@@ -66,7 +66,7 @@ export default function Nav() {
           <Link
             className={activeLink === 'faq' ? 'active' : ''}
             onClick={() => handleLinkClick('faq')}
-            href='#FAQ'
+            href='/faq'
           >
             FAQ
           </Link>
@@ -75,7 +75,7 @@ export default function Nav() {
           <Link
             className={activeLink === 'contact' ? 'active' : ''}
             onClick={() => handleLinkClick('contact')}
-            href='#Contact'
+            href='/contact'
           >
             Contact
           </Link>
