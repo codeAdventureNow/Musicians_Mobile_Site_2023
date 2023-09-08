@@ -1,7 +1,13 @@
+import Nav from '../components/nav/nav';
+import styles from './contact.module.css';
+
 export default function Contact() {
   return (
     <div>
-      <p>Welcome to the contact page</p>
+      <Nav />
+      <div>
+        <h2 className={styles.paragraph}>Welcome to the contact page</h2>
+      </div>
     </div>
   );
 }
