@@ -1,5 +1,5 @@
 // import HomePageStyle from './page.module.css';
-import HomePage from './homepage/homepage';
+import HomePage from './homepage/page';
 import About from './about/page';
 import Teachers from './teachers/page';
 import FAQ from './faq/page';
@@ -13,19 +13,6 @@ export default function Home() {
     <div>
       <Nav />
       <HomePage />
-
-      <Link href='/about'>
-        <About />
-      </Link>
-      <Link href='/teachers'>
-        <Teachers />
-      </Link>
-      <Link href='/faq'>
-        <FAQ />
-      </Link>
-      <Link href='/contact'>
-        <Contact />
-      </Link>
     </div>
   );
 }

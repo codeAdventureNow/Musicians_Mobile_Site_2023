@@ -22,13 +22,15 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Image
-          width={100}
-          height={100}
-          layout='intrinsic'
-          src='/images/Logo.jpg'
-          alt='musicians mobile logo'
-        />
+        <Link href='/'>
+          <Image
+            width={100}
+            height={100}
+            layout='intrinsic'
+            src='/images/Logo.jpg'
+            alt='musicians mobile logo'
+          />
+        </Link>
       </div>
       <ul
         className={
@@ -38,8 +40,7 @@ export default function Nav() {
         <li>
           <Link
             className={activeLink === 'home' ? `${styles.active}` : ''}
-            onClick={() => handleLinkClick('home')}
-            href='/home'
+            href='/'
           >
             Home
           </Link>
@@ -47,7 +48,6 @@ export default function Nav() {
         <li>
           <Link
             className={activeLink === 'about' ? 'active' : ''}
-            onClick={() => handleLinkClick('about')}
             href='/about'
           >
             About
@@ -56,25 +56,19 @@ export default function Nav() {
         <li>
           <Link
             className={activeLink === 'music-teachers' ? 'active' : ''}
-            onClick={() => handleLinkClick('music-teachers')}
             href='/teachers'
           >
             Teachers
           </Link>
         </li>
         <li>
-          <Link
-            className={activeLink === 'faq' ? 'active' : ''}
-            onClick={() => handleLinkClick('faq')}
-            href='/faq'
-          >
+          <Link className={activeLink === 'faq' ? 'active' : ''} href='/faq'>
             FAQ
           </Link>
         </li>
         <li>
           <Link
             className={activeLink === 'contact' ? 'active' : ''}
-            onClick={() => handleLinkClick('contact')}
             href='/contact'
           >
             Contact
