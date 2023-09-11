@@ -84,7 +84,10 @@ export default function HomePage() {
             In-Home
           </h2>
           <div className={styles.video_section_flex}>
-            <YouTubePlayer videoId={`ZZgqnipO-No`} />
+            <div className='ytcontainer'>
+              <YouTubePlayer videoId={`ZZgqnipO-No`} />
+            </div>
+
             <div className={styles.section_text}>
               <p className={styles.video_section_paragraph}>
                 Musicians Mobile brings quality, background-checked music

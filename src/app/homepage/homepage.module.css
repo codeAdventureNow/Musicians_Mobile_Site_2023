@@ -78,6 +78,11 @@
   color: #1c8cf2;
 }
 
+.section_text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .video_section_paragraph {
   font-size: 14px;
 }
@@ -89,3 +94,18 @@
 .video_section {
   padding-top: 40px;
 }
+.video_section_flex {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* @media (min-width: 1000px) {
+  .video_section_flex {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .section_text {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+} */

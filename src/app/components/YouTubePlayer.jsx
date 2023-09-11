@@ -13,10 +13,10 @@ const YouTubePlayer = ({ videoId }) => {
     console.error('YouTube Player Error:', error);
   };
 
-  //original dimensions height= 390  width= 640
+  // original dimensions height= 390  width= 640
   const opts = {
-    height: '195',
-    width: '320',
+    height: '290px',
+    width: '70%',
   };
 
   return (
@@ -25,6 +25,7 @@ const YouTubePlayer = ({ videoId }) => {
       onReady={onReady}
       onError={onError}
       opts={opts}
+      className={YouTubePlayer}
     />
   );
 };
