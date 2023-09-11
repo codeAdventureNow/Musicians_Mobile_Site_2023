@@ -87,8 +87,11 @@
   font-size: 14px;
 }
 
+.video_section_paragraph_one {
+  padding-top: 14px;
+}
 .video_section_paragraph_two {
-  padding-bottom: 14px;
+  padding-bottom: 32px;
 }
 
 .video_section {

@@ -89,7 +89,9 @@ export default function HomePage() {
             </div>
 
             <div className={styles.section_text}>
-              <p className={styles.video_section_paragraph}>
+              <p
+                className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_one}`}
+              >
                 Musicians Mobile brings quality, background-checked music
                 teachers straight to your home.{' '}
               </p>
@@ -97,8 +99,8 @@ export default function HomePage() {
               <p
                 className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_two}`}
               >
-                Save the drive on the 85 so your family can safely spend more
-                time on what matters most.{' '}
+                Save the drive on highway 85 so your family can safely spend
+                more time on what matters most.{' '}
               </p>
               <div className={navstyles.nav_cta}>
                 <Link
