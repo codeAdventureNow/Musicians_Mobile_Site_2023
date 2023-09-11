@@ -2,6 +2,7 @@
 import styles from './homepage.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import YouTubePlayer from '../components/YouTubePlayer';
 
 export default function HomePage() {
   return (
@@ -82,6 +83,7 @@ export default function HomePage() {
               <br />
               In-Home
             </h2>
+            <YouTubePlayer videoId={`ZZgqnipO-No`} />
             <p className={styles.section_paragraph}>
               Musicians Mobile brings quality, background-checked music teachers
               straight to your home.{' '}
