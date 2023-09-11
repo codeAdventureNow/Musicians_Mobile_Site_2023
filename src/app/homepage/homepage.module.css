@@ -78,6 +78,14 @@
   color: #1c8cf2;
 }
 
-.section_paragraph {
+.video_section_paragraph {
   font-size: 14px;
+}
+
+.video_section_paragraph_two {
+  padding-bottom: 14px;
+}
+
+.video_section {
+  padding-top: 40px;
 }

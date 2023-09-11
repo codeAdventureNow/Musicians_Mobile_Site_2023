@@ -3,6 +3,7 @@ import styles from './homepage.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import YouTubePlayer from '../components/YouTubePlayer';
+import navstyles from '../components/nav/nav.module.css';
 
 export default function HomePage() {
   return (
@@ -72,27 +73,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.video_section}`}>
         <div className={styles.container}>
-          <div className={styles.section_text}>
-            <h2 className={styles.section_heading}>
-              Professional{' '}
-              <span className={styles.hero_heading_highlight}>
-                Music Teachers
-              </span>{' '}
-              <br />
-              In-Home
-            </h2>
-            <YouTubePlayer videoId={`ZZgqnipO-No`} />
-            <p className={styles.section_paragraph}>
-              Musicians Mobile brings quality, background-checked music teachers
-              straight to your home.{' '}
-            </p>
+          <h2 className={styles.section_heading}>
+            Professional{' '}
+            <span className={styles.hero_heading_highlight}>
+              Music Teachers
+            </span>{' '}
             <br />
-            <p className={styles.section_paragraph}>
-              Save the drive on the 85 so your family can safely spend more time
-              on what matters most.{' '}
-            </p>
+            In-Home
+          </h2>
+          <div className={styles.video_section_flex}>
+            <YouTubePlayer videoId={`ZZgqnipO-No`} />
+            <div className={styles.section_text}>
+              <p className={styles.video_section_paragraph}>
+                Musicians Mobile brings quality, background-checked music
+                teachers straight to your home.{' '}
+              </p>
+              <br />
+              <p
+                className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_two}`}
+              >
+                Save the drive on the 85 so your family can safely spend more
+                time on what matters most.{' '}
+              </p>
+              <div className={navstyles.nav_cta}>
+                <Link
+                  className={navstyles.cta_button}
+                  rel='noreferrer'
+                  href='#'
+                >
+                  Schedule A Free Lesson!
+                </Link>
+                <br />
+
+                <a className={navstyles.phone} href='tel:408-960-1100'>
+                  {' '}
+                  <Image
+                    width={20}
+                    height={100}
+                    layout='intrinsic'
+                    src='/images/phone_icon.png'
+                    alt='phone_icon'
+                    className={styles.phone_icon}
+                  />
+                  <p>(408) 960-1100</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
