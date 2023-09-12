@@ -84,7 +84,7 @@ export default function HomePage() {
             In-Home
           </h2>
           <div className={styles.video_section_flex}>
-            <div className='ytcontainer'>
+            <div className={styles.you_tube_container}>
               <YouTubePlayer videoId={`ZZgqnipO-No`} />
             </div>
 

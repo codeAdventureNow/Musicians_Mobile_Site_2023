@@ -16,7 +16,7 @@ const YouTubePlayer = ({ videoId }) => {
   // original dimensions height= 390  width= 640
   const opts = {
     height: '290px',
-    width: '70%',
+    width: '100%',
   };
 
   return (

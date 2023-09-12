@@ -102,7 +102,7 @@
 }
 .video_section_flex {
   margin: 0 auto;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 
 .pillar_grid {
@@ -141,8 +141,18 @@
     flex-direction: row-reverse;
   }
   .section_text {
-    max-width: 400px;
-    margin: 0 auto;
+    width: 50%;
+  }
+
+  .you_tube_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 0;
+  }
+
+  .video_section_paragraph_one {
+    padding-top: 0px;
   }
 
   .pillar_grid {
