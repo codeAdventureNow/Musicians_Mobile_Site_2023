@@ -155,7 +155,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className={styles.column}>
+            <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Quality Teachers</h2>
               <Image
                 className={styles.pillar_image}
@@ -179,7 +179,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className={styles.column}>
+            <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Perform Confidently</h2>
               <Image
                 className={styles.pillar_image}

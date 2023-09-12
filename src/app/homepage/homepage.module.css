@@ -129,13 +129,27 @@
   padding: 14px 0;
 }
 
-/* @media (min-width: 1000px) {
-  .video_section_flex {
+.pillar_column {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* .video_section_flex {
     display: flex;
     flex-direction: row-reverse;
   }
   .section_text {
     max-width: 400px;
     margin: 0 auto;
+  } */
+
+  .pillar_grid {
+    display: flex;
+    gap: 2rem;
   }
-} */
+
+  .column {
+    max-width: 220px;
+  }
+}
