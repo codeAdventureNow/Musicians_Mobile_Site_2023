@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Linden+Hill&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap');
 
 .logo {
   border: 1px solid green;
@@ -67,7 +68,8 @@
   font-size: max(1vw, 12px);
 }
 
-.hero_image {
+.hero_image,
+.pillar_image {
   border-radius: 5px;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -83,7 +85,8 @@
   margin: 0 auto;
 }
 
-.video_section_paragraph {
+.video_section_paragraph,
+.pillar_section_bullet_points {
   font-size: 14px;
 }
 
@@ -100,6 +103,30 @@
 .video_section_flex {
   margin: 0 auto;
   max-width: 700px;
+}
+
+.pillar_grid {
+  display: grid;
+  gap: 4rem;
+}
+.pillar_heading {
+  font-family: Linden Hill;
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #3b0404;
+}
+
+.pillar_subheading {
+  font-family: Oxygen;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 0;
+
+  color: #3b0404;
+}
+
+.pillar_section_bullet_points {
+  padding: 14px 0;
 }
 
 /* @media (min-width: 1000px) {

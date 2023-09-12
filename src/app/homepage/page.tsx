@@ -131,9 +131,9 @@ export default function HomePage() {
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.grid}>
-            <div className={styles.column}>
-              <h2>Save Time</h2>
+          <div className={styles.pillar_grid}>
+            <div className={styles.pillar_column}>
+              <h2 className={styles.pillar_heading}>Save Time</h2>
               <Image
                 className={styles.pillar_image}
                 src='/images/drums_guitar_piano_inhome.jpg'
@@ -142,19 +142,21 @@ export default function HomePage() {
                 height={300}
                 layout='intrinsic'
               ></Image>
-              <h3>
+              <h3 className={styles.pillar_subheading}>
                 Save 4-8 hours a month in traffic and waiting for lessons.
               </h3>
               <ul>
-                <li>
+                <li className={styles.pillar_section_bullet_points}>
                   Eliminate the frustration, inefficiency, fuel expense, and
                   road risks of driving to and from lessons
                 </li>
-                <li>Spend time doing what matters most to you</li>
+                <li className={styles.pillar_section_bullet_points}>
+                  Spend time doing what matters most to you
+                </li>
               </ul>
             </div>
             <div className={styles.column}>
-              <h2>Quality Teachers</h2>
+              <h2 className={styles.pillar_heading}>Quality Teachers</h2>
               <Image
                 className={styles.pillar_image}
                 src='/images/inhomepiano.jpg'
@@ -163,22 +165,22 @@ export default function HomePage() {
                 height={300}
                 layout='intrinsic'
               ></Image>
-              <h3>
+              <h3 className={styles.pillar_subheading}>
                 Enjoy a friendly, focused approach from patient music teachers
               </h3>
               <ul>
-                <li>
+                <li className={styles.pillar_section_bullet_points}>
                   Learn the songs that excite you and keep you engaged in music
                   lessons
                 </li>
-                <li>
+                <li className={styles.pillar_section_bullet_points}>
                   Teachers pass background checks and tested for musical
                   proficiency
                 </li>
               </ul>
             </div>
             <div className={styles.column}>
-              <h2>Perform Confidently</h2>
+              <h2 className={styles.pillar_heading}>Perform Confidently</h2>
               <Image
                 className={styles.pillar_image}
                 src='/images/threeguitars.png'
@@ -187,15 +189,15 @@ export default function HomePage() {
                 height={300}
                 layout='intrinsic'
               ></Image>
-              <h3>
+              <h3 className={styles.pillar_subheading}>
                 We take the lessons to the home, and the students to the stage!
               </h3>
               <ul>
-                <li>
-                  Encouraging recitals designed for students to be comfortable
-                  and gain confidence on-stage and in life
+                <li className={styles.pillar_section_bullet_points}>
+                  Encouraging recitals designed for students to gain stage
+                  confidence
                 </li>
-                <li>
+                <li className={styles.pillar_section_bullet_points}>
                   Learn to play well with others through team building rock band
                   shows and workshops
                 </li>
