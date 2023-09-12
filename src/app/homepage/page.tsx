@@ -129,6 +129,81 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.grid}>
+            <div className={styles.column}>
+              <h2>Save Time</h2>
+              <Image
+                className={styles.pillar_image}
+                src='/images/drums_guitar_piano_inhome.jpg'
+                alt='student learning drums from teacher'
+                width={300}
+                height={300}
+                layout='intrinsic'
+              ></Image>
+              <h3>
+                Save 4-8 hours a month in traffic and waiting for lessons.
+              </h3>
+              <ul>
+                <li>
+                  Eliminate the frustration, inefficiency, fuel expense, and
+                  road risks of driving to and from lessons
+                </li>
+                <li>Spend time doing what matters most to you</li>
+              </ul>
+            </div>
+            <div className={styles.column}>
+              <h2>Quality Teachers</h2>
+              <Image
+                className={styles.pillar_image}
+                src='/images/inhomepiano.jpg'
+                alt='student learning drums from teacher'
+                width={300}
+                height={300}
+                layout='intrinsic'
+              ></Image>
+              <h3>
+                Enjoy a friendly, focused approach from patient music teachers
+              </h3>
+              <ul>
+                <li>
+                  Learn the songs that excite you and keep you engaged in music
+                  lessons
+                </li>
+                <li>
+                  Teachers pass background checks and tested for musical
+                  proficiency
+                </li>
+              </ul>
+            </div>
+            <div className={styles.column}>
+              <h2>Perform Confidently</h2>
+              <Image
+                className={styles.pillar_image}
+                src='/images/threeguitars.png'
+                alt='student learning drums from teacher'
+                width={300}
+                height={300}
+                layout='intrinsic'
+              ></Image>
+              <h3>
+                We take the lessons to the home, and the students to the stage!
+              </h3>
+              <ul>
+                <li>
+                  Encouraging recitals designed for students to be comfortable
+                  and gain confidence on-stage and in life
+                </li>
+                <li>
+                  Learn to play well with others through team building rock band
+                  shows and workshops
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
