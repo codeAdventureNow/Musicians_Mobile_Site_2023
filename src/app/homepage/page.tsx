@@ -136,7 +136,7 @@ export default function HomePage() {
               <h2 className={styles.pillar_heading}>Save Time</h2>
               <Image
                 className={styles.pillar_image}
-                src='/images/drums_guitar_piano_inhome.jpg'
+                src='/images/drums_guitar_piano_inhome_edit.jpg'
                 alt='student learning drums from teacher'
                 width={300}
                 height={300}
@@ -183,7 +183,7 @@ export default function HomePage() {
               <h2 className={styles.pillar_heading}>Perform Confidently</h2>
               <Image
                 className={styles.pillar_image}
-                src='/images/threeguitars.png'
+                src='/images/vocal_guitar_rock_edit.jpg'
                 alt='student learning drums from teacher'
                 width={300}
                 height={300}
