@@ -134,7 +134,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   /* .video_section_flex {
     display: flex;
     flex-direction: row-reverse;
@@ -146,6 +146,7 @@
 
   .pillar_grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
   }
 
