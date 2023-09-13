@@ -34,7 +34,7 @@
   font-size: clamp(2.5rem, 3.5vw, 4rem);
   line-height: 1.2;
   color: #3b0404;
-  margin: 4% 0;
+  margin: 2% 0;
 }
 
 .section_heading {
@@ -143,7 +143,6 @@
 @media (min-width: 800px) {
   .video_section_flex {
     max-width: 90%;
-
     display: flex;
     flex-direction: row-reverse;
     gap: 1rem;
@@ -164,13 +163,9 @@
     padding-top: 0px;
   }
 
-  .pillar_grid {
+  .pillar_flex {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-
-  .column {
-    max-width: 220px;
   }
 }

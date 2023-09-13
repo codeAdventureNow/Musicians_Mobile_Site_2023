@@ -131,7 +131,7 @@ export default function HomePage() {
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.pillar_grid}>
+          <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Save Time</h2>
               <Image
