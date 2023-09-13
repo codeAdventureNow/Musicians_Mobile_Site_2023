@@ -2,7 +2,7 @@
 import styles from './homepage.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import YouTubePlayer from '../components/YouTubePlayer';
+import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
 import navstyles from '../components/nav/nav.module.css';
 
 export default function HomePage() {
