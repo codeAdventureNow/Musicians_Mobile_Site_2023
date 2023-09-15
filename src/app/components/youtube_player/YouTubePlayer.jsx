@@ -25,7 +25,6 @@ const YouTubePlayer = ({ videoId }) => {
       onReady={onReady}
       onError={onError}
       opts={opts}
-      className={YouTubePlayer}
     />
   );
 };
