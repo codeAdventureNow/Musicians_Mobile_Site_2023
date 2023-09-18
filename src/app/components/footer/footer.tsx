@@ -25,6 +25,76 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
+      <ul className={styles.social_media_list}>
+        <li>
+          <Link target='_blank' href='https://www.facebook.com/musiciansmobile'>
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/facebook_icon.png'
+              alt='facebook social media link'
+            />
+          </Link>
+          <Link
+            target='_blank'
+            href='https://www.instagram.com/musiciansmobile/'
+          >
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/instagram_icon.png'
+              alt='instagram social media link'
+            />
+          </Link>
+          <Link
+            target='_blank'
+            href='https://www.youtube.com/channel/UCgzb0Z2uKMQxmCRVR2dAY4Q'
+          >
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/youtube_icon.png'
+              alt='youtube social media link'
+            />
+          </Link>
+          <Link
+            target='_blank'
+            href='https://www.yelp.com/biz/musicians-mobile-san-jose'
+          >
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/yelp_icon.png'
+              alt='yelp social media link'
+            />
+          </Link>
+          <Link
+            target='_blank'
+            href='https://www.linkedin.com/company/musiciansmobile/'
+          >
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/linked_in_icon.png'
+              alt='linked in social media link'
+            />
+          </Link>
+          <Link target='_blank' href='https://feeds.buzzsprout.com/1169933'>
+            <Image
+              width={25}
+              height={25}
+              layout='intrinsic'
+              src='/images/podcast_icon.png'
+              alt='podcast media link'
+            />
+          </Link>
+        </li>
+      </ul>
       <div className={styles.logo}>
         <Link href='/'>
           <Image

@@ -1,11 +1,20 @@
 .footer {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 32px 2%;
   background: white;
+}
+
+.social_media_list {
+  text-align: center;
+  margin: 12px;
+}
+
+.social_media_list a {
+  padding: 1.5rem;
 }
 
 .footer_nav {
