@@ -95,8 +95,8 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
-      <div className={styles.logo}>
-        <Link href='/'>
+      <div className={styles.logo_address}>
+        <Link className={styles.logo} href='/'>
           <Image
             width={100}
             height={100}
@@ -105,6 +105,10 @@ export default function Footer() {
             alt='musicians mobile logo'
           />
         </Link>
+        <div className={styles.address}>
+          <p>1276 Lincoln Ave, suite 109</p>
+          <p>San Jose CA 95125</p>
+        </div>
       </div>
     </footer>
   );

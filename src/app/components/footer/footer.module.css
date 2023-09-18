@@ -38,3 +38,16 @@
   font-size: 0.8rem;
   padding: 1rem 1rem;
 }
+
+.logo_address {
+  display: flex;
+  color: #676767;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.address {
+  font-size: 12px;
+}
