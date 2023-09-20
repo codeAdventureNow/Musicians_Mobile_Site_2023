@@ -4,20 +4,41 @@ import styles from './nav.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('');
 
-  const handleLinkClick = (linkId: string) => {
-    setActiveLink(linkId);
-  };
+  const pathname = usePathname();
 
   const toggleBurgerMenu = () => {
     setIsOpen((prevOpen) => !prevOpen);
     setIsActive(!isActive);
   };
+
+  const navLinks = [
+    {
+      name: 'Home',
+      href: '/',
+    },
+    {
+      name: 'About',
+      href: '/about',
+    },
+    {
+      name: 'Teachers',
+      href: '/teachers',
+    },
+    {
+      name: 'FAQ',
+      href: '/faq',
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+    },
+  ];
 
   return (
     <header className={styles.header}>
@@ -37,43 +58,22 @@ export default function Nav() {
           isActive ? `${styles.navbar}` : `${styles.navbar} ${styles.open}`
         }
       >
-        <li>
-          <Link
-            className={activeLink === 'home' ? `${styles.active}` : ''}
-            href='/'
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={activeLink === 'about' ? 'active' : ''}
-            href='/about'
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={activeLink === 'music-teachers' ? 'active' : ''}
-            href='/teachers'
-          >
-            Teachers
-          </Link>
-        </li>
-        <li>
-          <Link className={activeLink === 'faq' ? 'active' : ''} href='/faq'>
-            FAQ
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={activeLink === 'contact' ? 'active' : ''}
-            href='/contact'
-          >
-            Contact
-          </Link>
-        </li>
+        {navLinks.map((link) => {
+          const isActiveLink = pathname === link.href;
+          console.log(isActiveLink);
+
+          return (
+            <Link
+              className={
+                isActiveLink ? `${styles.link_active}` : `${styles.link}`
+              }
+              href={link.href}
+              key={link.name}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
       </ul>
 
       <div className={styles.cta_burgerMenu}>
