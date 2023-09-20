@@ -30,6 +30,39 @@ export default function Footer() {
     },
   ];
 
+  const socialMediaLinks = [
+    {
+      href: 'https://www.facebook.com/musiciansmobile',
+      src: '/images/facebook_icon.png',
+      alt: 'facebook social media link',
+    },
+    {
+      href: 'https://www.instagram.com/musiciansmobile/',
+      src: '/images/instagram_icon.png',
+      alt: 'instagram social media link',
+    },
+    {
+      href: 'https://www.youtube.com/channel/UCgzb0Z2uKMQxmCRVR2dAY4Q',
+      src: '/images/youtube_icon.png',
+      alt: 'youtube social media link',
+    },
+    {
+      href: 'https://www.yelp.com/biz/musicians-mobile-san-jose',
+      src: '/images/yelp_icon.png',
+      alt: 'yelp social media link',
+    },
+    {
+      href: 'https://www.linkedin.com/company/musiciansmobile/',
+      src: '/images/linked_in_icon.png',
+      alt: 'linked in social media link',
+    },
+    {
+      href: 'https://feeds.buzzsprout.com/1169933',
+      src: '/images/podcast_icon.png',
+      alt: 'podcast media link',
+    },
+  ];
+
   return (
     <footer className={styles.footer}>
       <ul className={styles.footer_nav}>
@@ -75,74 +108,21 @@ export default function Footer() {
         })}
       </ul>
       <ul className={styles.social_media_list}>
-        <li>
-          <Link target='_blank' href='https://www.facebook.com/musiciansmobile'>
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/facebook_icon.png'
-              alt='facebook social media link'
-            />
-          </Link>
-          <Link
-            target='_blank'
-            href='https://www.instagram.com/musiciansmobile/'
-          >
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/instagram_icon.png'
-              alt='instagram social media link'
-            />
-          </Link>
-          <Link
-            target='_blank'
-            href='https://www.youtube.com/channel/UCgzb0Z2uKMQxmCRVR2dAY4Q'
-          >
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/youtube_icon.png'
-              alt='youtube social media link'
-            />
-          </Link>
-          <Link
-            target='_blank'
-            href='https://www.yelp.com/biz/musicians-mobile-san-jose'
-          >
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/yelp_icon.png'
-              alt='yelp social media link'
-            />
-          </Link>
-          <Link
-            target='_blank'
-            href='https://www.linkedin.com/company/musiciansmobile/'
-          >
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/linked_in_icon.png'
-              alt='linked in social media link'
-            />
-          </Link>
-          <Link target='_blank' href='https://feeds.buzzsprout.com/1169933'>
-            <Image
-              width={25}
-              height={25}
-              layout='intrinsic'
-              src='/images/podcast_icon.png'
-              alt='podcast media link'
-            />
-          </Link>
-        </li>
+        {socialMediaLinks.map((link) => {
+          return (
+            <li>
+              <Link target='_blank' href={link.href}>
+                <Image
+                  width={25}
+                  height={25}
+                  layout='intrinsic'
+                  src={link.src}
+                  alt={link.alt}
+                />
+              </Link>
+            </li>
+          );
+        })}
       </ul>
       <div className={styles.logo_address}>
         <Link className={styles.logo} href='/'>

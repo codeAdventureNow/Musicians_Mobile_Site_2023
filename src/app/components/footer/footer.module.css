@@ -9,12 +9,17 @@
 }
 
 .social_media_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
+
   margin: 12px;
 }
 
 .social_media_list a {
-  padding: 1.5rem;
+  display: block;
+  margin: 1rem;
 }
 
 .footer_nav {
@@ -42,6 +47,8 @@
 
 .logo_address {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
   color: #676767;
 }
 
