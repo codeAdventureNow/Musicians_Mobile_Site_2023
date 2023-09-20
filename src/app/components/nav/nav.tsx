@@ -60,7 +60,6 @@ export default function Nav() {
       >
         {navLinks.map((link) => {
           const isActiveLink = pathname === link.href;
-          console.log(isActiveLink);
 
           return (
             <Link

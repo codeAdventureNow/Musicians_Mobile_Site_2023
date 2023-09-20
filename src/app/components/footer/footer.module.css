@@ -29,13 +29,14 @@
   font-size: 14px;
 }
 
-.footer_navtwo {
+.footer_navlegal {
   margin: 16px;
 }
 
 .nav_links {
   color: #676767;
   font-size: 0.8rem;
+  font-weight: 500;
   padding: 1rem 1rem;
 }
 
@@ -50,4 +51,8 @@
 
 .address {
   font-size: 12px;
+}
+
+.link_active {
+  color: #ff5a5f;
 }

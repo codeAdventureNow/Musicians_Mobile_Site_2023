@@ -1,29 +1,78 @@
+'use client';
+
 import styles from './footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const footerLinksMain = [
+    {
+      name: 'Careers',
+      href: '/careers',
+    },
+    {
+      name: 'Blog',
+      href: '/blog',
+    },
+  ];
+
+  const footerLinksLegal = [
+    {
+      name: 'Terms & Conditions',
+      href: '/terms_conditions',
+    },
+    {
+      name: 'Privacy Policy',
+      href: '/privacy_policy',
+    },
+  ];
+
   return (
     <footer className={styles.footer}>
       <ul className={styles.footer_nav}>
-        <li>
-          <Link className={styles.nav_links} href='/'>
-            Careers
-          </Link>
-          <Link className={styles.nav_links} href='/'>
-            Blog
-          </Link>
-        </li>
+        {footerLinksMain.map((link) => {
+          const isActiveLink = pathname === link.href;
+
+          return (
+            <li>
+              <Link
+                className={
+                  isActiveLink
+                    ? `${styles.nav_links} ${styles.link_active}`
+                    : `${styles.nav_links}`
+                }
+                href={link.href}
+                key={link.name}
+              >
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
-      <ul className={styles.footer_navtwo}>
-        <li>
-          <Link className={styles.nav_links} href='/'>
-            Terms & Conditions
-          </Link>
-          <Link className={styles.nav_links} href='/'>
-            Privacy Policy
-          </Link>
-        </li>
+      <ul className={`${styles.footer_nav} ${styles.footer_navlegal}`}>
+        {footerLinksLegal.map((link) => {
+          const isActiveLink = pathname === link.href;
+
+          return (
+            <li>
+              <Link
+                className={
+                  isActiveLink
+                    ? `${styles.nav_links} ${styles.link_active}`
+                    : `${styles.nav_links}`
+                }
+                href={link.href}
+                key={link.name}
+              >
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
       <ul className={styles.social_media_list}>
         <li>
