@@ -70,7 +70,7 @@ export default function Footer() {
           const isActiveLink = pathname === link.href;
 
           return (
-            <li>
+            <li key={link.name}>
               <Link
                 className={
                   isActiveLink
@@ -78,7 +78,6 @@ export default function Footer() {
                     : `${styles.nav_links}`
                 }
                 href={link.href}
-                key={link.name}
               >
                 {link.name}
               </Link>
@@ -91,7 +90,7 @@ export default function Footer() {
           const isActiveLink = pathname === link.href;
 
           return (
-            <li>
+            <li key={link.name}>
               <Link
                 className={
                   isActiveLink
@@ -99,7 +98,6 @@ export default function Footer() {
                     : `${styles.nav_links}`
                 }
                 href={link.href}
-                key={link.name}
               >
                 {link.name}
               </Link>
@@ -110,7 +108,7 @@ export default function Footer() {
       <ul className={styles.social_media_list}>
         {socialMediaLinks.map((link) => {
           return (
-            <li>
+            <li key={link.src}>
               <Link target='_blank' href={link.href}>
                 <Image
                   width={25}
