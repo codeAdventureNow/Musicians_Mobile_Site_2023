@@ -3,3 +3,44 @@
   text-align: center;
   margin-top: 250px;
 }
+
+.reviews_widget {
+  margin-top: 200px;
+  max-width: 320px;
+  background: beige;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.widget_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name_image {
+  display: flex;
+}
+
+.profile_icon,
+.profile_image {
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.star_collection {
+  margin-right: 12px;
+}
+.star {
+  color: gold;
+  width: 20px;
+}
+
+.stars_plus_date {
+  display: flex;
+}
+
+.widget_bottom {
+  margin-top: 12px;
+  text-align: center;
+}

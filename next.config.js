@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.dog.ceo'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's3-media2.fl.yelpcdn.com',
+      },
+    ],
   },
 };
 
