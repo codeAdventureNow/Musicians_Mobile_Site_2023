@@ -125,7 +125,7 @@ export default async function About() {
                   </Link>
                 )}
                 <Link target='_blank' href={post.user.profile_url}>
-                  <p>{post.user.name}</p>
+                  <p className={styles.user_name}>{post.user.name}</p>
                 </Link>
               </div>
               <div className={styles.stars_plus_date}>
@@ -136,11 +136,7 @@ export default async function About() {
                 >
                   {starRating(post.rating)}
                 </Link>
-                <Link
-                  className={styles.company_name}
-                  target='_blank'
-                  href={post.url}
-                >
+                <Link className={styles.date} target='_blank' href={post.url}>
                   <p>{converDate(post.time_created)}</p>
                 </Link>
               </div>
@@ -149,7 +145,11 @@ export default async function About() {
             </div>
             <hr className={styles.hr} />
             <div className={styles.widget_bottom}>
-              <Link target='_blank' href={post.user.profile_url}>
+              <Link
+                className={styles.read_Yelp}
+                target='_blank'
+                href={post.user.profile_url}
+              >
                 Read More On Yelp
               </Link>
             </div>
