@@ -73,10 +73,20 @@ export default async function About() {
           <div className={styles.reviews_widget} key={post.id}>
             <div className={styles.widget_top}>
               <div className={styles.widget_top_left}>
-                <Link target='_blank' href={post.url}>
+                <Link
+                  className={styles.company_name}
+                  target='_blank'
+                  href={post.url}
+                >
                   Musicians Mobile
                 </Link>
-                <p>{posts.total} Reviews</p>
+                <Link
+                  className={styles.total_reviews}
+                  target='_blank'
+                  href={post.url}
+                >
+                  <p>{posts.total} Reviews</p>
+                </Link>
               </div>
               <div className={styles.widget_top_right}>
                 <Link target='_blank' href={post.url}>

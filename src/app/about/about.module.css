@@ -44,3 +44,26 @@
   margin-top: 12px;
   text-align: center;
 }
+
+.company_name {
+  text-decoration: none;
+  color: blue;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.company_name:hover {
+  text-decoration: underline;
+}
+
+.total_reviews {
+  text-decoration: none;
+  color: #676767;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.widget_middle {
+  color: #676767;
+}
