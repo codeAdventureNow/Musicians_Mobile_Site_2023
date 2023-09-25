@@ -22,6 +22,11 @@ const getPostsData = async () => {
 export default async function About() {
   const posts = await getPostsData();
 
+  function converDate(date: string) {
+    const convertedDate = new Date(date);
+    return new Intl.DateTimeFormat('en-US').format(convertedDate);
+  }
+
   function starRating(postRatings: number) {
     if (postRatings === 5) {
       return (
@@ -100,31 +105,49 @@ export default async function About() {
                 </Link>
               </div>
             </div>
-            <hr />
+            <hr className={styles.hr} />
             <div className={styles.widget_middle}>
               <div className={styles.name_image}>
                 {post.user.image_url ? (
-                  <Image
-                    className={styles.profile_image}
-                    src={post.user.image_url}
-                    alt='yelp profile image'
-                    width={20}
-                    height={20}
-                    layout='intrinsic'
-                  ></Image>
+                  <Link target='_blank' href={post.user.profile_url}>
+                    <Image
+                      className={styles.profile_image}
+                      src={post.user.image_url}
+                      alt='yelp profile image'
+                      width={20}
+                      height={20}
+                      layout='intrinsic'
+                    ></Image>
+                  </Link>
                 ) : (
-                  <UserCircleIcon className={styles.profile_icon} />
+                  <Link target='_blank' href={post.user.profile_url}>
+                    <UserCircleIcon className={styles.profile_icon} />
+                  </Link>
                 )}
-                <p>{post.user.name}</p>
+                <Link target='_blank' href={post.user.profile_url}>
+                  <p>{post.user.name}</p>
+                </Link>
               </div>
               <div className={styles.stars_plus_date}>
-                {starRating(post.rating)}
-                <p>10/4/2028</p>
+                <Link
+                  className={styles.company_name}
+                  target='_blank'
+                  href={post.url}
+                >
+                  {starRating(post.rating)}
+                </Link>
+                <Link
+                  className={styles.company_name}
+                  target='_blank'
+                  href={post.url}
+                >
+                  <p>{converDate(post.time_created)}</p>
+                </Link>
               </div>
 
               <p>{post.text}</p>
             </div>
-            <hr />
+            <hr className={styles.hr} />
             <div className={styles.widget_bottom}>
               <Link target='_blank' href={post.user.profile_url}>
                 Read More On Yelp
