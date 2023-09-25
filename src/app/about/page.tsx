@@ -148,7 +148,7 @@ export default async function About() {
               <Link
                 className={styles.read_Yelp}
                 target='_blank'
-                href={post.user.profile_url}
+                href={post.url}
               >
                 Read More On Yelp
               </Link>
