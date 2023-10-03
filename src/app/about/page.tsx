@@ -72,7 +72,7 @@ export default async function About() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       {posts.reviews.map((post: any) => {
         return (
           <div className={styles.reviews_widget} key={post.id}>
