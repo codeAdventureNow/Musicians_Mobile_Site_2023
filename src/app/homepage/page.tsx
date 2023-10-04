@@ -9,6 +9,7 @@ import navstyles from '../components/nav/nav.module.css';
 export default function HomePage() {
   return (
     <div>
+      {/*  Hero   */}
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.hero_pre_heading}>
@@ -74,6 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Video Section */}
       <section className={`${styles.section} ${styles.video_section}`}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>
@@ -130,8 +132,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Pillars of Progress */}
       <section className={styles.section}>
         <div className={styles.container}>
+          <h2 className={styles.section_heading}>
+            {/* How We Help{' '} */}
+            {/* <span className={styles.hero_heading_highlight}>You</span> */}
+            <br className={styles.progress} />
+            Three Pillars To
+            <span className={styles.hero_heading_highlight}> Progress</span>
+          </h2>
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Save Time</h2>
@@ -207,6 +217,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/*  Reviews    */}
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Check Out Our Reviews</h2>
