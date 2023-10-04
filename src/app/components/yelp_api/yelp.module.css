@@ -9,16 +9,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  width: 85%;
-  max-width: 1170px;
   margin: 0 auto;
   text-align: center;
 }
 
 .reviews_widget {
-  margin-top: 100px;
+  margin-top: 25px;
   max-width: 320px;
-  background: beige;
+  background: white;
   border-radius: 10px;
   padding: 20px;
 }

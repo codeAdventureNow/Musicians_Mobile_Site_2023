@@ -207,8 +207,41 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section>
-        <Yelp_API />
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <h2 className={styles.section_heading}>Check Out Our Reviews</h2>
+          <Yelp_API />
+        </div>
+      </section>
+      <section className={`${styles.section} ${styles.cta_final}`}>
+        <div className={styles.container}>
+          <div className={styles.pillar_column}>
+            <h2 className={styles.pillar_heading}>Try Us Free!</h2>
+            <p className={styles.free_lesson_paragraph}>
+              Try a free no obligation 30-minute lesson in the comfort of your
+              home. Choose from piano, guitar, voice, violin, and drums.
+            </p>
+            <div className={navstyles.nav_cta}>
+              <Link className={navstyles.cta_button} rel='noreferrer' href='#'>
+                Schedule A Free Lesson!
+              </Link>
+              <br />
+
+              <a className={navstyles.phone} href='tel:408-960-1100'>
+                {' '}
+                <Image
+                  width={20}
+                  height={100}
+                  layout='intrinsic'
+                  src='/images/phone_icon.png'
+                  alt='phone_icon'
+                  className={styles.phone_icon}
+                />
+                <p>(408) 960-1100</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
