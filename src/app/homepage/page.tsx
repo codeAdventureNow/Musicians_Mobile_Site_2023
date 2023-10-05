@@ -5,6 +5,7 @@ import Link from 'next/link';
 import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
 import Yelp_API from '../components/yelp_api/yelp';
 import navstyles from '../components/nav/nav.module.css';
+import { CheckIcon } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
   return (
@@ -159,10 +160,12 @@ export default function HomePage() {
               </h3>
               <ul>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Eliminate the frustration, inefficiency, fuel expense, and
                   road risks of driving to and from lessons
                 </li>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Spend time doing what matters most to you
                 </li>
               </ul>
@@ -182,10 +185,12 @@ export default function HomePage() {
               </h3>
               <ul>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Learn the songs that excite you and keep you engaged in music
                   lessons
                 </li>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Teachers pass background checks and tested for musical
                   proficiency
                 </li>
@@ -206,10 +211,12 @@ export default function HomePage() {
               </h3>
               <ul>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Encouraging recitals designed for students to gain stage
                   confidence
                 </li>
                 <li className={styles.pillar_section_bullet_points}>
+                  <CheckIcon className={styles.check_mark} />
                   Learn to play well with others through team building rock band
                   shows and workshops
                 </li>

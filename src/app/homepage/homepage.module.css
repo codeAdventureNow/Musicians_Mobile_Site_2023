@@ -134,6 +134,12 @@
   margin: 0 auto;
 }
 
+.check_mark {
+  width: 14px;
+  color: green;
+  margin-right: 6px;
+}
+
 .you_tube_container {
   max-width: 500px;
   margin: 0 auto;
