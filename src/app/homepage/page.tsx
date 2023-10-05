@@ -132,6 +132,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Pillars of Progress */}
       <section className={styles.section}>
         <div className={styles.container}>

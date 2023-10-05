@@ -1,7 +1,6 @@
 import styles from './yelp.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-
 import { UserCircleIcon, StarIcon } from '@heroicons/react/24/solid';
 
 const getPostsData = async () => {
@@ -71,9 +70,22 @@ export default async function Yelp_API() {
     }
   }
 
+  type Post = {
+    id: string;
+    url: string;
+    time_created: string;
+    text: string;
+    rating: number;
+    user: {
+      profile_url: string;
+      image_url: string;
+      name: string;
+    };
+  };
+
   return (
     <div className={styles.container}>
-      {posts.reviews.map((post: any) => {
+      {posts.reviews.map((post: Post) => {
         return (
           <div className={styles.reviews_widget} key={post.id}>
             <div className={styles.widget_top}>
