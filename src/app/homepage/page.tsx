@@ -3,13 +3,18 @@ import styles from './homepage.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
-import Yelp_API from '../components/yelp_api/yelp';
+import GetYelpReviews from '../components/yelp_api/yelp';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
+  const homeGuitarShy = '/images/HomeShy.jpg';
+  const promoVideo = 'ZZgqnipO-No';
+  const drumsGuitarKeysFamily = '/images/drums_guitar_piano_inhome_edit.jpg';
+  const inHomePianoLesson = '/images/inhomepiano.jpg';
+  const twoGuitarsVocalsOnStage = '/images/vocal_guitar_rock_edit.jpg';
   return (
-    <div>
+    <div className={styles.homepage}>
       {/*  Hero   */}
       <section className={styles.section}>
         <div className={styles.container}>
@@ -30,6 +35,7 @@ export default function HomePage() {
             In-Home
           </h1>
 
+          {/* Use text transform - italic styling in CSS instead of i */}
           <h3 className={styles.hero_subheading}>
             <i>
               Happily helping hundreds of South Bay Area families<br></br> with
@@ -37,9 +43,10 @@ export default function HomePage() {
             </i>
           </h3>
 
+          {/* Create a variable heroImage = '/images/HomeShy.jpg' */}
           <Image
             className={styles.hero_image}
-            src='/images/HomeShy.jpg'
+            src={homeGuitarShy}
             alt='home music lesson'
             width={500}
             height={500}
@@ -83,13 +90,13 @@ export default function HomePage() {
             Professional{' '}
             <span className={styles.hero_heading_highlight}>
               Music Teachers
-            </span>{' '}
+            </span>
             <br />
             In-Home
           </h2>
           <div className={styles.video_section_flex}>
             <div className={styles.you_tube_container}>
-              <YouTubePlayer videoId={`ZZgqnipO-No`} />
+              <YouTubePlayer videoId={promoVideo} />
             </div>
 
             <div className={styles.section_text}>
@@ -97,16 +104,17 @@ export default function HomePage() {
                 className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_one}`}
               >
                 Musicians Mobile brings quality, background-checked music
-                teachers straight to your home.{' '}
+                teachers straight to your home.
               </p>
               <br />
               <p
                 className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_two}`}
               >
                 Save the drive on highway 85 so your family can safely spend
-                more time on what matters most.{' '}
+                more time on what matters most.
               </p>
               <div className={navstyles.nav_cta}>
+                {/* Consider creating this into a separate component */}
                 <Link
                   className={navstyles.cta_button}
                   rel='noreferrer'
@@ -117,7 +125,6 @@ export default function HomePage() {
                 <br />
 
                 <a className={navstyles.phone} href='tel:408-960-1100'>
-                  {' '}
                   <Image
                     width={20}
                     height={100}
@@ -138,8 +145,6 @@ export default function HomePage() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>
-            {/* How We Help{' '} */}
-            {/* <span className={styles.hero_heading_highlight}>You</span> */}
             <br className={styles.progress} />
             Three Pillars To
             <span className={styles.hero_heading_highlight}> Progress</span>
@@ -149,8 +154,8 @@ export default function HomePage() {
               <h2 className={styles.pillar_heading}>Save Time</h2>
               <Image
                 className={styles.pillar_image}
-                src='/images/drums_guitar_piano_inhome_edit.jpg'
-                alt='student learning drums from teacher'
+                src={drumsGuitarKeysFamily}
+                alt='students learning drums, guitar and keyboards from teacher'
                 width={300}
                 height={300}
                 layout='intrinsic'
@@ -174,7 +179,7 @@ export default function HomePage() {
               <h2 className={styles.pillar_heading}>Quality Teachers</h2>
               <Image
                 className={styles.pillar_image}
-                src='/images/inhomepiano.jpg'
+                src={inHomePianoLesson}
                 alt='student learning drums from teacher'
                 width={300}
                 height={300}
@@ -200,7 +205,7 @@ export default function HomePage() {
               <h2 className={styles.pillar_heading}>Perform Confidently</h2>
               <Image
                 className={styles.pillar_image}
-                src='/images/vocal_guitar_rock_edit.jpg'
+                src={twoGuitarsVocalsOnStage}
                 alt='student learning drums from teacher'
                 width={300}
                 height={300}
@@ -230,7 +235,7 @@ export default function HomePage() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Check Out Our Reviews</h2>
-          <Yelp_API />
+          <GetYelpReviews />
         </div>
       </section>
       <section className={`${styles.section} ${styles.cta_final}`}>
