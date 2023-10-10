@@ -6,6 +6,7 @@ import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
 import GetYelpReviews from '../components/yelp_api/yelp';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/24/outline';
+import CTA_Button from '../components/cta_button/cta_button';
 
 export default function HomePage() {
   const homeGuitarShy = '/images/HomeShy.jpg';
@@ -115,13 +116,7 @@ export default function HomePage() {
               </p>
               <div className={navstyles.nav_cta}>
                 {/* Consider creating this into a separate component */}
-                <Link
-                  className={navstyles.cta_button}
-                  rel='noreferrer'
-                  href='#'
-                >
-                  Schedule A Free Lesson!
-                </Link>
+                <CTA_Button />
                 <br />
 
                 <a className={navstyles.phone} href='tel:408-960-1100'>
@@ -247,9 +242,7 @@ export default function HomePage() {
               home. Choose from piano, guitar, voice, violin, and drums.
             </p>
             <div className={navstyles.nav_cta}>
-              <Link className={navstyles.cta_button} rel='noreferrer' href='#'>
-                Schedule A Free Lesson!
-              </Link>
+              <CTA_Button />
               <br />
 
               <a className={navstyles.phone} href='tel:408-960-1100'>

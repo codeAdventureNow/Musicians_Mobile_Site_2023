@@ -1,0 +1,8 @@
+.cta_button {
+  background: #0091ea;
+  color: white;
+  border-radius: 1em;
+  padding: 0.5em 0.75em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import CTA_Button from '../cta_button/cta_button';
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(true);
@@ -77,9 +78,7 @@ export default function Nav() {
 
       <div className={styles.cta_burgerMenu}>
         <div className={styles.nav_cta}>
-          <Link className={styles.cta_button} rel='noreferrer' href='#'>
-            Schedule A Free Lesson!
-          </Link>
+          <CTA_Button />
           <br />
 
           <a className={styles.phone} href='tel:408-960-1100'>
