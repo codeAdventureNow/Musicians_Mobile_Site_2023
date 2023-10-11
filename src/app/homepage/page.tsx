@@ -6,7 +6,7 @@ import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
 import GetYelpReviews from '../components/yelp_api/yelp';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/24/outline';
-import ScheduleButton from '../components/scheduleButton/scheduleButton';
+import ScheduleButton from '../components/schedule-button/schedule-button';
 
 export default function HomePage() {
   const homeGuitarShy = '/images/HomeShy.jpg';

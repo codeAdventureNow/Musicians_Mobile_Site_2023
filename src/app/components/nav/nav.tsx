@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import ScheduleButton from '../scheduleButton/scheduleButton';
+import ScheduleButton from '../schedule-button/schedule-button';
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(true);
