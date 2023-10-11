@@ -6,7 +6,7 @@ import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
 import GetYelpReviews from '../components/yelp_api/yelp';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/24/outline';
-import CTA_Button from '../components/cta_button/cta_button';
+import ScheduleButton from '../components/scheduleButton/scheduleButton';
 
 export default function HomePage() {
   const homeGuitarShy = '/images/HomeShy.jpg';
@@ -36,15 +36,11 @@ export default function HomePage() {
             In-Home
           </h1>
 
-          {/* Use text transform - italic styling in CSS instead of i */}
           <h3 className={styles.hero_subheading}>
-            <i>
-              Happily helping hundreds of South Bay Area families<br></br> with
-              music lessons since 2009.
-            </i>
+            Happily helping hundreds of South Bay Area families<br></br> with
+            music lessons since 2009.
           </h3>
 
-          {/* Create a variable heroImage = '/images/HomeShy.jpg' */}
           <Image
             className={styles.hero_image}
             src={homeGuitarShy}
@@ -115,8 +111,7 @@ export default function HomePage() {
                 more time on what matters most.
               </p>
               <div className={navstyles.nav_cta}>
-                {/* Consider creating this into a separate component */}
-                <CTA_Button />
+                <ScheduleButton />
                 <br />
 
                 <a className={navstyles.phone} href='tel:408-960-1100'>
@@ -242,7 +237,7 @@ export default function HomePage() {
               home. Choose from piano, guitar, voice, violin, and drums.
             </p>
             <div className={navstyles.nav_cta}>
-              <CTA_Button />
+              <ScheduleButton />
               <br />
 
               <a className={navstyles.phone} href='tel:408-960-1100'>
