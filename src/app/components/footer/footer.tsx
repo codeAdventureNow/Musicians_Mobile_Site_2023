@@ -22,11 +22,11 @@ export default function Footer() {
   const footerLinksLegal = [
     {
       name: 'Terms & Conditions',
-      href: '/terms_conditions',
+      href: '/terms-conditions',
     },
     {
       name: 'Privacy Policy',
-      href: '/privacy_policy',
+      href: '/privacy-policy',
     },
   ];
 
