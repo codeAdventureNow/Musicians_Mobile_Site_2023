@@ -197,7 +197,9 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className={styles.pillar_column}>
+            <div
+              className={`${styles.pillar_column} ${styles.pillar_column_last}`}
+            >
               <h2 className={styles.pillar_heading}>
                 3. Perform{' '}
                 <span className={styles.hero_heading_highlight}>
