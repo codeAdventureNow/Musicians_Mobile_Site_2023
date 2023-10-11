@@ -1,6 +1,6 @@
-import styles from './privacy_policy.module.css';
+import styles from './privacy-policy.module.css';
 
-export default function FAQ() {
+export default function PrivacyPolicy() {
   return (
     <div>
       <div>

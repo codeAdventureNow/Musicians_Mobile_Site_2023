@@ -1,4 +1,4 @@
-import styles from './terms_conditions.module.css';
+import styles from './terms-conditions.module.css';
 
 export default function Teachers() {
   return (

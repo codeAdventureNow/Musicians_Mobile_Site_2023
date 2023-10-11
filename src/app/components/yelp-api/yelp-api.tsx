@@ -1,4 +1,4 @@
-import styles from './yelp.module.css';
+import styles from './yelp-api.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UserCircleIcon, StarIcon } from '@heroicons/react/24/solid';

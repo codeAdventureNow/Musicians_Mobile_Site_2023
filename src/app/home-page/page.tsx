@@ -1,9 +1,9 @@
 // 'use client';
-import styles from './homepage.module.css';
+import styles from './home-page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import YouTubePlayer from '../components/youtube_player/YouTubePlayer';
-import GetYelpReviews from '../components/yelp_api/yelp';
+import YouTubePlayer from '../components/youtube-player/youtube-player';
+import GetYelpReviews from '../components/yelp-api/yelp-api';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/24/outline';
 import ScheduleButton from '../components/schedule-button/schedule-button';
