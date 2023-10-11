@@ -8,24 +8,18 @@
 
 .homepage {
   background-color: #f9f6f0;
-  border: 1px solid green;
   text-align: center;
-  /* padding: 0 2rem; */
 }
 
 .section {
   padding-top: 100px;
-  /* background-color: #f9f6f0; */
-  border: 1px solid red;
   color: #383838;
   font-family: 'Poppins', sans-serif;
 }
 .container {
-  border: 1px solid blue;
   width: 85%;
   max-width: 1170px;
   margin: 0 auto;
-  /* text-align: center; */
 }
 
 .hero_pre_heading {
@@ -119,9 +113,9 @@
   gap: 4rem;
 }
 .pillar_heading {
-  font-family: Linden Hill;
-  font-size: 28px;
-  font-weight: 500;
+  font-family: Kalam;
+  font-size: 22px;
+  font-weight: 600;
   margin-bottom: 12px;
   color: #3b0404;
 }

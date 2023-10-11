@@ -141,7 +141,10 @@ export default function HomePage() {
           </h2>
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
-              <h2 className={styles.pillar_heading}>Save Time</h2>
+              <h2 className={styles.pillar_heading}>
+                1. Save
+                <span className={styles.hero_heading_highlight}> Time</span>
+              </h2>
               <Image
                 className={styles.pillar_image}
                 src={drumsGuitarKeysFamily}
@@ -166,7 +169,10 @@ export default function HomePage() {
               </ul>
             </div>
             <div className={styles.pillar_column}>
-              <h2 className={styles.pillar_heading}>Quality Teachers</h2>
+              <h2 className={styles.pillar_heading}>
+                2. Quality
+                <span className={styles.hero_heading_highlight}> Teachers</span>
+              </h2>
               <Image
                 className={styles.pillar_image}
                 src={inHomePianoLesson}
@@ -192,7 +198,13 @@ export default function HomePage() {
               </ul>
             </div>
             <div className={styles.pillar_column}>
-              <h2 className={styles.pillar_heading}>Perform Confidently</h2>
+              <h2 className={styles.pillar_heading}>
+                3. Perform{' '}
+                <span className={styles.hero_heading_highlight}>
+                  {' '}
+                  Confidently
+                </span>
+              </h2>
               <Image
                 className={styles.pillar_image}
                 src={twoGuitarsVocalsOnStage}
@@ -224,14 +236,20 @@ export default function HomePage() {
       {/*  Reviews    */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>Check Out Our Reviews</h2>
+          <h2 className={styles.section_heading}>
+            Check Out Our{' '}
+            <span className={styles.hero_heading_highlight}>Reviews</span>{' '}
+          </h2>
           <GetYelpReviews />
         </div>
       </section>
       <section className={`${styles.section} ${styles.cta_final}`}>
         <div className={styles.container}>
           <div className={styles.pillar_column}>
-            <h2 className={styles.pillar_heading}>Try Us Free!</h2>
+            <h2 className={styles.section_heading}>
+              Try Us{' '}
+              <span className={styles.hero_heading_highlight}>Free!</span>
+            </h2>
             <p className={styles.free_lesson_paragraph}>
               Try a free no obligation 30-minute lesson in the comfort of your
               home. Choose from piano, guitar, voice, violin, and drums.
