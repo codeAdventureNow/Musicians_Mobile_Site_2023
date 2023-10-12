@@ -10,11 +10,6 @@ export default function Contact() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h1 className={styles.hero_heading}>Contact Us</h1>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <div className={styles.container}>
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 1</h2>
@@ -43,6 +38,8 @@ export default function Contact() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
