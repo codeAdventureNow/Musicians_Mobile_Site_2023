@@ -1,5 +1,198 @@
-.paragraph {
+/* .paragraph {
   color: aqua;
   text-align: center;
   margin-top: 250px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Linden+Hill&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap');
+
+.logo {
+  border: 1px solid green;
+  width: 90px;
+  padding: 0 20px;
+}
+
+.homepage {
+  background-color: #f9f6f0;
+  text-align: center;
+}
+
+.section {
+  padding-top: 100px;
+  color: #383838;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.hero_pre_heading {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12px;
+  font-size: max(1vw, 12px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hero_heading {
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
+  line-height: 1.2;
+  color: #3b0404;
+  margin: 2% 0;
+}
+
+.section_heading {
+  font-family: 'Kalam', cursive;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #3b0404;
+  margin: 4% 0;
+}
+
+.hero_heading_highlight {
+  color: #ff5a5f;
+}
+.hero_subheading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: max(1vw, 12px);
+  margin-bottom: 30px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.hero_lesson_links_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  font-size: 12px;
+  font-size: max(1vw, 12px);
+}
+
+.hero_image,
+.pillar_image {
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.lesson_link {
+  color: #1c8cf2;
+}
+
+.section_text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.video_section_paragraph,
+.pillar_section_bullet_points {
+  font-size: 14px;
+}
+
+.video_section_paragraph_one {
+  padding-top: 14px;
+}
+.video_section_paragraph_two {
+  padding-bottom: 32px;
+}
+
+.video_section {
+  padding-top: 40px;
+}
+.video_section_flex {
+  margin: 0 auto;
+  /* max-width: 700px; */
+}
+
+.pillar_grid {
+  display: grid;
+  gap: 4rem;
+}
+.pillar_heading {
+  font-family: Kalam;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #3b0404;
+}
+
+.pillar_subheading {
+  font-family: Oxygen;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 14px 0;
+
+  color: #3b0404;
+}
+
+.pillar_section_bullet_points {
+  padding: 14px 0;
+}
+
+.pillar_column {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-bottom: 52px;
+}
+
+.pillar_column_last {
+  padding-bottom: 0px;
+}
+
+.check_mark {
+  width: 14px;
+  color: green;
+  margin-right: 6px;
+}
+
+.you_tube_container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.free_lesson_paragraph {
+  margin: 32px 0;
+}
+
+.cta_final {
+  padding-bottom: 20px;
+}
+@media (min-width: 800px) {
+  .video_section_flex {
+    max-width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  .section_text {
+    width: 50%;
+  }
+
+  .you_tube_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .video_section_paragraph_one {
+    padding-top: 0px;
+  }
+
+  .pillar_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
