@@ -47,6 +47,28 @@ export default function Contact() {
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
             </div>
+            <div className={styles.pillar_column}>
+              <h4>Musicians Mobile</h4>
+              <div className={navstyles.nav_cta}>
+                <br />
+                <a className={navstyles.phone} href='tel:408-960-1100'>
+                  {' '}
+                  <Image
+                    width={20}
+                    height={100}
+                    layout='intrinsic'
+                    src='/images/phone_icon.png'
+                    alt='phone_icon'
+                    className={styles.phone_icon}
+                  />
+                  <p>(408) 960-1100</p>
+                </a>
+              </div>
+              <p>carl@musiciansmobile.com</p>
+              <p>1276 Lincoln Ave, suite 109</p>
+              <p>San Jose, CA 95125</p>
+              <p>Office Hours: M-F 9am-6pm</p>
+            </div>
           </div>
         </div>
       </section>

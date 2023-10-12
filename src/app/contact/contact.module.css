@@ -140,10 +140,15 @@
 }
 
 .pillar_column {
+  width: 50%;
   max-width: 320px;
   margin: 0 auto;
   padding-bottom: 52px;
 }
+
+/* .pillar_column_contact_form {
+  width: 100%;
+} */
 
 .pillar_column_last {
   padding-bottom: 0px;
