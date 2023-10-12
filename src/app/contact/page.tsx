@@ -2,6 +2,8 @@ import styles from './contact.module.css';
 
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 import navstyles from '../components/nav/nav.module.css';
 
 export default function Contact() {
@@ -45,7 +47,17 @@ export default function Contact() {
               <p>Fill out our contact form</p>
             </div>
             <div className={styles.pillar_column}>
-              <h4>Musicians Mobile</h4>
+              <div className={styles.logo}>
+                <Link href='/'>
+                  <Image
+                    width={100}
+                    height={100}
+                    layout='intrinsic'
+                    src='/images/Logo.jpg'
+                    alt='musicians mobile logo'
+                  />
+                </Link>
+              </div>
               <div className={navstyles.nav_cta}>
                 <br />
                 <a className={navstyles.phone} href='tel:408-960-1100'>
