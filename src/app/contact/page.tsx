@@ -76,6 +76,13 @@ export default function Contact() {
               <p>carl@musiciansmobile.com</p>
               <p>1276 Lincoln Ave, suite 109</p>
               <p>San Jose, CA 95125</p>
+              <iframe
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.5629107149553!2d-121.90112832343421!3d37.30549173905257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e346eb98cff69%3A0x2e9270c56585f820!2sMusicians%20Mobile!5e0!3m2!1sen!2sus!4v1697230138264!5m2!1sen!2sus'
+                width='300'
+                height='225'
+                loading='lazy'
+                referrerpolicy='no-referrer-when-downgrade'
+              ></iframe>
               <p>Office Hours: M-F 9am-6pm</p>
             </div>
           </div>
