@@ -58,8 +58,10 @@ export default function Contact() {
                   />
                 </Link>
               </div>
+              <p>Office Hours: M-F 9am-6pm</p>
               <div className={navstyles.nav_cta}>
                 <br />
+
                 <a className={navstyles.phone} href='tel:408-960-1100'>
                   {' '}
                   <Image
@@ -73,6 +75,7 @@ export default function Contact() {
                   <p>(408) 960-1100</p>
                 </a>
               </div>
+
               <p>carl@musiciansmobile.com</p>
               <p>1276 Lincoln Ave, suite 109</p>
               <p>San Jose, CA 95125</p>
@@ -83,7 +86,6 @@ export default function Contact() {
                 loading='lazy'
                 referrerpolicy='no-referrer-when-downgrade'
               ></iframe>
-              <p>Office Hours: M-F 9am-6pm</p>
             </div>
           </div>
         </div>
