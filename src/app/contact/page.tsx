@@ -115,7 +115,7 @@ export default function Contact() {
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
-              <div className={styles.inputForm}>
+              <div className={styles.input_form}>
                 <form onSubmit={handleSubmit}>
                   {inputs.map((input) => (
                     <FormInput
@@ -158,17 +158,21 @@ export default function Contact() {
                   <p>(408) 960-1100</p>
                 </a>
               </div>
+              <div className={styles.contact_info}>
+                <p>carl@musiciansmobile.com</p>
+                <p>1276 Lincoln Ave, suite 109</p>
+                <p>San Jose, CA 95125</p>
+              </div>
 
-              <p>carl@musiciansmobile.com</p>
-              <p>1276 Lincoln Ave, suite 109</p>
-              <p>San Jose, CA 95125</p>
-              <iframe
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.5629107149553!2d-121.90112832343421!3d37.30549173905257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e346eb98cff69%3A0x2e9270c56585f820!2sMusicians%20Mobile!5e0!3m2!1sen!2sus!4v1697230138264!5m2!1sen!2sus'
-                width='300'
-                height='225'
-                loading='lazy'
-                referrerpolicy='no-referrer-when-downgrade'
-              ></iframe>
+              <div className={styles.map}>
+                <iframe
+                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.5629107149553!2d-121.90112832343421!3d37.30549173905257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e346eb98cff69%3A0x2e9270c56585f820!2sMusicians%20Mobile!5e0!3m2!1sen!2sus!4v1697230138264!5m2!1sen!2sus'
+                  width='300'
+                  height='225'
+                  loading='lazy'
+                  referrerPolicy='no-referrer-when-downgrade'
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
