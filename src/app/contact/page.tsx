@@ -8,69 +8,145 @@ import FormInput from '../components/form-input/form-input';
 
 export default function Contact() {
   const [values, setValues] = useState({
-    username: '',
+    fullname: '',
+    zipcode: '',
     email: '',
-    birthday: '',
-    password: '',
-    confirmPassword: '',
+    phone: '',
+    leadsource: '',
+    availability: '',
+    message: '',
+    piano: '',
+    guitar: '',
+    voice: '',
+    drums: '',
+    other: '',
   });
 
   const inputs = [
     {
       id: 1,
-      name: 'username',
+      name: 'fullname',
       type: 'text',
-      placeholder: 'Username',
-      errorMessage:
-        'Username should be 3-16 character and should not include any special characters',
-      label: 'Username',
-      pattern: '^[A-Za-z0-9]{3,16}$',
+      placeholder: 'First Name/Last Name',
+      errorMessage: 'Please enter your first and last name',
+      label: 'First Name/Last Name*',
+
       required: true,
     },
     {
       id: 2,
-      name: 'email',
-      type: 'email',
-      placeholder: 'Email',
-      errorMessage: 'It should be a valid email address',
-      label: 'Email',
+      name: 'zipcode',
+      type: 'number',
+      placeholder: 'Zip Code',
+      errorMessage: 'You must enter a number',
+      label: 'Zip Code*',
       required: true,
     },
     {
       id: 3,
-      name: 'birthday',
-      type: 'date',
-      placeholder: 'Birthday',
-      errorMessage: '',
-      label: 'Birthday',
+      name: 'email',
+      type: 'email',
+      placeholder: 'Email',
+      errorMessage: 'It should be a valid email address',
+      label: 'Email*',
+      required: true,
     },
     {
       id: 4,
-      name: 'password',
-      type: 'password',
-      placeholder: 'Password',
-      errorMessage:
-        'Password should 8-20 characters and include at least 1 letter, 1 number, and one special character',
-      label: 'Password',
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+      name: 'phone',
+      type: 'tel',
+      placeholder: 'Phone',
+      errorMessage: 'Please enter a valid phone number',
+      label: 'Phone*',
 
       required: true,
     },
     {
       id: 5,
-      name: 'confirmPassword',
-      type: 'password',
-      placeholder: 'Confirm Password',
-      errorMessage: 'Passwords do not match',
-      label: 'confirm Password',
-      pattern: values.password,
+      name: 'leadsource',
+      type: 'text',
+      placeholder: 'How did you hear about us?',
+      errorMessage: '',
+      label: 'How did you hear about us?*',
       required: true,
+    },
+    {
+      id: 6,
+      name: 'availability',
+      type: 'text',
+      placeholder: 'ex. Mon 3-8pm, Fri 4-6pm',
+      errorMessage: '',
+      label: 'What is your availability for music lessons?',
+      required: false,
+    },
+    {
+      id: 7,
+      name: 'message',
+      type: 'text',
+      placeholder: 'ex. Daughter is complete beginner, loves pop music',
+      errorMessage: '',
+      label: 'Any further details that will help us?',
+      required: false,
+    },
+  ];
+
+  const lessonsOptions = [
+    {
+      id: 8,
+      name: 'piano',
+      type: 'checkbox',
+      label: 'Piano',
+      checked: false,
+      required: false,
+    },
+    {
+      id: 9,
+      name: 'guitar',
+      type: 'checkbox',
+      label: 'Guitar',
+      required: false,
+    },
+    {
+      id: 10,
+      name: 'voice',
+      type: 'checkbox',
+      label: 'Voice',
+      required: false,
+    },
+    {
+      id: 11,
+      name: 'drums',
+      type: 'checkbox',
+      label: 'Drums',
+      required: false,
+    },
+    {
+      id: 12,
+      name: 'other',
+      type: 'checkbox',
+      label: 'Other',
+      required: false,
     },
   ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(values);
+    setValues({
+      fullname: '',
+      zipcode: '',
+      email: '',
+      phone: '',
+      leadsource: '',
+      availability: '',
+      message: '',
+      piano: '',
+      guitar: '',
+      voice: '',
+      drums: '',
+      other: '',
+    });
+    e.target.reset();
   };
 
   const onChange = (e) => {
@@ -125,6 +201,20 @@ export default function Contact() {
                       onChange={onChange}
                     />
                   ))}
+                  <label className={styles.label}>
+                    Which instruments would you like to learn?
+                  </label>
+                  <div className={styles.instrument_checkbox_container}>
+                    {lessonsOptions.map((input) => (
+                      <FormInput
+                        key={input.id}
+                        {...input}
+                        values={lessonsOptions[input.name]}
+                        onChange={onChange}
+                      />
+                    ))}
+                  </div>
+
                   <button>Submit</button>
                 </form>
               </div>
