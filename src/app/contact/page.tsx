@@ -21,6 +21,7 @@ export default function Contact() {
     drums: '',
     other: '',
   });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const inputs = [
     {
@@ -30,7 +31,6 @@ export default function Contact() {
       placeholder: 'First Name/Last Name',
       errorMessage: 'Please enter your first and last name',
       label: 'First Name/Last Name*',
-
       required: true,
     },
     {
@@ -58,7 +58,6 @@ export default function Contact() {
       placeholder: 'Phone',
       errorMessage: 'Please enter a valid phone number',
       label: 'Phone*',
-
       required: true,
     },
     {
@@ -96,7 +95,6 @@ export default function Contact() {
       name: 'piano',
       type: 'checkbox',
       label: 'Piano',
-      checked: false,
       required: false,
     },
     {
@@ -131,7 +129,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormSubmitted(true);
     console.log(values);
+
     setValues({
       fullname: '',
       zipcode: '',
@@ -192,31 +192,42 @@ export default function Contact() {
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
               <div className={styles.input_form}>
-                <form className={styles.form} onSubmit={handleSubmit}>
-                  {inputs.map((input) => (
-                    <FormInput
-                      key={input.id}
-                      {...input}
-                      value={values[input.name]}
-                      onChange={onChange}
-                    />
-                  ))}
-                  <label className={styles.label}>
-                    Which instruments would you like to learn?
-                  </label>
-                  <div className={styles.instrument_checkbox_container}>
-                    {lessonsOptions.map((input) => (
+                {formSubmitted ? (
+                  <div>
+                    <br />
+                    <br />
+                    <br />
+                    <p>
+                      Form Submitted Succesfully! We will be in contact shortly.
+                    </p>
+                  </div>
+                ) : (
+                  <form className={styles.form} onSubmit={handleSubmit}>
+                    {inputs.map((input) => (
                       <FormInput
                         key={input.id}
                         {...input}
-                        values={lessonsOptions[input.name]}
+                        value={values[input.name]}
                         onChange={onChange}
                       />
                     ))}
-                  </div>
+                    <label className={styles.label}>
+                      Which instruments would you like to learn?
+                    </label>
+                    <div className={styles.instrument_checkbox_container}>
+                      {lessonsOptions.map((input) => (
+                        <FormInput
+                          key={input.id}
+                          {...input}
+                          values={lessonsOptions[input.name]}
+                          onChange={onChange}
+                        />
+                      ))}
+                    </div>
 
-                  <button>Submit</button>
-                </form>
+                    <button type='submit'>Submit</button>
+                  </form>
+                )}
               </div>
             </div>
             <div className={styles.pillar_column}>
