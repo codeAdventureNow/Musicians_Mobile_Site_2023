@@ -116,7 +116,7 @@ export default function Contact() {
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
               <div className={styles.input_form}>
-                <form onSubmit={handleSubmit}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                   {inputs.map((input) => (
                     <FormInput
                       key={input.id}

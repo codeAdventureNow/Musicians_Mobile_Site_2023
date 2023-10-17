@@ -58,53 +58,9 @@
   font-style: italic;
 }
 
-.hero_lesson_links_list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  gap: 1rem;
-  font-size: 12px;
-  font-size: max(1vw, 12px);
-}
-
-.hero_image,
-.pillar_image {
-  border-radius: 5px;
-
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.lesson_link {
-  color: #1c8cf2;
-}
-
 .section_text {
   max-width: 400px;
   margin: 0 auto;
-}
-
-.video_section_paragraph,
-.pillar_section_bullet_points {
-  font-size: 14px;
-}
-
-.video_section_paragraph_one {
-  padding-top: 14px;
-}
-.video_section_paragraph_two {
-  padding-bottom: 32px;
-}
-
-.video_section {
-  padding-top: 40px;
-}
-.video_section_flex {
-  margin: 0 auto;
-  /* max-width: 700px; */
 }
 
 .pillar_grid {
@@ -139,23 +95,8 @@
   padding-bottom: 52px;
 }
 
-/* .pillar_column_contact_form {
-  width: 100%;
-} */
-
 .pillar_column_last {
   padding-bottom: 0px;
-}
-
-.check_mark {
-  width: 14px;
-  color: green;
-  margin-right: 6px;
-}
-
-.you_tube_container {
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 .free_lesson_paragraph {
@@ -177,27 +118,20 @@
   display: flex;
   justify-content: center;
 }
+
+.input_form {
+  width: 100%;
+
+  border: 1px solid red;
+}
+
+.form {
+  width: 100%;
+  min-width: 320px;
+}
 @media (min-width: 800px) {
-  .video_section_flex {
-    max-width: 90%;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-  }
   .section_text {
     width: 50%;
-  }
-
-  .you_tube_container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .video_section_paragraph_one {
-    padding-top: 0px;
   }
 
   .pillar_flex {
