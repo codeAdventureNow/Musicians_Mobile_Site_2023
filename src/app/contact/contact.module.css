@@ -89,7 +89,7 @@
 }
 
 .pillar_column {
-  width: 50%;
+  width: 85%;
   max-width: 320px;
   margin: 0 auto;
   padding-bottom: 52px;
@@ -99,10 +99,11 @@
   padding-bottom: 0px;
 }
 
-.free_lesson_paragraph {
-  margin: 32px 0;
+.pillar_paragraph {
+  width: 100%;
+  margin: 0;
+  border: 1px solid green;
 }
-
 .cta_final {
   padding-bottom: 20px;
 }
@@ -119,17 +120,15 @@
   justify-content: center;
 }
 
-.input_form {
-  width: 100%;
-
-  border: 1px solid red;
-}
-
 .form {
   width: 100%;
   min-width: 320px;
 }
+
 @media (min-width: 800px) {
+  .pillar_column {
+    width: 50%;
+  }
   .section_text {
     width: 50%;
   }

@@ -85,7 +85,7 @@ export default function Contact() {
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 1</h2>
-              <p>
+              <p className={styles.pillar_paragraph}>
                 Schedule a 10-minute phone consultation. Talk to one of our team
                 members so we can learn more about your music interests and
                 answer any questions.
