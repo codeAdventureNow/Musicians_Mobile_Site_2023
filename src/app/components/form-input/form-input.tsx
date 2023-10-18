@@ -10,29 +10,22 @@ type FormData = {
   zipCode: number;
   email: string;
   phone: number;
-  password: string;
-  confirmPassword: string;
+  lessons: string;
 };
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const schema: ZodType<FormData> = z
-    .object({
-      fullName: z.string().min(2).max(20),
-      zipCode: z.coerce
-        .number() // Force it to be a number
-        .int() // Make sure it's an integer
-        .gte(10000) // Greater than or equal to the smallest 5 digit int
-        .lte(99999),
-      email: z.string().email(),
-      phone: z.coerce.number().int().gte(1000000),
-      password: z.string().min(5).max(20),
-      confirmPassword: z.string().min(5).max(20),
-    })
-    .refine((data) => data.password === data.confirmPassword, {
-      message: 'Passwords do not match',
-      path: ['confirmPassword'],
-    });
+  const schema: ZodType<FormData> = z.object({
+    fullName: z.string().min(2).max(20),
+    zipCode: z.coerce
+      .number() // Force it to be a number
+      .int() // Make sure it's an integer
+      .gte(10000) // Greater than or equal to the smallest 5 digit int
+      .lte(99999),
+    email: z.string().email(),
+    phone: z.coerce.number().int().gte(1000000),
+    lessons: z.string(),
+  });
 
   const {
     register,
@@ -53,7 +46,7 @@ const FormInput = () => {
         <h2>Form successfully submitted!</h2>
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
-          <label className={styles.label}> First Name/Last Name </label>
+          <label className={styles.label}> First/Last Name </label>
           <input
             className={styles.input}
             type='text'
@@ -93,27 +86,18 @@ const FormInput = () => {
             <span className={styles.errormessage}>{errors.phone.message}</span>
           )}
 
-          <label className={styles.label}> Password: </label>
+          <label className={styles.label}>
+            {' '}
+            Which musical instruments would you like to learn?{' '}
+          </label>
           <input
             className={styles.input}
-            type='password'
-            {...register('password')}
+            type='text'
+            {...register('lessons')}
           />
-          {errors.password && (
+          {errors.lessons && (
             <span className={styles.errormessage}>
-              {errors.password.message}
-            </span>
-          )}
-
-          <label className={styles.label}> Confirm Password: </label>
-          <input
-            className={styles.input}
-            type='password'
-            {...register('confirmPassword')}
-          />
-          {errors.confirmPassword && (
-            <span className={styles.errormessage}>
-              {errors.confirmPassword.message}
+              {errors.lessons.message}
             </span>
           )}
 
