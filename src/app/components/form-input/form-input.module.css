@@ -37,7 +37,7 @@
 .errormessage {
   font-size: 12px;
   padding: 3px;
-  color: red;
+  color: white;
 }
 
 .checkbox {
@@ -51,4 +51,13 @@
   flex-wrap: wrap;
   gap: 14px;
   margin: 14px 0;
+}
+
+.submit {
+  background: #0091ea;
+  color: white;
+  border-radius: 1em;
+  padding: 0.5em 0.75em;
+  border: none;
+  font-family: 'Poppins', sans-serif;
 }
