@@ -3,12 +3,11 @@ import styles from './form-input.module.css';
 import { z, ZodType } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { spawn } from 'child_process';
 import { useState } from 'react';
 
 type FormData = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
+  zipCode: number;
   email: string;
   age: number;
   password: string;
@@ -19,8 +18,12 @@ const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const schema: ZodType<FormData> = z
     .object({
-      firstName: z.string().min(2).max(20),
-      lastName: z.string().min(2).max(20),
+      fullName: z.string().min(2).max(20),
+      zipCode: z.coerce
+        .number() // Force it to be a number
+        .int() // Make sure it's an integer
+        .gte(10000) // Greater than or equal to the smallest 5 digit int
+        .lte(99999),
       email: z.string().email(),
       age: z.number().min(18).max(70),
       password: z.string().min(5).max(20),
@@ -50,27 +53,27 @@ const FormInput = () => {
         <h2>Form successfully submitted!</h2>
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
-          <label className={styles.label}> First Name: </label>
+          <label className={styles.label}> First Name/Last Name </label>
           <input
             className={styles.input}
             type='text'
-            {...register('firstName')}
+            {...register('fullName')}
           />
-          {errors.firstName && (
+          {errors.fullName && (
             <span className={styles.errormessage}>
-              {errors.firstName.message}
+              {errors.fullName.message}
             </span>
           )}
 
-          <label className={styles.label}> Last Name: </label>
+          <label className={styles.label}> Zip Code </label>
           <input
             className={styles.input}
-            type='text'
-            {...register('lastName')}
+            type='number'
+            {...register('zipCode', { valueAsNumber: true })}
           />
-          {errors.lastName && (
+          {errors.zipCode && (
             <span className={styles.errormessage}>
-              {errors.lastName.message}
+              {errors.zipCode.message}
             </span>
           )}
 
