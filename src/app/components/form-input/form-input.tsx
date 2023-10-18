@@ -27,8 +27,8 @@ const FormInput = () => {
       .lte(99999),
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
-    lessons: z.string(),
-    leadSource: z.string(),
+    lessons: z.string().min(3),
+    leadSource: z.string().min(3),
     availability: z.string(),
     message: z.string(),
   });
@@ -52,7 +52,7 @@ const FormInput = () => {
         <h2>Form successfully submitted!</h2>
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
-          <label className={styles.label}> First/Last Name </label>
+          <label className={styles.label}> First/Last Name* </label>
           <input
             className={styles.input}
             type='text'
@@ -64,7 +64,7 @@ const FormInput = () => {
             </span>
           )}
 
-          <label className={styles.label}> Zip Code </label>
+          <label className={styles.label}> Zip Code* </label>
           <input
             className={styles.input}
             type='number'
@@ -76,13 +76,13 @@ const FormInput = () => {
             </span>
           )}
 
-          <label className={styles.label}> Email </label>
+          <label className={styles.label}> Email* </label>
           <input className={styles.input} type='email' {...register('email')} />
           {errors.email && (
             <span className={styles.errormessage}>{errors.email.message}</span>
           )}
 
-          <label className={styles.label}> Phone </label>
+          <label className={styles.label}> Phone* </label>
           <input
             className={styles.input}
             type='number'
@@ -94,7 +94,7 @@ const FormInput = () => {
 
           <label className={styles.label}>
             {' '}
-            Which musical instruments would you like to learn?{' '}
+            Which musical instruments would you like to learn?*{' '}
           </label>
           <input
             className={styles.input}
@@ -107,7 +107,7 @@ const FormInput = () => {
             </span>
           )}
 
-          <label className={styles.label}> How did you hear about us? </label>
+          <label className={styles.label}> How did you hear about us?* </label>
           <input
             className={styles.input}
             type='text'

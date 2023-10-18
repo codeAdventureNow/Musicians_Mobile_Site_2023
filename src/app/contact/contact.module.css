@@ -136,6 +136,11 @@
   padding: 0;
 }
 
+.required {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 800px) {
   .pillar_column {
     width: 50%;

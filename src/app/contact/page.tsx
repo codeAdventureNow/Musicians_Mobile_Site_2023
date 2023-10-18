@@ -45,6 +45,7 @@ export default function Contact() {
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
+              <p className={styles.required}>(*Required)</p>
               <ContactForm />
             </div>
             <div className={styles.pillar_column}>
