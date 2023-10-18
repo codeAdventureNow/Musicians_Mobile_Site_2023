@@ -9,7 +9,7 @@ type FormData = {
   fullName: string;
   zipCode: number;
   email: string;
-  age: number;
+  phone: number;
   password: string;
   confirmPassword: string;
 };
@@ -25,7 +25,7 @@ const FormInput = () => {
         .gte(10000) // Greater than or equal to the smallest 5 digit int
         .lte(99999),
       email: z.string().email(),
-      age: z.number().min(18).max(70),
+      phone: z.coerce.number().int().gte(1000000),
       password: z.string().min(5).max(20),
       confirmPassword: z.string().min(5).max(20),
     })
@@ -77,20 +77,20 @@ const FormInput = () => {
             </span>
           )}
 
-          <label className={styles.label}> Email: </label>
+          <label className={styles.label}> Email </label>
           <input className={styles.input} type='email' {...register('email')} />
           {errors.email && (
             <span className={styles.errormessage}>{errors.email.message}</span>
           )}
 
-          <label className={styles.label}> Age: </label>
+          <label className={styles.label}> Phone </label>
           <input
             className={styles.input}
             type='number'
-            {...register('age', { valueAsNumber: true })}
+            {...register('phone', { valueAsNumber: true })}
           />
-          {errors.age && (
-            <span className={styles.errormessage}>{errors.age.message}</span>
+          {errors.phone && (
+            <span className={styles.errormessage}>{errors.phone.message}</span>
           )}
 
           <label className={styles.label}> Password: </label>
