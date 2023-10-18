@@ -10,12 +10,16 @@ type FormData = {
   zipCode: number;
   email: string;
   phone: number;
-  lessons: string;
+
   leadSource: string;
   availability: string;
   message: string;
   guitar: boolean;
   piano: boolean;
+  voice: boolean;
+  drums: boolean;
+  violin: boolean;
+  other: boolean;
 };
 
 const FormInput = () => {
@@ -29,12 +33,15 @@ const FormInput = () => {
       .lte(99999),
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
-    lessons: z.string().min(3),
     leadSource: z.string().min(3),
     availability: z.string(),
     message: z.string(),
     guitar: z.boolean(),
     piano: z.boolean(),
+    voice: z.boolean(),
+    drums: z.boolean(),
+    violin: z.boolean(),
+    other: z.boolean(),
   });
 
   const {
@@ -100,17 +107,61 @@ const FormInput = () => {
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
-          <input
-            className={styles.input}
-            type='text'
-            {...register('lessons')}
-            placeholder='Guitar, Piano'
-          />
-          {errors.lessons && (
-            <span className={styles.errormessage}>
-              {errors.lessons.message}
-            </span>
-          )}
+          <div className={styles.flex}>
+            <div className={styles.checkbox}>
+              <label className={styles.label}> Piano </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('piano')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Guitar </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('guitar')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Voice </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('voice')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Drums </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('drums')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Violin </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('violin')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Other </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('other')}
+              />
+            </div>
+          </div>
 
           <label className={styles.label}> How did you hear about us?* </label>
           <input
@@ -153,30 +204,6 @@ const FormInput = () => {
             </span>
           )}
           {/* Experimental section */}
-
-          <label className={styles.label}>
-            {' '}
-            Which musical instruments would you like to learn?*{' '}
-          </label>
-          <div className={styles.flex}>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Guitar </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('guitar')}
-              />
-            </div>
-            <div className={styles.checkbox}>
-              <label className={styles.label}> Piano </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('piano')}
-              />
-            </div>
-          </div>
 
           <input className={styles.submit} type='submit' />
         </form>

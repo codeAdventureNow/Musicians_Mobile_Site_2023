@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  padding: 1rem;
+  background: #ff5a5f;
+
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .input,
@@ -23,7 +30,8 @@
 
 .label {
   font-size: 12px;
-  color: grey;
+
+  color: #404040;
 }
 
 .errormessage {
@@ -39,13 +47,8 @@
 
 .flex {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 14px 0;
 }
-
-/* .input:invalid[focused='true'] {
-  border: 1px solid red;
-}
-
-.input:invalid[focused='true'] ~ span {
-  display: block;
-} */
