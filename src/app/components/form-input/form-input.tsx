@@ -100,6 +100,7 @@ const FormInput = () => {
             className={styles.input}
             type='text'
             {...register('lessons')}
+            placeholder='Guitar, Piano'
           />
           {errors.lessons && (
             <span className={styles.errormessage}>
@@ -112,6 +113,7 @@ const FormInput = () => {
             className={styles.input}
             type='text'
             {...register('leadSource')}
+            placeholder='Referral-name, google search, yelp, facebook'
           />
           {errors.leadSource && (
             <span className={styles.errormessage}>
@@ -127,6 +129,7 @@ const FormInput = () => {
             className={styles.input}
             type='text'
             {...register('availability')}
+            placeholder='Mon 3-6pm, Sat 8-10am'
           />
           {errors.availability && (
             <span className={styles.errormessage}>
@@ -134,8 +137,12 @@ const FormInput = () => {
             </span>
           )}
 
-          <label className={styles.label}> Your message </label>
-          <textarea className={styles.input} {...register('message')} />
+          <label className={styles.label}> Additional info </label>
+          <textarea
+            className={styles.textarea}
+            {...register('message')}
+            placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
+          />
           {errors.message && (
             <span className={styles.errormessage}>
               {errors.message.message}
