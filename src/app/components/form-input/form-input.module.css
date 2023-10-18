@@ -32,6 +32,16 @@
   color: red;
 }
 
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
 /* .input:invalid[focused='true'] {
   border: 1px solid red;
 }

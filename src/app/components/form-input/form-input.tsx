@@ -14,6 +14,8 @@ type FormData = {
   leadSource: string;
   availability: string;
   message: string;
+  guitar: boolean;
+  piano: boolean;
 };
 
 const FormInput = () => {
@@ -31,6 +33,8 @@ const FormInput = () => {
     leadSource: z.string().min(3),
     availability: z.string(),
     message: z.string(),
+    guitar: z.boolean(),
+    piano: z.boolean(),
   });
 
   const {
@@ -148,6 +152,31 @@ const FormInput = () => {
               {errors.message.message}
             </span>
           )}
+          {/* Experimental section */}
+
+          <label className={styles.label}>
+            {' '}
+            Which musical instruments would you like to learn?*{' '}
+          </label>
+          <div className={styles.flex}>
+            <div className={styles.checkbox}>
+              {' '}
+              <label className={styles.label}> Guitar </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('guitar')}
+              />
+            </div>
+            <div className={styles.checkbox}>
+              <label className={styles.label}> Piano </label>
+              <input
+                className={styles.input}
+                type='checkbox'
+                {...register('piano')}
+              />
+            </div>
+          </div>
 
           <input className={styles.submit} type='submit' />
         </form>
