@@ -11,6 +11,9 @@ type FormData = {
   email: string;
   phone: number;
   lessons: string;
+  leadSource: string;
+  availability: string;
+  message: string;
 };
 
 const FormInput = () => {
@@ -25,6 +28,9 @@ const FormInput = () => {
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
     lessons: z.string(),
+    leadSource: z.string(),
+    availability: z.string(),
+    message: z.string(),
   });
 
   const {
@@ -98,6 +104,41 @@ const FormInput = () => {
           {errors.lessons && (
             <span className={styles.errormessage}>
               {errors.lessons.message}
+            </span>
+          )}
+
+          <label className={styles.label}> How did you hear about us? </label>
+          <input
+            className={styles.input}
+            type='text'
+            {...register('leadSource')}
+          />
+          {errors.leadSource && (
+            <span className={styles.errormessage}>
+              {errors.leadSource.message}
+            </span>
+          )}
+
+          <label className={styles.label}>
+            {' '}
+            What is your availability for music lessons?{' '}
+          </label>
+          <input
+            className={styles.input}
+            type='text'
+            {...register('availability')}
+          />
+          {errors.availability && (
+            <span className={styles.errormessage}>
+              {errors.availability.message}
+            </span>
+          )}
+
+          <label className={styles.label}> Your message </label>
+          <textarea className={styles.input} {...register('message')} />
+          {errors.message && (
+            <span className={styles.errormessage}>
+              {errors.message.message}
             </span>
           )}
 
