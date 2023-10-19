@@ -10,15 +10,9 @@ type FormData = {
   zipCode: number;
   email: string;
   phone: number;
-
   availability: string;
+  instrument: Array<String>;
   message: string;
-  guitar: boolean;
-  piano: boolean;
-  voice: boolean;
-  drums: boolean;
-  violin: boolean;
-  other: boolean;
   leadSource: string;
 };
 
@@ -27,31 +21,38 @@ const FormInput = () => {
   const schema: ZodType<FormData> = z.object({
     fullName: z.string().min(2, 'Name must be at least 2 letters.'),
     zipCode: z.coerce
-      .number() // Force it to be a number
-      .int() // Make sure it's an integer
-      .gte(10000, 'Too few digits, please enter a 5 digit zip code.') // Greater than or equal to the smallest 5 digit int
+      .number()
+      .int()
+      .gte(10000, 'Too few digits, please enter a 5 digit zip code.')
       .lte(99999, 'Too many digits, please enter a 5 digit zip code.'),
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
+    instrument: z
+      .string()
+      .array()
+      .nonempty({ message: 'Please select an instrument' }),
 
     availability: z.string(),
     message: z.string(),
-    guitar: z.boolean(),
-    piano: z.boolean(),
-    voice: z.boolean(),
-    drums: z.boolean(),
-    violin: z.boolean(),
-    other: z.boolean(),
-    leadSource: z.string().min(2, 'Please select how discovred us.'),
+
+    leadSource: z.string().min(2, 'Please select how discovered us.'),
   });
 
   const {
     register,
+    watch,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
+    defaultValues: {
+      instrument: [],
+    },
     resolver: zodResolver(schema),
   });
+
+  const watchInstruments = watch('instrument');
+  const watchAll = watch();
+  console.log({ watchInstruments, watchAll });
 
   const submitData = (data: FormData) => {
     console.log('it worked', data);
@@ -65,16 +66,16 @@ const FormInput = () => {
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
           <label className={styles.label}> First/Last Name* </label>
-          <input
-            className={styles.input}
-            type='text'
-            {...register('fullName')}
-          />
           {errors.fullName && (
             <span className={styles.errormessage}>
               {errors.fullName.message}
             </span>
           )}
+          <input
+            className={styles.input}
+            type='text'
+            {...register('fullName')}
+          />
 
           <label className={styles.label}> Zip Code* </label>
           <input
@@ -108,13 +109,20 @@ const FormInput = () => {
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
+          {errors.instrument && (
+            <span className={styles.errormessage}>
+              {errors.instrument.message}
+            </span>
+          )}
           <div className={styles.flex}>
             <div className={styles.checkbox}>
               <label className={styles.label}> Piano </label>
+
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('piano')}
+                {...register('instrument')}
+                value='piano'
               />
             </div>
             <div className={styles.checkbox}>
@@ -123,7 +131,8 @@ const FormInput = () => {
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('guitar')}
+                {...register('instrument')}
+                value='guitar'
               />
             </div>
             <div className={styles.checkbox}>
@@ -132,7 +141,8 @@ const FormInput = () => {
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('voice')}
+                {...register('instrument')}
+                value='voice'
               />
             </div>
             <div className={styles.checkbox}>
@@ -141,7 +151,8 @@ const FormInput = () => {
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('drums')}
+                {...register('instrument')}
+                value='drums'
               />
             </div>
             <div className={styles.checkbox}>
@@ -150,7 +161,8 @@ const FormInput = () => {
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('violin')}
+                {...register('instrument')}
+                value='violin'
               />
             </div>
             <div className={styles.checkbox}>
@@ -159,7 +171,8 @@ const FormInput = () => {
               <input
                 className={styles.input}
                 type='checkbox'
-                {...register('other')}
+                {...register('instrument')}
+                value='other'
               />
             </div>
           </div>
