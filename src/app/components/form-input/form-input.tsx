@@ -11,7 +11,6 @@ type FormData = {
   email: string;
   phone: number;
 
-  leadSource: string;
   availability: string;
   message: string;
   guitar: boolean;
@@ -20,6 +19,7 @@ type FormData = {
   drums: boolean;
   violin: boolean;
   other: boolean;
+  leadSource: string;
 };
 
 const FormInput = () => {
@@ -33,7 +33,7 @@ const FormInput = () => {
       .lte(99999),
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
-    leadSource: z.string().min(3),
+
     availability: z.string(),
     message: z.string(),
     guitar: z.boolean(),
@@ -42,6 +42,7 @@ const FormInput = () => {
     drums: z.boolean(),
     violin: z.boolean(),
     other: z.boolean(),
+    leadSource: z.string().min(2),
   });
 
   const {
@@ -162,19 +163,36 @@ const FormInput = () => {
               />
             </div>
           </div>
-
           <label className={styles.label}> How did you hear about us?* </label>
-          <input
-            className={styles.input}
-            type='text'
-            {...register('leadSource')}
-            placeholder='Referral-name, google search, yelp, facebook'
-          />
-          {errors.leadSource && (
-            <span className={styles.errormessage}>
-              {errors.leadSource.message}
-            </span>
-          )}
+          <select className={styles.leadSource} {...register('leadSource')}>
+            <option className={styles.leadSourceOption} value=''>
+              Please choose an option
+            </option>
+            <option className={styles.leadSourceOption} value='referral'>
+              Referral
+            </option>
+            <option className={styles.leadSourceOption} value='yelp'>
+              Yelp!
+            </option>
+            <option className={styles.leadSourceOption} value='google search'>
+              Google Search
+            </option>
+            <option
+              className={styles.leadSourceOption}
+              value='google sponsored ad'
+            >
+              Google Sponsored Ad
+            </option>
+            <option className={styles.leadSourceOption} value='facebook'>
+              Facebook
+            </option>
+            <option className={styles.leadSourceOption} value='instagram'>
+              Instagram
+            </option>
+            <option className={styles.leadSourceOption} value='other'>
+              Other
+            </option>
+          </select>
 
           <label className={styles.label}>
             {' '}
@@ -203,7 +221,6 @@ const FormInput = () => {
               {errors.message.message}
             </span>
           )}
-          {/* Experimental section */}
 
           <input className={styles.submit} type='submit' />
         </form>

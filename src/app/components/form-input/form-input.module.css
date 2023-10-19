@@ -53,9 +53,21 @@
   margin: 14px 0;
 }
 
+.leadSource {
+  margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffacd;
+  padding-right: 2rem;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  padding: 12px 12px;
+}
+
 .submit {
   background: #0091ea;
-  color: white;
+  /* background: #595bd4; */
+  background: #fffacd;
+
+  color: black;
   /* background: #f9f1f1;
   color: #0091ea; */
   border-radius: 1em;
