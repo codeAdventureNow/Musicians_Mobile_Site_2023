@@ -56,6 +56,8 @@
 .submit {
   background: #0091ea;
   color: white;
+  /* background: #f9f1f1;
+  color: #0091ea; */
   border-radius: 1em;
   padding: 0.5em 0.75em;
   border: none;
