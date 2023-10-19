@@ -25,12 +25,12 @@ type FormData = {
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const schema: ZodType<FormData> = z.object({
-    fullName: z.string().min(2).max(20),
+    fullName: z.string().min(2, 'Name must be at least 2 letters.'),
     zipCode: z.coerce
       .number() // Force it to be a number
       .int() // Make sure it's an integer
-      .gte(10000) // Greater than or equal to the smallest 5 digit int
-      .lte(99999),
+      .gte(10000, 'Too few digits, please enter a 5 digit zip code.') // Greater than or equal to the smallest 5 digit int
+      .lte(99999, 'Too many digits, please enter a 5 digit zip code.'),
     email: z.string().email(),
     phone: z.coerce.number().int().gte(1000000),
 
@@ -42,7 +42,7 @@ const FormInput = () => {
     drums: z.boolean(),
     violin: z.boolean(),
     other: z.boolean(),
-    leadSource: z.string().min(2),
+    leadSource: z.string().min(2, 'Please select how discovred us.'),
   });
 
   const {
@@ -164,6 +164,11 @@ const FormInput = () => {
             </div>
           </div>
           <label className={styles.label}> How did you hear about us?* </label>
+          {errors.leadSource && (
+            <span className={styles.errormessage}>
+              {errors.leadSource.message}
+            </span>
+          )}
           <select className={styles.leadSource} {...register('leadSource')}>
             <option className={styles.leadSourceOption} value=''>
               Please choose an option
