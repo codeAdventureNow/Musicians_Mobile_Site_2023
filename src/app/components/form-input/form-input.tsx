@@ -26,7 +26,10 @@ const FormInput = () => {
       .gte(10000, 'Too few digits, please enter a 5 digit zip code.')
       .lte(99999, 'Too many digits, please enter a 5 digit zip code.'),
     email: z.string().email(),
-    phone: z.coerce.number().int().gte(1000000),
+    phone: z.coerce
+      .number()
+      .int()
+      .gte(1000000000, 'Your phone number should be at least ten digits.'),
     instrument: z
       .string()
       .array()
@@ -34,13 +37,11 @@ const FormInput = () => {
 
     availability: z.string(),
     message: z.string(),
-
     leadSource: z.string().min(2, 'Please select how discovered us.'),
   });
 
   const {
     register,
-    watch,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
@@ -49,10 +50,6 @@ const FormInput = () => {
     },
     resolver: zodResolver(schema),
   });
-
-  const watchInstruments = watch('instrument');
-  const watchAll = watch();
-  console.log({ watchInstruments, watchAll });
 
   const submitData = (data: FormData) => {
     console.log('it worked', data);
@@ -78,32 +75,32 @@ const FormInput = () => {
           />
 
           <label className={styles.label}> Zip Code* </label>
-          <input
-            className={styles.input}
-            type='number'
-            {...register('zipCode', { valueAsNumber: true })}
-          />
           {errors.zipCode && (
             <span className={styles.errormessage}>
               {errors.zipCode.message}
             </span>
           )}
+          <input
+            className={styles.input}
+            type='number'
+            {...register('zipCode', { valueAsNumber: true })}
+          />
 
           <label className={styles.label}> Email* </label>
-          <input className={styles.input} type='email' {...register('email')} />
           {errors.email && (
             <span className={styles.errormessage}>{errors.email.message}</span>
           )}
+          <input className={styles.input} type='email' {...register('email')} />
 
           <label className={styles.label}> Phone* </label>
+          {errors.phone && (
+            <span className={styles.errormessage}>{errors.phone.message}</span>
+          )}
           <input
             className={styles.input}
             type='number'
             {...register('phone', { valueAsNumber: true })}
           />
-          {errors.phone && (
-            <span className={styles.errormessage}>{errors.phone.message}</span>
-          )}
 
           <label className={styles.label}>
             {' '}
@@ -216,29 +213,29 @@ const FormInput = () => {
             {' '}
             What is your availability for music lessons?{' '}
           </label>
+          {errors.availability && (
+            <span className={styles.errormessage}>
+              {errors.availability.message}
+            </span>
+          )}
           <input
             className={styles.input}
             type='text'
             {...register('availability')}
             placeholder='Mon 3-6pm, Sat 8-10am'
           />
-          {errors.availability && (
-            <span className={styles.errormessage}>
-              {errors.availability.message}
-            </span>
-          )}
 
           <label className={styles.label}> Additional info </label>
-          <textarea
-            className={styles.textarea}
-            {...register('message')}
-            placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
-          />
           {errors.message && (
             <span className={styles.errormessage}>
               {errors.message.message}
             </span>
           )}
+          <textarea
+            className={styles.textarea}
+            {...register('message')}
+            placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
+          />
 
           <input className={styles.submit} type='submit' />
         </form>
