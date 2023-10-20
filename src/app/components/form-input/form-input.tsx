@@ -27,7 +27,9 @@ const FormInput = () => {
       .lte(99999, 'Too many digits, please enter a 5 digit zip code.'),
     email: z.string().email(),
     phone: z.coerce
-      .number()
+      .number({
+        invalid_type_error: 'Please enter a ten digit phone number',
+      })
       .int()
       .gte(1000000000, 'Your phone number should be at least ten digits.'),
     instrument: z
