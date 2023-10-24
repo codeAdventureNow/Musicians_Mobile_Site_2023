@@ -4,10 +4,8 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-
   padding: 1rem;
   background: #ff888d;
-
   border-radius: 14px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -30,7 +28,6 @@
 
 .label {
   font-size: 12px;
-
   color: #404040;
 }
 
@@ -58,18 +55,14 @@
   font-family: 'Poppins', sans-serif;
   background: #fffacd;
   padding-right: 2rem;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+
   padding: 12px 12px;
 }
 
 .submit {
   background: #0091ea;
-  /* background: #595bd4; */
   background: #fffacd;
-
   color: black;
-  /* background: #f9f1f1;
-  color: #0091ea; */
   border-radius: 1em;
   padding: 0.5em 0.75em;
   border: none;
