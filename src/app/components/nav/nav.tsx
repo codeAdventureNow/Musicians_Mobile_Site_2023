@@ -18,6 +18,11 @@ export default function Nav() {
     setIsActive(!isActive);
   };
 
+  const closeBurgerMenu = () => {
+    setIsOpen((prevOpen) => !prevOpen);
+    setIsActive(!isActive);
+  };
+
   const navLinks = [
     {
       name: 'Home',
@@ -64,6 +69,7 @@ export default function Nav() {
 
           return (
             <Link
+              onClick={closeBurgerMenu}
               className={
                 isActiveLink ? `${styles.link_active}` : `${styles.link}`
               }
