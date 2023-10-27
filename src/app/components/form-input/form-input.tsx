@@ -5,6 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase-config/firebase-config';
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -20,8 +22,11 @@ const FormInput = () => {
     resolver: zodResolver(schema),
   });
 
-  const submitData = (data: FormData) => {
+  const submitData = async (data: FormData) => {
     console.log('it worked', data);
+    await addDoc(collection(db, 'prospects'), {
+      data,
+    });
     setFormSubmitted(true);
   };
 
