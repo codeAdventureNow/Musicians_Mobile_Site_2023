@@ -3,8 +3,15 @@ import styles from './contact.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import navstyles from '../components/nav/nav.module.css';
-import { useState } from 'react';
-import ContactForm from '../components/form-input/form-input';
+import dynamic from 'next/dynamic';
+
+const DynamicContactForm = dynamic(
+  () => import('../components/form-input/form-input'),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 export default function Contact() {
   return (
@@ -46,7 +53,7 @@ export default function Contact() {
               <h2 className={styles.pillar_heading}>Option 3 </h2>
               <p>Fill out our contact form</p>
               <p className={styles.required}>(*Required)</p>
-              <ContactForm />
+              <DynamicContactForm />
             </div>
             <div className={styles.pillar_column}>
               <div className={styles.logo}>

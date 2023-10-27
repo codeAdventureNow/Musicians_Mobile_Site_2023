@@ -7,10 +7,10 @@ import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
+import { useEffect } from 'react';
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-
   const {
     register,
     handleSubmit,
