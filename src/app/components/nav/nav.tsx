@@ -8,7 +8,9 @@ import { usePathname } from 'next/navigation';
 import ScheduleButton from '../schedule-button/schedule-button';
 
 export default function Nav() {
+  //isActive will have burger menu off the screen
   const [isActive, setIsActive] = useState(true);
+  //sets burger icon to be open, better name might might be burgerIconToggle
   const [isOpen, setIsOpen] = useState(false);
 
   const pathname = usePathname();
@@ -19,8 +21,12 @@ export default function Nav() {
   };
 
   const closeBurgerMenu = () => {
-    setIsOpen((prevOpen) => !prevOpen);
-    setIsActive(!isActive);
+    if (isActive) {
+      setIsOpen((prevOpen) => prevOpen);
+    } else {
+      setIsOpen((prevOpen) => !prevOpen);
+      setIsActive(!isActive);
+    }
   };
 
   const navLinks = [
