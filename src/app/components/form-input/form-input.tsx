@@ -17,7 +17,7 @@ import {
 import { db } from '../firebase-config/firebase-config';
 import { useEffect, useState } from 'react';
 
-interface Item {
+interface Client {
   id: string;
   data: {
     availability?: string;
@@ -32,8 +32,7 @@ interface Item {
 }
 
 const FormInput = () => {
-  //items is clients
-  const [items, setItems] = useState<Item[]>([]);
+  const [clients, setClients] = useState<Client[]>([]);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
@@ -46,9 +45,7 @@ const FormInput = () => {
     resolver: zodResolver(schema),
   });
 
-  // console.log(items[0]data.availability);
   const submitData = async (data: FormData) => {
-    console.log('it worked', data);
     await addDoc(collection(db, 'prospects'), {
       data,
     });
@@ -63,7 +60,7 @@ const FormInput = () => {
       QuerySnapshot.forEach((doc) => {
         itemsArr.push({ ...doc.data(), id: doc.id });
       });
-      setItems(itemsArr);
+      setClients(itemsArr);
     });
   }, []);
 
@@ -257,7 +254,7 @@ const FormInput = () => {
       )}
 
       <ul>
-        {items.map((item, id) => (
+        {clients.map((item, id) => (
           <li key={id}>
             <div className={styles.customerCard}>
               <span
