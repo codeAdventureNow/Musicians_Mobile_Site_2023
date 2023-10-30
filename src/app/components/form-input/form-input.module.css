@@ -70,5 +70,8 @@
 }
 
 .customerCard {
-  color: red;
+  color: slate;
+  background: #ffa4a9;
+  margin: 20px 0;
+  border-radius: 10px;
 }

@@ -44,7 +44,7 @@ const FormInput = () => {
     resolver: zodResolver(schema),
   });
 
-  console.log(items[0].data);
+  // console.log(items[0]data.availability);
   const submitData = async (data: FormData) => {
     console.log('it worked', data);
     await addDoc(collection(db, 'prospects'), {
@@ -252,8 +252,17 @@ const FormInput = () => {
 
       <ul>
         {items.map((item, id) => (
-          <li key={id} className={styles.customerCard}>
-            <span>{item.data.fullName}</span>
+          <li key={id}>
+            <div className={styles.customerCard}>
+              <p>Name: {item.data.fullName}</p>
+              <p>Zip Code: {item.data.zipCode}</p>
+              <p>Email: {item.data.email}</p>
+              <p>Phone: {item.data.phone}</p>
+              <p>Instruments: {item.data.instrument}</p>
+              <p>LeadSource: {item.data.leadSource}</p>
+              <p>Availability: {item.data.availability}</p>
+              <p>Message: {item.data.message}</p>
+            </div>
           </li>
         ))}
       </ul>
