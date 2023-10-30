@@ -8,23 +8,20 @@ import { usePathname } from 'next/navigation';
 import ScheduleButton from '../schedule-button/schedule-button';
 
 export default function Nav() {
-  //isActive will have burger menu off the screen
+  //isActive will have burger menu off the screen, desktopMenuActive
   const [isActive, setIsActive] = useState(true);
-  //sets burger icon to be open, better name might might be burgerIconToggle
-  const [isOpen, setIsOpen] = useState(false);
+  const [burgerIconOpen, setBurgerIconOpen] = useState(false);
 
   const pathname = usePathname();
 
   const toggleBurgerMenu = () => {
-    setIsOpen((prevOpen) => !prevOpen);
+    setBurgerIconOpen((prevOpen) => !prevOpen);
     setIsActive(!isActive);
   };
 
   const closeBurgerMenu = () => {
-    if (isActive) {
-      setIsOpen((prevOpen) => prevOpen);
-    } else {
-      setIsOpen((prevOpen) => !prevOpen);
+    if (!isActive) {
+      setBurgerIconOpen((prevOpen) => !prevOpen);
       setIsActive(!isActive);
     }
   };
@@ -108,7 +105,7 @@ export default function Nav() {
         </div>
         <div
           onClick={toggleBurgerMenu}
-          className={`nav-icon1 ${isOpen ? `${styles.open}` : ''}`}
+          className={`nav-icon1 ${burgerIconOpen ? `${styles.open}` : ''}`}
           id={styles.nav_icon1}
         >
           <span></span>
