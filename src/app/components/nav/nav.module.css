@@ -29,7 +29,7 @@
   margin-right: 25px;
 }
 
-.navbar.open {
+.navbar.openMobileMenu {
   right: 0.1%;
 }
 
@@ -135,7 +135,7 @@
   top: 17px;
 }
 
-#nav_icon1.open span:nth-child(1) {
+#nav_icon1.openMobileMenu span:nth-child(1) {
   top: 9px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -143,12 +143,12 @@
   transform: rotate(135deg);
 }
 
-#nav_icon1.open span:nth-child(2) {
+#nav_icon1.openMobileMenu span:nth-child(2) {
   opacity: 0;
   left: -60px;
 }
 
-#nav_icon1.open span:nth-child(3) {
+#nav_icon1.openMobileMenu span:nth-child(3) {
   top: 9px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);

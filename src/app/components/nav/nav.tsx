@@ -8,21 +8,20 @@ import { usePathname } from 'next/navigation';
 import ScheduleButton from '../schedule-button/schedule-button';
 
 export default function Nav() {
-  //isActive will have burger menu off the screen, desktopMenuActive
-  const [isActive, setIsActive] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [burgerIconOpen, setBurgerIconOpen] = useState(false);
 
   const pathname = usePathname();
 
   const toggleBurgerMenu = () => {
-    setBurgerIconOpen((prevOpen) => !prevOpen);
-    setIsActive(!isActive);
+    setBurgerIconOpen(!burgerIconOpen);
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   const closeBurgerMenu = () => {
-    if (!isActive) {
-      setBurgerIconOpen((prevOpen) => !prevOpen);
-      setIsActive(!isActive);
+    if (mobileMenuOpen) {
+      setBurgerIconOpen(!burgerIconOpen);
+      setMobileMenuOpen(!mobileMenuOpen);
     }
   };
 
@@ -64,17 +63,19 @@ export default function Nav() {
       </div>
       <ul
         className={
-          isActive ? `${styles.navbar}` : `${styles.navbar} ${styles.open}`
+          mobileMenuOpen
+            ? `${styles.navbar} ${styles.openMobileMenu}`
+            : `${styles.navbar}`
         }
       >
         {navLinks.map((link) => {
-          const isActiveLink = pathname === link.href;
+          const isActiveNavLink = pathname === link.href;
 
           return (
             <Link
               onClick={closeBurgerMenu}
               className={
-                isActiveLink ? `${styles.link_active}` : `${styles.link}`
+                isActiveNavLink ? `${styles.link_active}` : `${styles.link}`
               }
               href={link.href}
               key={link.name}
@@ -105,7 +106,9 @@ export default function Nav() {
         </div>
         <div
           onClick={toggleBurgerMenu}
-          className={`nav-icon1 ${burgerIconOpen ? `${styles.open}` : ''}`}
+          className={`nav-icon1 ${
+            burgerIconOpen ? `${styles.openMobileMenu}` : ''
+          }`}
           id={styles.nav_icon1}
         >
           <span></span>
