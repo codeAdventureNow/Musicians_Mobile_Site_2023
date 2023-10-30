@@ -68,3 +68,7 @@
   border: none;
   font-family: 'Poppins', sans-serif;
 }
+
+.customerCard {
+  color: red;
+}

@@ -2,14 +2,36 @@
 import styles from './form-input.module.css';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
-import { collection, addDoc } from 'firebase/firestore';
+import {
+  collection,
+  addDoc,
+  getDoc,
+  query,
+  QuerySnapshot,
+  onSnapshot,
+} from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+interface Item {
+  id: string;
+  data: {
+    availability?: string;
+    email: string;
+    fullName: string;
+    instrument: string[];
+    leadSource: string;
+    phone: number;
+    zipCode: number;
+    message?: number;
+  };
+}
 
 const FormInput = () => {
+  //items is clients
+  const [items, setItems] = useState<Item[]>([]);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
@@ -22,6 +44,7 @@ const FormInput = () => {
     resolver: zodResolver(schema),
   });
 
+  console.log(items[0].data);
   const submitData = async (data: FormData) => {
     console.log('it worked', data);
     await addDoc(collection(db, 'prospects'), {
@@ -29,6 +52,18 @@ const FormInput = () => {
     });
     setFormSubmitted(true);
   };
+
+  useEffect(() => {
+    const q = query(collection(db, 'prospects'));
+    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+      let itemsArr: any = [];
+
+      QuerySnapshot.forEach((doc) => {
+        itemsArr.push({ ...doc.data(), id: doc.id });
+      });
+      setItems(itemsArr);
+    });
+  }, []);
 
   return (
     <div>
@@ -214,6 +249,14 @@ const FormInput = () => {
           <input className={styles.submit} type='submit' />
         </form>
       )}
+
+      <ul>
+        {items.map((item, id) => (
+          <li key={id} className={styles.customerCard}>
+            <span>{item.data.fullName}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
