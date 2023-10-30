@@ -11,6 +11,8 @@ import {
   query,
   QuerySnapshot,
   onSnapshot,
+  deleteDoc,
+  doc,
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { useEffect, useState } from 'react';
@@ -64,6 +66,10 @@ const FormInput = () => {
       setItems(itemsArr);
     });
   }, []);
+
+  const deleteClient = async (id: string) => {
+    await deleteDoc(doc(db, 'prospects', id));
+  };
 
   return (
     <div>
@@ -254,6 +260,12 @@ const FormInput = () => {
         {items.map((item, id) => (
           <li key={id}>
             <div className={styles.customerCard}>
+              <span
+                onClick={() => deleteClient(item.id)}
+                className={styles.deleteButton}
+              >
+                X
+              </span>
               <p>Name: {item.data.fullName}</p>
               <p>Zip Code: {item.data.zipCode}</p>
               <p>Email: {item.data.email}</p>
