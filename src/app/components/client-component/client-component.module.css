@@ -1,16 +1,28 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .customerCard {
   color: slate;
   background: #ffa4a9;
-  margin: 20px 0;
+  margin: 20px 10px;
   border-radius: 10px;
-  max-width: 330px;
+  width: 310px;
   text-align: center;
+  padding: 20px;
+}
+
+.deleteButtonFlex {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .deleteButton {
   background: white;
-  margin-top: 7px;
   padding: 5px 5px;
+  border-radius: 3px;
 }
 
 .deleteButton:hover {

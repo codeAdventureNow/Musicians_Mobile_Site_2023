@@ -253,7 +253,7 @@ const FormInput = () => {
         </form>
       )}
 
-      <ul>
+      {/* <ul>
         {clients.map((item, id) => (
           <li key={id}>
             <div className={styles.customerCard}>
@@ -274,7 +274,7 @@ const FormInput = () => {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

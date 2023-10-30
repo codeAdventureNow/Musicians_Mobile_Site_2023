@@ -47,17 +47,19 @@ export default function ClientComponent() {
 
   return (
     <div>
-      <h2 className={styles.paragraph}>Welcome to the clients page</h2>
-      <ul>
+      <ul className={styles.flex}>
         {clients.map((item, id) => (
           <li key={id}>
             <div className={styles.customerCard}>
-              <span
-                onClick={() => deleteClient(item.id)}
-                className={styles.deleteButton}
-              >
-                X
-              </span>
+              <div className={styles.deleteButtonFlex}>
+                <span
+                  onClick={() => deleteClient(item.id)}
+                  className={styles.deleteButton}
+                >
+                  X
+                </span>
+              </div>
+
               <p>Name: {item.data.fullName}</p>
               <p>Zip Code: {item.data.zipCode}</p>
               <p>Email: {item.data.email}</p>
