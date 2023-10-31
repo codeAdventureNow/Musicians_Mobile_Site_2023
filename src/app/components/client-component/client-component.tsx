@@ -11,7 +11,7 @@ import {
   doc,
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { BiEditAlt } from 'react-icons/bi';
 
 interface Client {
@@ -29,6 +29,7 @@ interface Client {
 }
 
 export default function ClientComponent() {
+  const [isEditingName, setIsEditingName] = useState(false);
   const [clients, setClients] = useState<Client[]>([]);
   useEffect(() => {
     const q = query(collection(db, 'prospects'));
@@ -46,6 +47,8 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
+  console.log(isEditingName);
+
   return (
     <div>
       <ul className={styles.flex}>
@@ -61,10 +64,26 @@ export default function ClientComponent() {
                 </span>
               </div>
               <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Name: {item.data.fullName}
-                </p>
-                <BiEditAlt className={styles.pencil_icon} />
+                {isEditingName ? (
+                  <div>
+                    <p>Name: </p>
+                    <input type='text' />
+                    <BiEditAlt
+                      onClick={() => setIsEditingName(false)}
+                      className={styles.pencil_icon}
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <p className={styles.printedFields}>
+                      Name: {item.data.fullName}
+                    </p>
+                    <BiEditAlt
+                      onClick={() => setIsEditingName(true)}
+                      className={styles.pencil_icon}
+                    />
+                  </div>
+                )}
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
