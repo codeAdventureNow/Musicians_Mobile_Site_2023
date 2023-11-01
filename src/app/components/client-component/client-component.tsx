@@ -25,11 +25,11 @@ interface Client {
     phone: number;
     zipCode: number;
     message?: number;
+    isEditingTitle: boolean;
   };
 }
 
 export default function ClientComponent() {
-  const [isEditingName, setIsEditingName] = useState(false);
   const [clients, setClients] = useState<Client[]>([]);
   useEffect(() => {
     const q = query(collection(db, 'prospects'));
@@ -47,7 +47,9 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
-  console.log(isEditingName);
+  const updateClient = (id: string) => {
+    console.log(id);
+  };
 
   return (
     <div>
@@ -64,12 +66,12 @@ export default function ClientComponent() {
                 </span>
               </div>
               <div className={styles.field_edit}>
-                {isEditingName ? (
+                {item.data.isEditingTitle ? (
                   <div>
                     <p>Name: </p>
                     <input type='text' />
                     <BiEditAlt
-                      onClick={() => setIsEditingName(false)}
+                      onClick={() => updateClient(item.id)}
                       className={styles.pencil_icon}
                     />
                   </div>
@@ -79,7 +81,7 @@ export default function ClientComponent() {
                       Name: {item.data.fullName}
                     </p>
                     <BiEditAlt
-                      onClick={() => setIsEditingName(true)}
+                      onClick={() => updateClient(item.id)}
                       className={styles.pencil_icon}
                     />
                   </div>
