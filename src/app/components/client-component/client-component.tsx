@@ -29,7 +29,6 @@ interface Client {
 }
 
 export default function ClientComponent() {
-  const [isEditingName, setIsEditingName] = useState(false);
   const [clients, setClients] = useState<Client[]>([]);
   useEffect(() => {
     const q = query(collection(db, 'prospects'));
@@ -47,8 +46,6 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
-  console.log(isEditingName);
-
   return (
     <div>
       <ul className={styles.flex}>
@@ -63,28 +60,14 @@ export default function ClientComponent() {
                   Delete
                 </span>
               </div>
+
               <div className={styles.field_edit}>
-                {isEditingName ? (
-                  <div>
-                    <p>Name: </p>
-                    <input type='text' />
-                    <BiEditAlt
-                      onClick={() => setIsEditingName(false)}
-                      className={styles.pencil_icon}
-                    />
-                  </div>
-                ) : (
-                  <div>
-                    <p className={styles.printedFields}>
-                      Name: {item.data.fullName}
-                    </p>
-                    <BiEditAlt
-                      onClick={() => setIsEditingName(true)}
-                      className={styles.pencil_icon}
-                    />
-                  </div>
-                )}
+                <p className={styles.printedFields}>
+                  Name: {item.data.fullName}{' '}
+                </p>
+                <BiEditAlt className={styles.pencil_icon} />
               </div>
+
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   Zip Code: {item.data.zipCode}
