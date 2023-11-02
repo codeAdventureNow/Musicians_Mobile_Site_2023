@@ -13,6 +13,7 @@ import {
 import { db } from '../firebase-config/firebase-config';
 import { useEffect, useState, useRef } from 'react';
 import { BiEditAlt } from 'react-icons/bi';
+import { ClientCard } from './client-card';
 
 interface Client {
   id: string;
@@ -50,57 +51,58 @@ export default function ClientComponent() {
     <div>
       <ul className={styles.flex}>
         {clients.map((item, id) => (
-          <li key={id}>
-            <div className={styles.customerCard}>
-              <div className={styles.deleteButtonFlex}>
-                <span
-                  onClick={() => deleteClient(item.id)}
-                  className={styles.deleteButton}
-                >
-                  Delete
-                </span>
-              </div>
+          <ClientCard deleteClient={deleteClient} item={item} key={id} />
+          // <li key={id}>
+          //   <div className={styles.customerCard}>
+          //     <div className={styles.deleteButtonFlex}>
+          //       <span
+          //         onClick={() => deleteClient(item.id)}
+          //         className={styles.deleteButton}
+          //       >
+          //         Delete
+          //       </span>
+          //     </div>
 
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Name: {item.data.fullName}{' '}
-                </p>
-              </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         Name: {item.data.fullName}{' '}
+          //       </p>
+          //     </div>
 
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Zip Code: {item.data.zipCode}
-                </p>
-              </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         Zip Code: {item.data.zipCode}
+          //       </p>
+          //     </div>
 
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>Email: {item.data.email}</p>
-              </div>
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>Phone: {item.data.phone}</p>
-              </div>
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Instruments: {item.data.instrument}
-                </p>
-              </div>
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  LeadSource: {item.data.leadSource}
-                </p>
-              </div>
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Availability: {item.data.availability}
-                </p>
-              </div>
-              <div className={styles.field_edit}>
-                <p className={styles.printedFields}>
-                  Message: {item.data.message}
-                </p>
-              </div>
-            </div>
-          </li>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>Email: {item.data.email}</p>
+          //     </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>Phone: {item.data.phone}</p>
+          //     </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         Instruments: {item.data.instrument}
+          //       </p>
+          //     </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         LeadSource: {item.data.leadSource}
+          //       </p>
+          //     </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         Availability: {item.data.availability}
+          //       </p>
+          //     </div>
+          //     <div className={styles.field_edit}>
+          //       <p className={styles.printedFields}>
+          //         Message: {item.data.message}
+          //       </p>
+          //     </div>
+          //   </div>
+          // </li>
         ))}
       </ul>
     </div>
