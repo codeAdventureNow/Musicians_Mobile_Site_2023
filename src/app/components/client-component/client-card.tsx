@@ -1,4 +1,5 @@
 import styles from './client-card.module.css';
+import { useState } from 'react';
 
 interface Client {
   id: string;
@@ -15,6 +16,16 @@ interface Client {
 }
 
 export const ClientCard = ({ item, deleteClient }) => {
+  const [editCardData, setEditCardData] = useState(false);
+
+  const toggleEdit = (id: string) => {
+    console.log(
+      'toggle edit, lifting state up to parent component which is client component',
+      id,
+      editCardData
+    );
+    setEditCardData(!editCardData);
+  };
   return (
     <li>
       <div className={styles.customerCard}>
@@ -24,6 +35,14 @@ export const ClientCard = ({ item, deleteClient }) => {
             className={styles.deleteButton}
           >
             Delete
+          </span>
+        </div>
+        <div className={styles.deleteButtonFlex}>
+          <span
+            onClick={() => toggleEdit(item.id)}
+            className={styles.deleteButton}
+          >
+            Edit
           </span>
         </div>
 
