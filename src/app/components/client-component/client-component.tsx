@@ -65,47 +65,39 @@ export default function ClientComponent() {
                 <p className={styles.printedFields}>
                   Name: {item.data.fullName}{' '}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
 
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   Zip Code: {item.data.zipCode}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
 
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>Email: {item.data.email}</p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>Phone: {item.data.phone}</p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   Instruments: {item.data.instrument}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   LeadSource: {item.data.leadSource}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   Availability: {item.data.availability}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
               <div className={styles.field_edit}>
                 <p className={styles.printedFields}>
                   Message: {item.data.message}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
               </div>
             </div>
           </li>
