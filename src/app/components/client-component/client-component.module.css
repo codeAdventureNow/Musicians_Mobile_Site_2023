@@ -45,3 +45,16 @@
   margin-left: 12px;
   padding-top: 3px;
 }
+
+.input {
+  cursor: pointer;
+  width: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: white;
+}

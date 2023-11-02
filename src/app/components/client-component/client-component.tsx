@@ -46,6 +46,7 @@ export default function ClientComponent() {
     },
     resolver: zodResolver(schema),
   });
+
   useEffect(() => {
     const q = query(collection(db, 'prospects'));
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
@@ -96,9 +97,30 @@ export default function ClientComponent() {
 
   // console.log(clients);
 
+  // onSubmit={setValue(updateData)}
+
+  // const handleChange = (e: any) => {
+  //   e.preventDefault();
+  //   console.log(e.target.value);
+  // };
+
+  const updateClient = async (e: any, id: string) => {
+    console.log(id);
+    // e.preventDefault();
+    const docRef = doc(db, 'prospects', id);
+    await updateDoc(docRef, {
+      id: id,
+      data: {
+        fullName: e.target.value,
+      },
+    });
+  };
+
+  console.log(clients);
+
   return (
     <div>
-      <form onSubmit={setValue(updateData)} className={styles.update}>
+      <form className={styles.update}>
         <label htmlFor='id'>Document id:</label>
         <input type='text' name='id' />
 
@@ -122,7 +144,16 @@ export default function ClientComponent() {
                 <p className={styles.printedFields}>
                   Name: {item.data.fullName}{' '}
                 </p>
-                <BiEditAlt className={styles.pencil_icon} />
+                <input
+                  type='text'
+                  defaultValue={item.data.fullName}
+                  className={styles.input}
+                  {...register('fullName')}
+                />
+                <BiEditAlt
+                  onClick={(e: any) => updateClient(e, item.id)}
+                  className={styles.pencil_icon}
+                />
               </div>
 
               <div className={styles.field_edit}>
