@@ -15,7 +15,7 @@ interface Client {
   };
 }
 
-export const ClientCard = ({ item, deleteClient }) => {
+export const ClientCard = ({ item, deleteClient, onClick }) => {
   const [editCardData, setEditCardData] = useState(false);
 
   const toggleEdit = (id: string) => {
@@ -24,7 +24,7 @@ export const ClientCard = ({ item, deleteClient }) => {
       id,
       editCardData
     );
-    setEditCardData(!editCardData);
+    setEditCardData((prev) => !prev);
   };
   return (
     <li>
@@ -39,7 +39,7 @@ export const ClientCard = ({ item, deleteClient }) => {
         </div>
         <div className={styles.deleteButtonFlex}>
           <span
-            onClick={() => toggleEdit(item.id)}
+            onClick={() => onClick(item.id)}
             className={styles.deleteButton}
           >
             Edit

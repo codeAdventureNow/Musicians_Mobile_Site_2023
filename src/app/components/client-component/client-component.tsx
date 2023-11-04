@@ -26,6 +26,7 @@ interface Client {
     phone: number;
     zipCode: number;
     message?: number;
+    isEditing?: boolean;
   };
 }
 
@@ -47,11 +48,25 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
+  const toggleEdit = (id: string) => {
+    const newClients = [...clients];
+    const client = newClients.find((client) => client.id === id);
+    // client.isEditing = true;
+    // setClients(newClients);
+    // // console.log(id);
+    console.log(client.data);
+  };
+
   return (
     <div>
       <ul className={styles.flex}>
         {clients.map((item, id) => (
-          <ClientCard deleteClient={deleteClient} item={item} key={id} />
+          <ClientCard
+            deleteClient={deleteClient}
+            onClick={toggleEdit}
+            item={item}
+            key={id}
+          />
           // <li key={id}>
           //   <div className={styles.customerCard}>
           //     <div className={styles.deleteButtonFlex}>
