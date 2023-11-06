@@ -1,20 +1,6 @@
 import styles from './client-card.module.css';
 import { useState } from 'react';
 
-interface Client {
-  id: string;
-  data: {
-    availability?: string;
-    email: string;
-    fullName: string;
-    instrument: string[];
-    leadSource: string;
-    phone: number;
-    zipCode: number;
-    message?: number;
-  };
-}
-
 export const ClientCard = ({ item, deleteClient, onClick }) => {
   const [editCardData, setEditCardData] = useState(false);
 
