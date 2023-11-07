@@ -1,5 +1,14 @@
+'use client';
 import styles from './client-card.module.css';
 import { useState } from 'react';
+
+import style from '../form-input/form-input.module.css';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import schema from '../../lib/form-data-schema';
+import { FormData } from '../../lib/form-data-schema';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase-config/firebase-config';
 
 export const ClientCard = ({ item, deleteClient }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -11,93 +20,303 @@ export const ClientCard = ({ item, deleteClient }) => {
   const handleOnChange = () => {
     console.log('hello on change');
   };
+
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    defaultValues: {
+      instrument: [],
+    },
+    resolver: zodResolver(schema),
+  });
+
+  const submitData = async (data: FormData) => {
+    await addDoc(collection(db, 'prospects'), {
+      data,
+    });
+    setFormSubmitted(true);
+  };
+
   return (
     <div>
       {isEditing ? (
-        <li>
-          <div className={styles.customerCard}>
-            <div className={styles.deleteButtonFlex}>
-              <span
-                onClick={() => deleteClient(item.id)}
-                className={styles.deleteButton}
-              >
-                Delete
-              </span>
-            </div>
-            <div className={styles.deleteButtonFlex}>
-              <span
-                onClick={() => toggleEdit(item.id)}
-                className={styles.deleteButton}
-              >
-                Edit
-              </span>
-            </div>
+        <form onSubmit={handleSubmit(submitData)} className={style.formInput}>
+          <div className={styles.deleteButtonFlex}>
+            <span
+              onClick={() => deleteClient(item.id)}
+              className={styles.deleteButton}
+            >
+              Delete
+            </span>
+          </div>
+          <div className={styles.deleteButtonFlex}>
+            <span
+              onClick={() => toggleEdit(item.id)}
+              className={styles.deleteButton}
+            >
+              Edit
+            </span>
+          </div>
+          <label className={style.label}> First/Last Name* </label>
+          {errors.fullName && (
+            <span className={style.errormessage}>
+              {errors.fullName.message}
+            </span>
+          )}
+          <input
+            className={style.input}
+            type='text'
+            {...register('fullName')}
+          />
 
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Name:</p>
-              <input
-                onChange={handleOnChange}
-                type='text'
-                value={item.data.fullName}
-              />
-            </div>
+          <label className={style.label}> Zip Code* </label>
+          {errors.zipCode && (
+            <span className={style.errormessage}>{errors.zipCode.message}</span>
+          )}
+          <input
+            className={style.input}
+            type='number'
+            {...register('zipCode', { valueAsNumber: true })}
+          />
 
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Zip Code:</p>
-              <input
-                onChange={handleOnChange}
-                type='text'
-                value={item.data.zipCode}
-              />
-            </div>
+          <label className={style.label}> Email* </label>
+          {errors.email && (
+            <span className={style.errormessage}>{errors.email.message}</span>
+          )}
+          <input className={style.input} type='email' {...register('email')} />
 
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Email:</p>
+          <label className={style.label}> Phone* </label>
+          {errors.phone && (
+            <span className={style.errormessage}>{errors.phone.message}</span>
+          )}
+          <input
+            className={style.input}
+            type='number'
+            {...register('phone', { valueAsNumber: true })}
+          />
+
+          <label className={style.label}>
+            {' '}
+            Which musical instruments would you like to learn?*{' '}
+          </label>
+          {errors.instrument && (
+            <span className={style.errormessage}>
+              {errors.instrument.message}
+            </span>
+          )}
+          <div className={style.flex}>
+            <div className={style.checkbox}>
+              <label className={style.label}> Piano </label>
+
               <input
-                onChange={handleOnChange}
-                type='email'
-                value={item.data.email}
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='piano'
               />
             </div>
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Phone:</p>
+            <div className={style.checkbox}>
+              {' '}
+              <label className={style.label}> Guitar </label>
               <input
-                onChange={handleOnChange}
-                type='number'
-                value={item.data.phone}
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='guitar'
               />
             </div>
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Instruments:</p>
+            <div className={style.checkbox}>
+              {' '}
+              <label className={style.label}> Voice </label>
               <input
-                onChange={handleOnChange}
-                type='text'
-                value={item.data.instrument}
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='voice'
               />
             </div>
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>LeadSource:</p>
+            <div className={style.checkbox}>
+              {' '}
+              <label className={style.label}> Drums </label>
               <input
-                onChange={handleOnChange}
-                type='text'
-                value={item.data.leadSource}
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='drums'
               />
             </div>
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Availability:</p>
+            <div className={style.checkbox}>
+              {' '}
+              <label className={style.label}> Violin </label>
               <input
-                onChange={handleOnChange}
-                type='text'
-                value={item.data.availability}
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='violin'
               />
             </div>
-            <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Message:</p>
-              <input onChange={handleOnChange} value={item.data.message} />
+            <div className={style.checkbox}>
+              {' '}
+              <label className={style.label}> Other </label>
+              <input
+                className={style.input}
+                type='checkbox'
+                {...register('instrument')}
+                value='other'
+              />
             </div>
           </div>
-        </li>
+          <label className={style.label}> How did you hear about us?* </label>
+          {errors.leadSource && (
+            <span className={style.errormessage}>
+              {errors.leadSource.message}
+            </span>
+          )}
+          <select className={style.leadSource} {...register('leadSource')}>
+            <option className={style.leadSourceOption} value=''>
+              Please choose an option
+            </option>
+            <option className={style.leadSourceOption} value='referral'>
+              Referral
+            </option>
+            <option className={style.leadSourceOption} value='yelp'>
+              Yelp!
+            </option>
+            <option className={style.leadSourceOption} value='google search'>
+              Google Search
+            </option>
+            <option
+              className={style.leadSourceOption}
+              value='google sponsored ad'
+            >
+              Google Sponsored Ad
+            </option>
+            <option className={style.leadSourceOption} value='facebook'>
+              Facebook
+            </option>
+            <option className={style.leadSourceOption} value='instagram'>
+              Instagram
+            </option>
+            <option className={style.leadSourceOption} value='other'>
+              Other
+            </option>
+          </select>
+
+          <label className={style.label}>
+            {' '}
+            What is your availability for music lessons?{' '}
+          </label>
+          {errors.availability && (
+            <span className={style.errormessage}>
+              {errors.availability.message}
+            </span>
+          )}
+          <input
+            className={style.input}
+            type='text'
+            {...register('availability')}
+            placeholder='Mon 3-6pm, Sat 8-10am'
+          />
+
+          <label className={style.label}> Additional info </label>
+          {errors.message && (
+            <span className={style.errormessage}>{errors.message.message}</span>
+          )}
+          <textarea
+            className={style.textarea}
+            {...register('message')}
+            placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
+          />
+
+          <input className={style.submit} type='submit' />
+        </form>
       ) : (
+        // <li>
+        //   <div className={styles.customerCard}>
+        //     <div className={styles.deleteButtonFlex}>
+        //       <span
+        //         onClick={() => deleteClient(item.id)}
+        //         className={styles.deleteButton}
+        //       >
+        //         Delete
+        //       </span>
+        //     </div>
+        //     <div className={styles.deleteButtonFlex}>
+        //       <span
+        //         onClick={() => toggleEdit(item.id)}
+        //         className={styles.deleteButton}
+        //       >
+        //         Edit
+        //       </span>
+        //     </div>
+
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Name:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='text'
+        //         value={item.data.fullName}
+        //       />
+        //     </div>
+
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Zip Code:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='text'
+        //         value={item.data.zipCode}
+        //       />
+        //     </div>
+
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Email:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='email'
+        //         value={item.data.email}
+        //       />
+        //     </div>
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Phone:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='number'
+        //         value={item.data.phone}
+        //       />
+        //     </div>
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Instruments:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='text'
+        //         value={item.data.instrument}
+        //       />
+        //     </div>
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>LeadSource:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='text'
+        //         value={item.data.leadSource}
+        //       />
+        //     </div>
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Availability:</p>
+        //       <input
+        //         onChange={handleOnChange}
+        //         type='text'
+        //         value={item.data.availability}
+        //       />
+        //     </div>
+        //     <div className={styles.field_edit}>
+        //       <p className={styles.printedFields}>Message:</p>
+        //       <input onChange={handleOnChange} value={item.data.message} />
+        //     </div>
+        //   </div>
+        // </li>
         <li>
           <div className={styles.customerCard}>
             <div className={styles.deleteButtonFlex}>
