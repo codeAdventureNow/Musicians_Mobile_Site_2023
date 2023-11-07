@@ -11,9 +11,6 @@ import { db } from '../firebase-config/firebase-config';
 
 export const ClientCard = ({ item, deleteClient }) => {
   const [isEditing, setIsEditing] = useState(false);
-  // const preLoadedValues = {
-  //   firstName: item.data.fullName,
-  // };
 
   const toggleEdit = (id: string) => {
     setIsEditing((prev) => !prev);
