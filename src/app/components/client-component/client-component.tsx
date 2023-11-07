@@ -48,76 +48,20 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
-  const toggleEdit = (id: string) => {
-    const newClients = [...clients];
-    const client = newClients.find((client) => client.id === id);
-    // client.isEditing = true;
-    // setClients(newClients);
-    // // console.log(id);
-    console.log(client.data);
-  };
+  // const toggleEdit = (id: string) => {
+  //   const newClients = [...clients];
+  //   const client = newClients.find((client) => client.id === id);
+  //   // client.isEditing = true;
+  //   // setClients(newClients);
+  //   // // console.log(id);
+  //   console.log(client.data);
+  // };
 
   return (
     <div>
       <ul className={styles.flex}>
         {clients.map((item, id) => (
-          <ClientCard
-            deleteClient={deleteClient}
-            onClick={toggleEdit}
-            item={item}
-            key={id}
-          />
-          // <li key={id}>
-          //   <div className={styles.customerCard}>
-          //     <div className={styles.deleteButtonFlex}>
-          //       <span
-          //         onClick={() => deleteClient(item.id)}
-          //         className={styles.deleteButton}
-          //       >
-          //         Delete
-          //       </span>
-          //     </div>
-
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         Name: {item.data.fullName}{' '}
-          //       </p>
-          //     </div>
-
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         Zip Code: {item.data.zipCode}
-          //       </p>
-          //     </div>
-
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>Email: {item.data.email}</p>
-          //     </div>
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>Phone: {item.data.phone}</p>
-          //     </div>
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         Instruments: {item.data.instrument}
-          //       </p>
-          //     </div>
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         LeadSource: {item.data.leadSource}
-          //       </p>
-          //     </div>
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         Availability: {item.data.availability}
-          //       </p>
-          //     </div>
-          //     <div className={styles.field_edit}>
-          //       <p className={styles.printedFields}>
-          //         Message: {item.data.message}
-          //       </p>
-          //     </div>
-          //   </div>
-          // </li>
+          <ClientCard deleteClient={deleteClient} item={item} key={id} />
         ))}
       </ul>
     </div>
