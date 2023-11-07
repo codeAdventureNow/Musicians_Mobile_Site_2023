@@ -1,4 +1,3 @@
-'use client';
 import styles from './client-card.module.css';
 import { useState } from 'react';
 
@@ -7,11 +6,14 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 
 export const ClientCard = ({ item, deleteClient }) => {
   const [isEditing, setIsEditing] = useState(false);
+  // const preLoadedValues = {
+  //   firstName: item.data.fullName,
+  // };
 
   const toggleEdit = (id: string) => {
     setIsEditing((prev) => !prev);
@@ -22,6 +24,8 @@ export const ClientCard = ({ item, deleteClient }) => {
   };
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  console.log(item.data.instrument);
+
   const {
     register,
     handleSubmit,
@@ -29,6 +33,13 @@ export const ClientCard = ({ item, deleteClient }) => {
   } = useForm<FormData>({
     defaultValues: {
       instrument: [],
+      fullName: item.data.fullName,
+      zipCode: item.data.zipCode,
+      email: item.data.email,
+      phone: item.data.phone,
+      availability: item.data.availability,
+      message: item.data.message,
+      leadSource: item.data.leadSource,
     },
     resolver: zodResolver(schema),
   });
