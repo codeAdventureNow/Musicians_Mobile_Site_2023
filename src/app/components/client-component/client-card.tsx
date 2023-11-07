@@ -21,7 +21,7 @@ export const ClientCard = ({ item, deleteClient }) => {
   };
 
   const [formSubmitted, setFormSubmitted] = useState(false);
-  console.log(item.data.instrument);
+  // console.log(item.data);
 
   const {
     register,
