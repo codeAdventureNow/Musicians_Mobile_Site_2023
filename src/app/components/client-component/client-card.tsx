@@ -6,7 +6,13 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import {
+  collection,
+  addDoc,
+  doc,
+  getDocs,
+  updateDoc,
+} from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 
 export const ClientCard = ({ item, deleteClient }) => {
@@ -48,10 +54,27 @@ export const ClientCard = ({ item, deleteClient }) => {
     setFormSubmitted(true);
   };
 
+  const updateData = async (data: FormData) => {
+    const clientDoc = doc(db, 'prospects', item.id);
+
+    await updateDoc(clientDoc, {
+      data,
+    });
+    setIsEditing((prev) => !prev);
+  };
+
   return (
     <div>
       {isEditing ? (
         <form onSubmit={handleSubmit(submitData)} className={style.formInput}>
+          <div className={styles.deleteButtonFlex}>
+            <span
+              onClick={handleSubmit(updateData)}
+              className={styles.deleteButton}
+            >
+              Update
+            </span>
+          </div>
           <div className={styles.deleteButtonFlex}>
             <span
               onClick={() => deleteClient(item.id)}

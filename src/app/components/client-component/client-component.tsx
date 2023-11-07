@@ -48,15 +48,6 @@ export default function ClientComponent() {
     deleteDoc(doc(db, 'prospects', id));
   };
 
-  // const toggleEdit = (id: string) => {
-  //   const newClients = [...clients];
-  //   const client = newClients.find((client) => client.id === id);
-  //   // client.isEditing = true;
-  //   // setClients(newClients);
-  //   // // console.log(id);
-  //   console.log(client.data);
-  // };
-
   return (
     <div>
       <ul className={styles.flex}>
