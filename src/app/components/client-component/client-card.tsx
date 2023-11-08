@@ -15,7 +15,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 
-export const ClientCard = ({ item, deleteClient }) => {
+export const ClientCard = ({ item, deleteClient }: any) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const toggleEdit = (id: string) => {
