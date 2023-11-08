@@ -25,8 +25,7 @@ interface Client {
     leadSource: string;
     phone: number;
     zipCode: number;
-    message?: number;
-    isEditing?: boolean;
+    message?: string;
   };
 }
 
@@ -51,7 +50,7 @@ export default function ClientComponent() {
   return (
     <div>
       <ul className={styles.flex}>
-        {clients.map((item: any, id: any) => (
+        {clients.map((item, id) => (
           <ClientCard deleteClient={deleteClient} item={item} key={id} />
         ))}
       </ul>
