@@ -50,7 +50,7 @@ export default function ClientComponent() {
   return (
     <div>
       <ul className={styles.flex}>
-        {clients.map((item, id) => (
+        {clients.map((item: Client, id) => (
           <ClientCard deleteClient={deleteClient} item={item} key={id} />
         ))}
       </ul>

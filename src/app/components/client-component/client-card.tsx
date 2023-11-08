@@ -14,7 +14,6 @@ import {
   updateDoc,
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
-
 interface Client {
   id: string;
   data: {
