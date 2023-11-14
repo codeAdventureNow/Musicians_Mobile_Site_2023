@@ -12,7 +12,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { useEffect, useState, useRef } from 'react';
-import { BiEditAlt } from 'react-icons/bi';
+
 import { ClientCard } from './client-card';
 
 interface Client {

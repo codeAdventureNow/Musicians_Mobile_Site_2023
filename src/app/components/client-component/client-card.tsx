@@ -6,13 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
-import {
-  collection,
-  addDoc,
-  doc,
-  getDocs,
-  updateDoc,
-} from 'firebase/firestore';
+import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 interface Client {
   id: string;
@@ -41,13 +35,6 @@ export const ClientCard = ({
     setIsEditing((prev) => !prev);
   };
 
-  const handleOnChange = () => {
-    console.log('hello on change');
-  };
-
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  // console.log(item.data);
-
   const {
     register,
     handleSubmit,
@@ -66,13 +53,6 @@ export const ClientCard = ({
     resolver: zodResolver(schema),
   });
 
-  const submitData = async (data: FormData) => {
-    await addDoc(collection(db, 'prospects'), {
-      data,
-    });
-    setFormSubmitted(true);
-  };
-
   const updateData = async (data: FormData) => {
     const clientDoc = doc(db, 'prospects', item.id);
 
@@ -85,7 +65,7 @@ export const ClientCard = ({
   return (
     <div>
       {isEditing ? (
-        <form onSubmit={handleSubmit(submitData)} className={style.formInput}>
+        <form className={style.formInput}>
           <div className={styles.deleteButtonFlex}>
             <span
               onClick={handleSubmit(updateData)}
@@ -280,8 +260,6 @@ export const ClientCard = ({
             {...register('message')}
             placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
           />
-
-          <input className={style.submit} type='submit' />
         </form>
       ) : (
         <li>
