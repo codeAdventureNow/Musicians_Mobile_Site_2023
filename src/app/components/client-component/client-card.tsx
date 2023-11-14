@@ -1,13 +1,15 @@
 'use client';
 import styles from './client-card.module.css';
+import formstyle from '../form-input/form-input.module.css';
 import { useState } from 'react';
-import style from '../form-input/form-input.module.css';
+
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
+
 interface Client {
   id: string;
   data: {
@@ -42,7 +44,7 @@ export const ClientCard = ({
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      instrument: [],
+      instrument: client.data.instrument,
       fullName: client.data.fullName,
       zipCode: client.data.zipCode,
       email: client.data.email,
@@ -66,7 +68,7 @@ export const ClientCard = ({
   return (
     <div>
       {isEditing ? (
-        <form className={style.formInput}>
+        <form className={formstyle.formInput}>
           <div className={styles.deleteButtonFlex}>
             <span
               onClick={handleSubmit(updateData)}
@@ -91,173 +93,191 @@ export const ClientCard = ({
               Edit
             </span>
           </div>
-          <label className={style.label}> First/Last Name* </label>
+          <label className={formstyle.label}> First/Last Name* </label>
           {errors.fullName && (
-            <span className={style.errormessage}>
+            <span className={formstyle.errormessage}>
               {errors.fullName.message}
             </span>
           )}
           <input
-            className={style.input}
+            className={formstyle.input}
             type='text'
             {...register('fullName')}
           />
 
-          <label className={style.label}> Zip Code* </label>
+          <label className={formstyle.label}> Zip Code* </label>
           {errors.zipCode && (
-            <span className={style.errormessage}>{errors.zipCode.message}</span>
+            <span className={formstyle.errormessage}>
+              {errors.zipCode.message}
+            </span>
           )}
           <input
-            className={style.input}
+            className={formstyle.input}
             type='number'
             {...register('zipCode', { valueAsNumber: true })}
           />
 
-          <label className={style.label}> Email* </label>
+          <label className={formstyle.label}> Email* </label>
           {errors.email && (
-            <span className={style.errormessage}>{errors.email.message}</span>
-          )}
-          <input className={style.input} type='email' {...register('email')} />
-
-          <label className={style.label}> Phone* </label>
-          {errors.phone && (
-            <span className={style.errormessage}>{errors.phone.message}</span>
+            <span className={formstyle.errormessage}>
+              {errors.email.message}
+            </span>
           )}
           <input
-            className={style.input}
+            className={formstyle.input}
+            type='email'
+            {...register('email')}
+          />
+
+          <label className={formstyle.label}> Phone* </label>
+          {errors.phone && (
+            <span className={formstyle.errormessage}>
+              {errors.phone.message}
+            </span>
+          )}
+          <input
+            className={formstyle.input}
             type='number'
             {...register('phone', { valueAsNumber: true })}
           />
 
-          <label className={style.label}>
+          <label className={formstyle.label}>
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
           {errors.instrument && (
-            <span className={style.errormessage}>
+            <span className={formstyle.errormessage}>
               {errors.instrument.message}
             </span>
           )}
-          <div className={style.flex}>
-            <div className={style.checkbox}>
-              <label className={style.label}> Piano </label>
+          <div className={formstyle.flex}>
+            <div className={formstyle.checkbox}>
+              <label className={formstyle.label}> Piano </label>
 
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='piano'
               />
             </div>
-            <div className={style.checkbox}>
+            <div className={formstyle.checkbox}>
               {' '}
-              <label className={style.label}> Guitar </label>
+              <label className={formstyle.label}> Guitar </label>
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='guitar'
               />
             </div>
-            <div className={style.checkbox}>
+            <div className={formstyle.checkbox}>
               {' '}
-              <label className={style.label}> Voice </label>
+              <label className={formstyle.label}> Voice </label>
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='voice'
               />
             </div>
-            <div className={style.checkbox}>
+            <div className={formstyle.checkbox}>
               {' '}
-              <label className={style.label}> Drums </label>
+              <label className={formstyle.label}> Drums </label>
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='drums'
               />
             </div>
-            <div className={style.checkbox}>
+            <div className={formstyle.checkbox}>
               {' '}
-              <label className={style.label}> Violin </label>
+              <label className={formstyle.label}> Violin </label>
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='violin'
               />
             </div>
-            <div className={style.checkbox}>
+            <div className={formstyle.checkbox}>
               {' '}
-              <label className={style.label}> Other </label>
+              <label className={formstyle.label}> Other </label>
               <input
-                className={style.input}
+                className={formstyle.input}
                 type='checkbox'
                 {...register('instrument')}
                 value='other'
               />
             </div>
           </div>
-          <label className={style.label}> How did you hear about us?* </label>
+          <label className={formstyle.label}>
+            {' '}
+            How did you hear about us?*{' '}
+          </label>
           {errors.leadSource && (
-            <span className={style.errormessage}>
+            <span className={formstyle.errormessage}>
               {errors.leadSource.message}
             </span>
           )}
-          <select className={style.leadSource} {...register('leadSource')}>
-            <option className={style.leadSourceOption} value=''>
+          <select className={formstyle.leadSource} {...register('leadSource')}>
+            <option className={formstyle.leadSourceOption} value=''>
               Please choose an option
             </option>
-            <option className={style.leadSourceOption} value='referral'>
+            <option className={formstyle.leadSourceOption} value='referral'>
               Referral
             </option>
-            <option className={style.leadSourceOption} value='yelp'>
+            <option className={formstyle.leadSourceOption} value='yelp'>
               Yelp!
             </option>
-            <option className={style.leadSourceOption} value='google search'>
+            <option
+              className={formstyle.leadSourceOption}
+              value='google search'
+            >
               Google Search
             </option>
             <option
-              className={style.leadSourceOption}
+              className={formstyle.leadSourceOption}
               value='google sponsored ad'
             >
               Google Sponsored Ad
             </option>
-            <option className={style.leadSourceOption} value='facebook'>
+            <option className={formstyle.leadSourceOption} value='facebook'>
               Facebook
             </option>
-            <option className={style.leadSourceOption} value='instagram'>
+            <option className={formstyle.leadSourceOption} value='instagram'>
               Instagram
             </option>
-            <option className={style.leadSourceOption} value='other'>
+            <option className={formstyle.leadSourceOption} value='other'>
               Other
             </option>
           </select>
 
-          <label className={style.label}>
+          <label className={formstyle.label}>
             {' '}
             What is your availability for music lessons?{' '}
           </label>
           {errors.availability && (
-            <span className={style.errormessage}>
+            <span className={formstyle.errormessage}>
               {errors.availability.message}
             </span>
           )}
           <input
-            className={style.input}
+            className={formstyle.input}
             type='text'
             {...register('availability')}
             placeholder='Mon 3-6pm, Sat 8-10am'
           />
 
-          <label className={style.label}> Additional info </label>
+          <label className={formstyle.label}> Additional info </label>
           {errors.message && (
-            <span className={style.errormessage}>{errors.message.message}</span>
+            <span className={formstyle.errormessage}>
+              {errors.message.message}
+            </span>
           )}
           <textarea
-            className={style.textarea}
+            className={formstyle.textarea}
             {...register('message')}
             placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
           />

@@ -2,16 +2,13 @@
 import styles from './client-component.module.css';
 import {
   collection,
-  addDoc,
-  getDoc,
   query,
-  QuerySnapshot,
   onSnapshot,
   deleteDoc,
   doc,
 } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ClientCard } from './client-card';
 
@@ -41,7 +38,7 @@ export default function ClientComponent() {
       });
       setClients(itemsArr);
     });
-  }, [clients]);
+  }, []);
 
   const deleteClient = (id: string) => {
     deleteDoc(doc(db, 'prospects', id));
