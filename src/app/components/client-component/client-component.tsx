@@ -41,7 +41,7 @@ export default function ClientComponent() {
       });
       setClients(itemsArr);
     });
-  }, []);
+  }, [clients]);
 
   const deleteClient = (id: string) => {
     deleteDoc(doc(db, 'prospects', id));
@@ -50,8 +50,8 @@ export default function ClientComponent() {
   return (
     <div>
       <ul className={styles.flex}>
-        {clients.map((item: Client, id) => (
-          <ClientCard deleteClient={deleteClient} item={item} key={id} />
+        {clients.map((client: Client, id) => (
+          <ClientCard deleteClient={deleteClient} client={client} key={id} />
         ))}
       </ul>
     </div>

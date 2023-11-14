@@ -1,6 +1,6 @@
+'use client';
 import styles from './client-card.module.css';
 import { useState } from 'react';
-
 import style from '../form-input/form-input.module.css';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -23,15 +23,16 @@ interface Client {
 }
 
 export const ClientCard = ({
-  item,
+  client,
   deleteClient,
 }: {
-  item: Client;
+  client: Client;
   deleteClient: any;
 }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const toggleEdit = (id: string) => {
+    console.log(client);
     setIsEditing((prev) => !prev);
   };
 
@@ -42,19 +43,19 @@ export const ClientCard = ({
   } = useForm<FormData>({
     defaultValues: {
       instrument: [],
-      fullName: item.data.fullName,
-      zipCode: item.data.zipCode,
-      email: item.data.email,
-      phone: item.data.phone,
-      availability: item.data.availability,
-      message: item.data.message,
-      leadSource: item.data.leadSource,
+      fullName: client.data.fullName,
+      zipCode: client.data.zipCode,
+      email: client.data.email,
+      phone: client.data.phone,
+      availability: client.data.availability,
+      message: client.data.message,
+      leadSource: client.data.leadSource,
     },
     resolver: zodResolver(schema),
   });
 
   const updateData = async (data: FormData) => {
-    const clientDoc = doc(db, 'prospects', item.id);
+    const clientDoc = doc(db, 'prospects', client.id);
 
     await updateDoc(clientDoc, {
       data,
@@ -76,7 +77,7 @@ export const ClientCard = ({
           </div>
           <div className={styles.deleteButtonFlex}>
             <span
-              onClick={() => deleteClient(item.id)}
+              onClick={() => deleteClient(client.id)}
               className={styles.deleteButton}
             >
               Delete
@@ -84,7 +85,7 @@ export const ClientCard = ({
           </div>
           <div className={styles.deleteButtonFlex}>
             <span
-              onClick={() => toggleEdit(item.id)}
+              onClick={() => toggleEdit(client.id)}
               className={styles.deleteButton}
             >
               Edit
@@ -266,7 +267,7 @@ export const ClientCard = ({
           <div className={styles.customerCard}>
             <div className={styles.deleteButtonFlex}>
               <span
-                onClick={() => deleteClient(item.id)}
+                onClick={() => deleteClient(client.id)}
                 className={styles.deleteButton}
               >
                 Delete
@@ -274,7 +275,7 @@ export const ClientCard = ({
             </div>
             <div className={styles.deleteButtonFlex}>
               <span
-                onClick={() => toggleEdit(item.id)}
+                onClick={() => toggleEdit(client.id)}
                 className={styles.deleteButton}
               >
                 Edit
@@ -283,40 +284,40 @@ export const ClientCard = ({
 
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Name: {item.data.fullName}{' '}
+                Name: {client.data.fullName}{' '}
               </p>
             </div>
 
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Zip Code: {item.data.zipCode}
+                Zip Code: {client.data.zipCode}
               </p>
             </div>
 
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Email: {item.data.email}</p>
+              <p className={styles.printedFields}>Email: {client.data.email}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Phone: {item.data.phone}</p>
+              <p className={styles.printedFields}>Phone: {client.data.phone}</p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Instruments: {item.data.instrument}
+                Instruments: {client.data.instrument}
               </p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                LeadSource: {item.data.leadSource}
+                LeadSource: {client.data.leadSource}
               </p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Availability: {item.data.availability}
+                Availability: {client.data.availability}
               </p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Message: {item.data.message}
+                Message: {client.data.message}
               </p>
             </div>
           </div>
