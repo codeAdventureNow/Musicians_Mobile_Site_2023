@@ -2,39 +2,23 @@
 import styles from './client-card.module.css';
 import formstyle from '../form-input/form-input.module.css';
 import { useState } from 'react';
-
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import schema from '../../lib/form-data-schema';
 import { FormData } from '../../lib/form-data-schema';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
+import { Client } from './client-component';
 
-interface Client {
-  id: string;
-  data: {
-    availability?: string;
-    email: string;
-    fullName: string;
-    instrument: string[];
-    leadSource: string;
-    phone: number;
-    zipCode: number;
-    message?: string;
-  };
+interface ClientCard {
+  client: Client;
+  deleteClient: Object;
 }
 
-export const ClientCard = ({
-  client,
-  deleteClient,
-}: {
-  client: Client;
-  deleteClient: any;
-}) => {
+export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const toggleEdit = (id: string) => {
-    console.log(client);
     setIsEditing((prev) => !prev);
   };
 

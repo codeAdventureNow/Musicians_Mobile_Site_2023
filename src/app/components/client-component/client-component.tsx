@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 
 import { ClientCard } from './client-card';
 
-interface Client {
+export interface Client {
   id: string;
   data: {
     availability?: string;
