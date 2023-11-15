@@ -12,7 +12,7 @@ import { Client } from './client-component';
 
 interface ClientCard {
   client: Client;
-  deleteClient: Object;
+  deleteClient: any;
 }
 
 export const ClientCard = ({ client, deleteClient }: ClientCard) => {
