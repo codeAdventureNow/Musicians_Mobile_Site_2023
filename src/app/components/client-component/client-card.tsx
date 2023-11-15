@@ -22,13 +22,16 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     setIsEditing((prev) => !prev);
   };
 
+  const instruments = [Guitar, piano, trumpet];
+
+  const { instrument, fullName, zipCode } = client.data;
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      instrument: client.data.instrument,
+      instrument: instrument,
       fullName: client.data.fullName,
       zipCode: client.data.zipCode,
       email: client.data.email,
@@ -39,6 +42,12 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     },
     resolver: zodResolver(schema),
   });
+
+  // clean up repetition of client.data above
+
+  const checkboxes = (instruments) => {
+    <div></div>;
+  };
 
   const updateData = async (data: FormData) => {
     const clientDoc = doc(db, 'prospects', client.id);
@@ -134,6 +143,9 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               {errors.instrument.message}
             </span>
           )}
+
+          {/* checkbox component - const instruments = [Piano, Guitar] */}
+          {/* label styling textTransform : capitalize */}
           <div className={formstyle.flex}>
             <div className={formstyle.checkbox}>
               <label className={formstyle.label}> Piano </label>
