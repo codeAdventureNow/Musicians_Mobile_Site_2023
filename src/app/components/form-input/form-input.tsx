@@ -7,6 +7,10 @@ import { FormData } from '../../lib/form-data-schema';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { useState } from 'react';
+import {
+  InstrumentCheckbox,
+  instruments,
+} from '../instrument-checkbox/instrument-checkbox';
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -84,66 +88,15 @@ const FormInput = () => {
             </span>
           )}
           <div className={styles.flex}>
-            <div className={styles.checkbox}>
-              <label className={styles.label}> Piano </label>
-
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='piano'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Guitar </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='guitar'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Voice </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='voice'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Drums </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='drums'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Violin </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='violin'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Other </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='other'
-              />
-            </div>
+            {instruments.map((instrument: string) => {
+              return (
+                <InstrumentCheckbox
+                  key={instrument}
+                  register={register}
+                  instrument={instrument}
+                />
+              );
+            })}
           </div>
           <label className={styles.label}> How did you hear about us?* </label>
           {errors.leadSource && (

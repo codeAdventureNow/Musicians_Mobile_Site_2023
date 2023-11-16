@@ -26,7 +26,16 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     setIsEditing((prev) => !prev);
   };
 
-  const { instrument, fullName, zipCode } = client.data;
+  const {
+    instrument,
+    fullName,
+    zipCode,
+    email,
+    phone,
+    availability,
+    message,
+    leadSource,
+  } = client.data;
   const {
     register,
     handleSubmit,
@@ -34,22 +43,16 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   } = useForm<FormData>({
     defaultValues: {
       instrument: instrument,
-      fullName: client.data.fullName,
-      zipCode: client.data.zipCode,
-      email: client.data.email,
-      phone: client.data.phone,
-      availability: client.data.availability,
-      message: client.data.message,
-      leadSource: client.data.leadSource,
+      fullName: fullName,
+      zipCode: zipCode,
+      email: email,
+      phone: phone,
+      availability: availability,
+      message: message,
+      leadSource: leadSource,
     },
     resolver: zodResolver(schema),
   });
-
-  // clean up repetition of client.data above
-
-  // const checkboxes = (instruments) => {
-  //   <div></div>;
-  // };
 
   const updateData = async (data: FormData) => {
     const clientDoc = doc(db, 'prospects', client.id);

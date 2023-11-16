@@ -1,6 +1,6 @@
 'use client';
 
-import formstyle from './instrument-checkbox.module.css';
+import styles from './instrument-checkbox.module.css';
 
 export const instruments: string[] = [
   'piano',
@@ -19,11 +19,11 @@ export function InstrumentCheckbox({
   register: any;
 }) {
   return (
-    <div className={formstyle.checkbox}>
-      <label className={formstyle.label}>{instrument}</label>
+    <div className={styles.checkbox}>
+      <label className={styles.label}>{instrument}</label>
 
       <input
-        className={formstyle.input}
+        className={styles.input}
         type='checkbox'
         {...register('instrument')}
         value={instrument}
