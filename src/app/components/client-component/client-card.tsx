@@ -9,7 +9,10 @@ import { FormData } from '../../lib/form-data-schema';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { Client } from './client-component';
-import InstrumentCheckbox from '../instrument-checkbox/instrument-checkbox';
+import {
+  InstrumentCheckbox,
+  instruments,
+} from '../instrument-checkbox/instrument-checkbox';
 
 interface ClientCard {
   client: Client;
@@ -22,15 +25,6 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   const toggleEdit = (id: string) => {
     setIsEditing((prev) => !prev);
   };
-
-  const instruments: string[] = [
-    'piano',
-    'guitar',
-    'voice',
-    'drums',
-    'violin',
-    'other',
-  ];
 
   const { instrument, fullName, zipCode } = client.data;
   const {
@@ -152,11 +146,8 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             </span>
           )}
 
-          {/* checkbox component - const instruments = [Piano, Guitar] */}
-          {/* label styling textTransform : capitalize */}
           <div className={formstyle.flex}>
-            {instruments.map((instrument: string, index: number) => {
-              console.log(instrument);
+            {instruments.map((instrument: string) => {
               return (
                 <InstrumentCheckbox
                   key={instrument}
@@ -165,67 +156,6 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
                 />
               );
             })}
-
-            {/* <div className={formstyle.checkbox}>
-              <label className={formstyle.label}> Piano </label>
-
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='piano'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Guitar </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='guitar'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Voice </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='voice'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Drums </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='drums'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Violin </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='violin'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Other </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='other'
-              />
-            </div> */}
           </div>
           <label className={formstyle.label}>
             {' '}
