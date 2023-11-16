@@ -23,19 +23,30 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   };
 
   const {
+    instrument,
+    fullName,
+    zipCode,
+    email,
+    phone,
+    availability,
+    message,
+    leadSource,
+  } = client.data;
+
+  const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      instrument: client.data.instrument,
-      fullName: client.data.fullName,
-      zipCode: client.data.zipCode,
-      email: client.data.email,
-      phone: client.data.phone,
-      availability: client.data.availability,
-      message: client.data.message,
-      leadSource: client.data.leadSource,
+      instrument: instrument,
+      fullName: fullName,
+      zipCode: zipCode,
+      email: email,
+      phone: phone,
+      availability: availability,
+      message: message,
+      leadSource: leadSource,
     },
     resolver: zodResolver(schema),
   });
