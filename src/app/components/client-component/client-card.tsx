@@ -22,7 +22,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     setIsEditing((prev) => !prev);
   };
 
-  const instruments = [Guitar, piano, trumpet];
+  // const instruments = [Guitar, piano, trumpet];
 
   const { instrument, fullName, zipCode } = client.data;
   const {
@@ -45,9 +45,9 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
 
   // clean up repetition of client.data above
 
-  const checkboxes = (instruments) => {
-    <div></div>;
-  };
+  // const checkboxes = (instruments) => {
+  //   <div></div>;
+  // };
 
   const updateData = async (data: FormData) => {
     const clientDoc = doc(db, 'prospects', client.id);
