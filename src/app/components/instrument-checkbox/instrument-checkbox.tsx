@@ -27,14 +27,12 @@ import formstyle from '../form-input/form-input.module.css';
 export default function InstrumentCheckbox({
   instrument,
   register,
-  key,
 }: {
   instrument: string;
   register: any;
-  key: string;
 }) {
   return (
-    <div key={key} className={formstyle.checkbox}>
+    <div className={formstyle.checkbox}>
       <label className={formstyle.label}>{instrument}</label>
 
       <input

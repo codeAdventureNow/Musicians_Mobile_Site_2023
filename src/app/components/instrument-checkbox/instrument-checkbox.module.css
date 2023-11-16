@@ -1,9 +1,18 @@
-.checkbox {
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Linden+Hill&family=Oxygen:wght@300;400&family=Poppins:wght@200;300;400;600;700&display=swap');
+
+.formInput {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #ff888d;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.input {
+.input,
+.textarea {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -11,7 +20,69 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.input::placeholder,
+.textarea::placeholder {
+  font-size: 12px;
+  color: #b2b2b2;
+}
+
 .label {
   font-size: 12px;
   color: #404040;
+  text-transform: capitalize;
+}
+
+.errormessage {
+  font-size: 12px;
+  padding: 3px;
+  color: white;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.leadSource {
+  margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffacd;
+  padding-right: 2rem;
+
+  padding: 12px 12px;
+}
+
+.submit {
+  background: #0091ea;
+  background: #fffacd;
+  color: black;
+  border-radius: 1em;
+  padding: 0.5em 0.75em;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.customerCard {
+  color: slate;
+  background: #ffa4a9;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.deleteButton {
+  background: white;
+  margin-top: 7px;
+  padding: 5px 5px;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
 }

@@ -159,9 +159,9 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               console.log(instrument);
               return (
                 <InstrumentCheckbox
+                  key={instrument}
                   register={register}
                   instrument={instrument}
-                  key={instrument}
                 />
               );
             })}
