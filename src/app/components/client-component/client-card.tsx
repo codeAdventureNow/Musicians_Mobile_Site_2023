@@ -1,7 +1,7 @@
 'use client';
 import styles from './client-card.module.css';
 import formstyle from '../form-input/form-input.module.css';
-import { leadSourceOptions } from '../form-input/form-input';
+import { leadSourceOptions } from '../lead-source/lead-source';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';

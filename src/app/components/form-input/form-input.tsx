@@ -11,16 +11,7 @@ import {
   InstrumentCheckbox,
   instruments,
 } from '../instrument-checkbox/instrument-checkbox';
-
-export const leadSourceOptions = [
-  'Referral',
-  'Yelp!',
-  'Google Search',
-  'Google Sponsored Ad',
-  'Facebook',
-  'Instagram',
-  'Other',
-];
+import { leadSourceOptions } from '../lead-source/lead-source';
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
