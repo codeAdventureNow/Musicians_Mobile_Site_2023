@@ -155,11 +155,18 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
           {/* checkbox component - const instruments = [Piano, Guitar] */}
           {/* label styling textTransform : capitalize */}
           <div className={formstyle.flex}>
-            <InstrumentCheckbox
-              register={register}
-              instruments={instruments[1]}
-            />
-            <div className={formstyle.checkbox}>
+            {instruments.map((instrument: string, index: number) => {
+              console.log(instrument);
+              return (
+                <InstrumentCheckbox
+                  register={register}
+                  instrument={instrument}
+                  key={instrument}
+                />
+              );
+            })}
+
+            {/* <div className={formstyle.checkbox}>
               <label className={formstyle.label}> Piano </label>
 
               <input
@@ -218,7 +225,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
                 {...register('instrument')}
                 value='other'
               />
-            </div>
+            </div> */}
           </div>
           <label className={formstyle.label}>
             {' '}
