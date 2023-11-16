@@ -1,6 +1,7 @@
 'use client';
 import styles from './client-card.module.css';
 import formstyle from '../form-input/form-input.module.css';
+import { leadSourceOptions } from '../form-input/form-input';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -173,33 +174,17 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             <option className={formstyle.leadSourceOption} value=''>
               Please choose an option
             </option>
-            <option className={formstyle.leadSourceOption} value='referral'>
-              Referral
-            </option>
-            <option className={formstyle.leadSourceOption} value='yelp'>
-              Yelp!
-            </option>
-            <option
-              className={formstyle.leadSourceOption}
-              value='google search'
-            >
-              Google Search
-            </option>
-            <option
-              className={formstyle.leadSourceOption}
-              value='google sponsored ad'
-            >
-              Google Sponsored Ad
-            </option>
-            <option className={formstyle.leadSourceOption} value='facebook'>
-              Facebook
-            </option>
-            <option className={formstyle.leadSourceOption} value='instagram'>
-              Instagram
-            </option>
-            <option className={formstyle.leadSourceOption} value='other'>
-              Other
-            </option>
+            {leadSourceOptions.map((leadSource) => {
+              return (
+                <option
+                  key={leadSource}
+                  className={styles.leadSourceOption}
+                  value={leadSource}
+                >
+                  {leadSource}
+                </option>
+              );
+            })}
           </select>
 
           <label className={formstyle.label}>

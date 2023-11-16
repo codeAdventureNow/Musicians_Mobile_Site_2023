@@ -12,6 +12,16 @@ import {
   instruments,
 } from '../instrument-checkbox/instrument-checkbox';
 
+export const leadSourceOptions = [
+  'Referral',
+  'Yelp!',
+  'Google Search',
+  'Google Sponsored Ad',
+  'Facebook',
+  'Instagram',
+  'Other',
+];
+
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
@@ -108,30 +118,17 @@ const FormInput = () => {
             <option className={styles.leadSourceOption} value=''>
               Please choose an option
             </option>
-            <option className={styles.leadSourceOption} value='referral'>
-              Referral
-            </option>
-            <option className={styles.leadSourceOption} value='yelp'>
-              Yelp!
-            </option>
-            <option className={styles.leadSourceOption} value='google search'>
-              Google Search
-            </option>
-            <option
-              className={styles.leadSourceOption}
-              value='google sponsored ad'
-            >
-              Google Sponsored Ad
-            </option>
-            <option className={styles.leadSourceOption} value='facebook'>
-              Facebook
-            </option>
-            <option className={styles.leadSourceOption} value='instagram'>
-              Instagram
-            </option>
-            <option className={styles.leadSourceOption} value='other'>
-              Other
-            </option>
+            {leadSourceOptions.map((leadSource) => {
+              return (
+                <option
+                  key={leadSource}
+                  className={styles.leadSourceOption}
+                  value={leadSource}
+                >
+                  {leadSource}
+                </option>
+              );
+            })}
           </select>
 
           <label className={styles.label}>
