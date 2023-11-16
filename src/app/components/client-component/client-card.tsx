@@ -1,6 +1,7 @@
 'use client';
 import styles from './client-card.module.css';
 import formstyle from '../form-input/form-input.module.css';
+import { leadSourceOptions } from '../lead-source/lead-source';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,6 +10,10 @@ import { FormData } from '../../lib/form-data-schema';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { Client } from './client-component';
+import {
+  InstrumentCheckbox,
+  instruments,
+} from '../instrument-checkbox/instrument-checkbox';
 
 interface ClientCard {
   client: Client;
@@ -145,67 +150,17 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               {errors.instrument.message}
             </span>
           )}
-          <div className={formstyle.flex}>
-            <div className={formstyle.checkbox}>
-              <label className={formstyle.label}> Piano </label>
 
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='piano'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Guitar </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='guitar'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Voice </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='voice'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Drums </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='drums'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Violin </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='violin'
-              />
-            </div>
-            <div className={formstyle.checkbox}>
-              {' '}
-              <label className={formstyle.label}> Other </label>
-              <input
-                className={formstyle.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='other'
-              />
-            </div>
+          <div className={formstyle.flex}>
+            {instruments.map((instrument: string) => {
+              return (
+                <InstrumentCheckbox
+                  key={instrument}
+                  register={register}
+                  instrument={instrument}
+                />
+              );
+            })}
           </div>
           <label className={formstyle.label}>
             {' '}
@@ -220,33 +175,17 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             <option className={formstyle.leadSourceOption} value=''>
               Please choose an option
             </option>
-            <option className={formstyle.leadSourceOption} value='referral'>
-              Referral
-            </option>
-            <option className={formstyle.leadSourceOption} value='yelp'>
-              Yelp!
-            </option>
-            <option
-              className={formstyle.leadSourceOption}
-              value='google search'
-            >
-              Google Search
-            </option>
-            <option
-              className={formstyle.leadSourceOption}
-              value='google sponsored ad'
-            >
-              Google Sponsored Ad
-            </option>
-            <option className={formstyle.leadSourceOption} value='facebook'>
-              Facebook
-            </option>
-            <option className={formstyle.leadSourceOption} value='instagram'>
-              Instagram
-            </option>
-            <option className={formstyle.leadSourceOption} value='other'>
-              Other
-            </option>
+            {leadSourceOptions.map((leadSource) => {
+              return (
+                <option
+                  key={leadSource}
+                  className={styles.leadSourceOption}
+                  value={leadSource}
+                >
+                  {leadSource}
+                </option>
+              );
+            })}
           </select>
 
           <label className={formstyle.label}>

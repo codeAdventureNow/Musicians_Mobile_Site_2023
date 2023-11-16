@@ -7,6 +7,11 @@ import { FormData } from '../../lib/form-data-schema';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase-config/firebase-config';
 import { useState } from 'react';
+import {
+  InstrumentCheckbox,
+  instruments,
+} from '../instrument-checkbox/instrument-checkbox';
+import { leadSourceOptions } from '../lead-source/lead-source';
 
 const FormInput = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -84,66 +89,15 @@ const FormInput = () => {
             </span>
           )}
           <div className={styles.flex}>
-            <div className={styles.checkbox}>
-              <label className={styles.label}> Piano </label>
-
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='piano'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Guitar </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='guitar'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Voice </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='voice'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Drums </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='drums'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Violin </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='violin'
-              />
-            </div>
-            <div className={styles.checkbox}>
-              {' '}
-              <label className={styles.label}> Other </label>
-              <input
-                className={styles.input}
-                type='checkbox'
-                {...register('instrument')}
-                value='other'
-              />
-            </div>
+            {instruments.map((instrument: string) => {
+              return (
+                <InstrumentCheckbox
+                  key={instrument}
+                  register={register}
+                  instrument={instrument}
+                />
+              );
+            })}
           </div>
           <label className={styles.label}> How did you hear about us?* </label>
           {errors.leadSource && (
@@ -155,30 +109,17 @@ const FormInput = () => {
             <option className={styles.leadSourceOption} value=''>
               Please choose an option
             </option>
-            <option className={styles.leadSourceOption} value='referral'>
-              Referral
-            </option>
-            <option className={styles.leadSourceOption} value='yelp'>
-              Yelp!
-            </option>
-            <option className={styles.leadSourceOption} value='google search'>
-              Google Search
-            </option>
-            <option
-              className={styles.leadSourceOption}
-              value='google sponsored ad'
-            >
-              Google Sponsored Ad
-            </option>
-            <option className={styles.leadSourceOption} value='facebook'>
-              Facebook
-            </option>
-            <option className={styles.leadSourceOption} value='instagram'>
-              Instagram
-            </option>
-            <option className={styles.leadSourceOption} value='other'>
-              Other
-            </option>
+            {leadSourceOptions.map((leadSource) => {
+              return (
+                <option
+                  key={leadSource}
+                  className={styles.leadSourceOption}
+                  value={leadSource}
+                >
+                  {leadSource}
+                </option>
+              );
+            })}
           </select>
 
           <label className={styles.label}>
