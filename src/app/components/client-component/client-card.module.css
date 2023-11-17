@@ -5,9 +5,8 @@
 }
 
 .customerCard {
-  color: slate;
-
-  background: #fef8c1;
+  color: #36454f;
+  background: #fffdd1;
   margin: 20px 10px;
   border-radius: 10px;
   width: 310px;
@@ -48,9 +47,10 @@
   display: inline-block;
   text-align: center;
   border: 1px solid grey;
-  background: white;
+  background: #fffef2;
   border-radius: 20px;
   margin-bottom: 7px;
   margin-right: 7px;
   padding: 0px 7px;
+  font-size: 14px;
 }
