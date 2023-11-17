@@ -14,6 +14,7 @@ import {
 import { leadSourceOptions } from '../lead-source/lead-source';
 
 const FormInput = () => {
+  const now = new Date().toUTCString();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
@@ -22,6 +23,7 @@ const FormInput = () => {
   } = useForm<FormData>({
     defaultValues: {
       instruments: [],
+      date: now,
     },
     resolver: zodResolver(schema),
   });
@@ -39,6 +41,18 @@ const FormInput = () => {
         <h2>Form successfully submitted!</h2>
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
+          <label className={styles.label_hidden}>Date</label>
+          {errors.fullName && (
+            <span className={styles.errormessage}>
+              {errors.fullName.message}
+            </span>
+          )}
+          <input
+            className={styles.label_hidden}
+            type='text'
+            {...register('date')}
+          />
+
           <label className={styles.label}> First/Last Name* </label>
           {errors.fullName && (
             <span className={styles.errormessage}>

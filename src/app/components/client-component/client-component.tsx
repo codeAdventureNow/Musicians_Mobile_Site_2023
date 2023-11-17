@@ -23,6 +23,7 @@ export interface Client {
     phone: number;
     zipCode: number;
     message?: string;
+    date: string;
   };
 }
 

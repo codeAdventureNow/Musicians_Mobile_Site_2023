@@ -38,7 +38,10 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     availability,
     message,
     leadSource,
+    date,
   } = client.data;
+
+  console.log(client);
 
   const {
     register,
@@ -54,6 +57,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
       availability: availability,
       message: message,
       leadSource: leadSource,
+      date: date,
     },
     resolver: zodResolver(schema),
   });
@@ -237,6 +241,9 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
                 Edit
               </span>
             </div>
+            <div className={styles.field_edit}>
+              <p className={styles.printedFields}> {date} </p>
+            </div>
 
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>Name: {fullName} </p>
@@ -253,7 +260,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               <p className={styles.printedFields}>Phone: {phone}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
+              <div className={styles.printedFields}>
                 Instruments:{' '}
                 {instruments.map((instrument) => {
                   return (
@@ -262,7 +269,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
                     </p>
                   );
                 })}
-              </p>
+              </div>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>LeadSource: {leadSource}</p>

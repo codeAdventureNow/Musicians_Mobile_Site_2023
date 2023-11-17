@@ -9,6 +9,7 @@ export type FormData = {
   instruments: Array<String>;
   message: string;
   leadSource: string;
+  date: string;
 };
 
 const schema: ZodType<FormData> = z.object({
@@ -35,6 +36,7 @@ const schema: ZodType<FormData> = z.object({
   availability: z.string(),
   message: z.string(),
   leadSource: z.string().min(2, 'Please select how you discovered us.'),
+  date: z.string(),
 });
 
 export default schema;

@@ -32,6 +32,10 @@
   text-transform: capitalize;
 }
 
+.label_hidden {
+  display: none;
+}
+
 .errormessage {
   font-size: 12px;
   padding: 3px;
