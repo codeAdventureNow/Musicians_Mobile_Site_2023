@@ -15,9 +15,11 @@ import {
   instruments,
 } from '../instrument-checkbox/instrument-checkbox';
 
+type DeleteClient = (id: string) => void;
+
 interface ClientCard {
   client: Client;
-  deleteClient: any;
+  deleteClient: DeleteClient;
 }
 
 export const ClientCard = ({ client, deleteClient }: ClientCard) => {

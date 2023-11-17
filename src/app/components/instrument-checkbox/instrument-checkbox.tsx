@@ -1,5 +1,6 @@
 'use client';
 
+import { UseFormReturn, FieldValues, UseFormRegister } from 'react-hook-form';
 import styles from './instrument-checkbox.module.css';
 
 export const instruments: string[] = [
@@ -11,13 +12,12 @@ export const instruments: string[] = [
   'other',
 ];
 
-export function InstrumentCheckbox({
-  instrument,
-  register,
-}: {
+interface Checkbox {
   instrument: string;
-  register: any;
-}) {
+  register: UseFormRegister<FieldValues>;
+}
+
+export function InstrumentCheckbox({ instrument, register }: Checkbox) {
   return (
     <div className={styles.checkbox}>
       <label className={styles.label}>{instrument}</label>
