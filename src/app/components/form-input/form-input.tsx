@@ -14,7 +14,7 @@ import {
 import { leadSourceOptions } from '../lead-source/lead-source';
 
 const FormInput = () => {
-  const now = new Date().toUTCString();
+  const now = new Date().toLocaleString();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,

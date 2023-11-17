@@ -242,7 +242,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               </span>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}> {date} </p>
+              <p className={styles.date}> {date} </p>
             </div>
 
             <div className={styles.field_edit}>

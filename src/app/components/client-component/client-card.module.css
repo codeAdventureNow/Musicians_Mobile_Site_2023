@@ -6,7 +6,8 @@
 
 .customerCard {
   color: slate;
-  background: #ffa4a9;
+
+  background: #fef8c1;
   margin: 20px 10px;
   border-radius: 10px;
   width: 310px;
@@ -39,10 +40,14 @@
   text-align: start;
 }
 
+.date {
+  font-size: 12px;
+}
+
 .instrument {
   display: inline-block;
   text-align: center;
-  border: 1px solid green;
+  border: 1px solid grey;
   background: white;
   border-radius: 20px;
   margin-bottom: 7px;
