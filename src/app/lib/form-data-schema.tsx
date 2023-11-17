@@ -6,7 +6,7 @@ export type FormData = {
   email: string;
   phone: number;
   availability: string;
-  instrument: Array<String>;
+  instruments: Array<String>;
   message: string;
   leadSource: string;
 };
@@ -27,7 +27,7 @@ const schema: ZodType<FormData> = z.object({
     })
     .int()
     .gte(1000000000, 'Your phone number should be at least ten digits.'),
-  instrument: z
+  instruments: z
     .string()
     .array()
     .nonempty({ message: 'Please select an instrument' }),

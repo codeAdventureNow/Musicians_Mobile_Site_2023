@@ -4,7 +4,7 @@ import { UseFormRegister } from 'react-hook-form';
 import styles from './instrument-checkbox.module.css';
 import { FormData } from '../../lib/form-data-schema';
 
-export const instruments: string[] = [
+export const instrumentOptions: string[] = [
   'piano',
   'guitar',
   'voice',
@@ -26,7 +26,7 @@ export function InstrumentCheckbox({ instrument, register }: Checkbox) {
       <input
         className={styles.input}
         type='checkbox'
-        {...register('instrument')}
+        {...register('instruments')}
         value={instrument}
       />
     </div>

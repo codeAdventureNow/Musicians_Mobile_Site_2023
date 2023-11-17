@@ -18,7 +18,7 @@ export interface Client {
     availability?: string;
     email: string;
     fullName: string;
-    instrument: string[];
+    instruments: string[];
     leadSource: string;
     phone: number;
     zipCode: number;

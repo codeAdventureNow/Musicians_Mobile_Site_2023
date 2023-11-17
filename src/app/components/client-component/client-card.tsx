@@ -12,7 +12,7 @@ import { db } from '../firebase-config/firebase-config';
 import { Client } from './client-component';
 import {
   InstrumentCheckbox,
-  instruments,
+  instrumentOptions,
 } from '../instrument-checkbox/instrument-checkbox';
 
 type DeleteClient = (id: string) => void;
@@ -30,7 +30,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   };
 
   const {
-    instrument,
+    instruments,
     fullName,
     zipCode,
     email,
@@ -46,7 +46,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      instrument: instrument,
+      instruments: instruments,
       fullName: fullName,
       zipCode: zipCode,
       email: email,
@@ -147,14 +147,14 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
-          {errors.instrument && (
+          {errors.instruments && (
             <span className={formstyle.errormessage}>
-              {errors.instrument.message}
+              {errors.instruments.message}
             </span>
           )}
 
           <div className={formstyle.flex}>
-            {instruments.map((instrument: string) => {
+            {instrumentOptions.map((instrument: string) => {
               return (
                 <InstrumentCheckbox
                   key={instrument}
@@ -258,7 +258,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Instruments: {client.data.instrument}
+                Instruments: {client.data.instruments}
               </p>
             </div>
             <div className={styles.field_edit}>

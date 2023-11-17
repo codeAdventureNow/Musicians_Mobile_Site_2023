@@ -9,7 +9,7 @@ import { db } from '../firebase-config/firebase-config';
 import { useState } from 'react';
 import {
   InstrumentCheckbox,
-  instruments,
+  instrumentOptions,
 } from '../instrument-checkbox/instrument-checkbox';
 import { leadSourceOptions } from '../lead-source/lead-source';
 
@@ -21,7 +21,7 @@ const FormInput = () => {
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      instrument: [],
+      instruments: [],
     },
     resolver: zodResolver(schema),
   });
@@ -83,13 +83,13 @@ const FormInput = () => {
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
-          {errors.instrument && (
+          {errors.instruments && (
             <span className={styles.errormessage}>
-              {errors.instrument.message}
+              {errors.instruments.message}
             </span>
           )}
           <div className={styles.flex}>
-            {instruments.map((instrument: string) => {
+            {instrumentOptions.map((instrument: string) => {
               return (
                 <InstrumentCheckbox
                   key={instrument}
