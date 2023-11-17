@@ -239,42 +239,32 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             </div>
 
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
-                Name: {client.data.fullName}{' '}
-              </p>
+              <p className={styles.printedFields}>Name: {fullName} </p>
             </div>
 
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
-                Zip Code: {client.data.zipCode}
-              </p>
+              <p className={styles.printedFields}>Zip Code: {zipCode}</p>
             </div>
 
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Email: {client.data.email}</p>
+              <p className={styles.printedFields}>Email: {email}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Phone: {client.data.phone}</p>
+              <p className={styles.printedFields}>Phone: {phone}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
-                Instruments: {client.data.instruments}
-              </p>
+              <p className={styles.printedFields}>Instruments: {instruments}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
-                LeadSource: {client.data.leadSource}
-              </p>
+              <p className={styles.printedFields}>LeadSource: {leadSource}</p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>
-                Availability: {client.data.availability}
+                Availability: {availability}
               </p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>
-                Message: {client.data.message}
-              </p>
+              <p className={styles.printedFields}>Message: {message}</p>
             </div>
           </div>
         </li>
