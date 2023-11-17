@@ -253,7 +253,16 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               <p className={styles.printedFields}>Phone: {phone}</p>
             </div>
             <div className={styles.field_edit}>
-              <p className={styles.printedFields}>Instruments: {instruments}</p>
+              <p className={styles.printedFields}>
+                Instruments:{' '}
+                {instruments.map((instrument) => {
+                  return (
+                    <p key={instrument} className={styles.instrument}>
+                      {instrument}
+                    </p>
+                  );
+                })}
+              </p>
             </div>
             <div className={styles.field_edit}>
               <p className={styles.printedFields}>LeadSource: {leadSource}</p>

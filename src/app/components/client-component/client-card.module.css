@@ -38,3 +38,14 @@
   width: 90%;
   text-align: start;
 }
+
+.instrument {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid green;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 7px;
+  margin-right: 7px;
+  padding: 0px 7px;
+}
