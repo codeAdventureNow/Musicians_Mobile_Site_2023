@@ -1,7 +1,8 @@
 'use client';
 
-import { UseFormReturn, FieldValues, UseFormRegister } from 'react-hook-form';
+import { UseFormRegister } from 'react-hook-form';
 import styles from './instrument-checkbox.module.css';
+import { FormData } from '../../lib/form-data-schema';
 
 export const instruments: string[] = [
   'piano',
@@ -14,7 +15,7 @@ export const instruments: string[] = [
 
 interface Checkbox {
   instrument: string;
-  register: UseFormRegister<FieldValues>;
+  register: UseFormRegister<FormData>;
 }
 
 export function InstrumentCheckbox({ instrument, register }: Checkbox) {
