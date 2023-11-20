@@ -79,13 +79,12 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   return (
     <div>
       {isEditing ? (
-        <form className={formstyle.formInput}>
+        <form className={`${formstyle.formInput}  ${styles.formInput}`}>
           <div className={styles.deleteButtonFlex}>
             <IoSaveOutline
               onClick={handleSubmit(updateData)}
               className={styles.reactIconsSave}
             />
-
             <TrashIcon
               onClick={() => deleteClient(client.id)}
               className={styles.reactIcons}

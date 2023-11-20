@@ -42,11 +42,7 @@ const FormInput = () => {
       ) : (
         <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
           <label className={styles.label_hidden}>Date</label>
-          {errors.fullName && (
-            <span className={styles.errormessage}>
-              {errors.fullName.message}
-            </span>
-          )}
+
           <input
             className={styles.label_hidden}
             type='text'
