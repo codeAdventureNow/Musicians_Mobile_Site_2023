@@ -79,7 +79,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
   return (
     <div>
       {isEditing ? (
-        <form className={`${formstyle.formInput}  ${styles.formInput}`}>
+        <form className={styles.formInput}>
           <div className={styles.deleteButtonFlex}>
             <IoSaveOutline
               onClick={handleSubmit(updateData)}
