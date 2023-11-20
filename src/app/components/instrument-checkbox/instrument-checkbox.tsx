@@ -4,6 +4,11 @@ import { UseFormRegister } from 'react-hook-form';
 import styles from './instrument-checkbox.module.css';
 import { FormData } from '../../lib/form-data-schema';
 
+interface Checkbox {
+  instrument: string;
+  register: UseFormRegister<FormData>;
+}
+
 export const instrumentOptions: string[] = [
   'piano',
   'guitar',
@@ -12,11 +17,6 @@ export const instrumentOptions: string[] = [
   'violin',
   'other',
 ];
-
-interface Checkbox {
-  instrument: string;
-  register: UseFormRegister<FormData>;
-}
 
 export function InstrumentCheckbox({ instrument, register }: Checkbox) {
   return (

@@ -14,6 +14,13 @@ import {
   InstrumentCheckbox,
   instrumentOptions,
 } from '../instrument-checkbox/instrument-checkbox';
+import {
+  PencilSquareIcon,
+  TrashIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+
+import { IoSaveOutline } from 'react-icons/io5';
 
 type DeleteClient = (id: string) => void;
 
@@ -40,8 +47,6 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
     leadSource,
     date,
   } = client.data;
-
-  console.log(client);
 
   const {
     register,
@@ -76,29 +81,21 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
       {isEditing ? (
         <form className={formstyle.formInput}>
           <div className={styles.deleteButtonFlex}>
-            <span
+            <IoSaveOutline
               onClick={handleSubmit(updateData)}
-              className={styles.deleteButton}
-            >
-              Update
-            </span>
-          </div>
-          <div className={styles.deleteButtonFlex}>
-            <span
+              className={styles.reactIconsSave}
+            />
+
+            <TrashIcon
               onClick={() => deleteClient(client.id)}
-              className={styles.deleteButton}
-            >
-              Delete
-            </span>
-          </div>
-          <div className={styles.deleteButtonFlex}>
-            <span
+              className={styles.reactIcons}
+            />
+            <XMarkIcon
               onClick={() => toggleEdit(client.id)}
-              className={styles.deleteButton}
-            >
-              Edit
-            </span>
+              className={styles.reactIcons}
+            />
           </div>
+
           <label className={formstyle.label}> First/Last Name* </label>
           {errors.fullName && (
             <span className={formstyle.errormessage}>
@@ -226,21 +223,16 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
         <li>
           <div className={styles.customerCard}>
             <div className={styles.deleteButtonFlex}>
-              <span
-                onClick={() => deleteClient(client.id)}
-                className={styles.deleteButton}
-              >
-                Delete
-              </span>
-            </div>
-            <div className={styles.deleteButtonFlex}>
-              <span
+              <PencilSquareIcon
                 onClick={() => toggleEdit(client.id)}
-                className={styles.deleteButton}
-              >
-                Edit
-              </span>
+                className={styles.reactIcons}
+              />
+              <TrashIcon
+                onClick={() => deleteClient(client.id)}
+                className={styles.reactIcons}
+              />
             </div>
+
             <div className={styles.field_edit}>
               <p className={styles.date}> {date} </p>
             </div>

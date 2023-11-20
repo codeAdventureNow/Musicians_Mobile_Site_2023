@@ -26,6 +26,24 @@
   margin-bottom: 16px;
 }
 
+.reactIcons {
+  height: 20px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.reactIconsSave {
+  display: inline-block;
+  height: 23px;
+  margin-right: 3px;
+}
+
+.reactIcons:hover,
+.reactIconsSave:hover {
+  cursor: pointer;
+  color: blue;
+}
+
 .deleteButton:hover {
   cursor: pointer;
 }
@@ -53,4 +71,8 @@
   margin-right: 7px;
   padding: 0px 7px;
   font-size: 14px;
+}
+
+.formInput {
+  color: #36454f;
 }
