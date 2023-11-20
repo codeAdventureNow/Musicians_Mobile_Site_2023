@@ -12,11 +12,13 @@
   width: 310px;
   text-align: start;
   padding: 20px;
+  height: 500px;
 }
 
 .deleteButtonFlex {
   display: flex;
   justify-content: flex-end;
+  color: grey;
 }
 
 .deleteButton {
@@ -41,7 +43,7 @@
 .reactIcons:hover,
 .reactIconsSave:hover {
   cursor: pointer;
-  color: blue;
+  color: #2a52be;
 }
 
 .deleteButton:hover {
@@ -50,6 +52,13 @@
 
 .field_edit {
   margin-bottom: 8px;
+  margin-right: 12px;
+}
+
+.field_edit_flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .printedFields {
   display: inline;
@@ -73,6 +82,31 @@
   font-size: 14px;
 }
 
+.input,
+.inputNumber {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-family: 'Poppins', sans-serif;
+  width: 250px;
+}
+
+.inputNumber {
+  width: 170px;
+}
+
+.label,
+.input {
+  display: inline;
+}
+
+.errorMessage {
+  color: slate;
+  font-size: 12px;
+}
+
 .formInput {
+  margin-right: 16px;
   background: #fffdd1;
 }

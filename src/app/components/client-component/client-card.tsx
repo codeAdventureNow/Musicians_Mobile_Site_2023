@@ -95,60 +95,68 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             />
           </div>
 
-          <label className={formstyle.label}> First/Last Name* </label>
           {errors.fullName && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.fullName.message}
             </span>
           )}
-          <input
-            className={formstyle.input}
-            type='text'
-            {...register('fullName')}
-          />
+          <div className={styles.field_edit_flexbox}>
+            <label className={styles.field_edit}> Name: </label>
 
-          <label className={formstyle.label}> Zip Code* </label>
+            <input
+              className={styles.input}
+              type='text'
+              {...register('fullName')}
+            />
+          </div>
+
           {errors.zipCode && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.zipCode.message}
             </span>
           )}
-          <input
-            className={formstyle.input}
-            type='number'
-            {...register('zipCode', { valueAsNumber: true })}
-          />
+          <div className={styles.field_edit_flexbox}>
+            <label className={styles.field_edit}> Zip Code: </label>
 
-          <label className={formstyle.label}> Email* </label>
+            <input
+              className={styles.inputNumber}
+              type='number'
+              {...register('zipCode', { valueAsNumber: true })}
+            />
+          </div>
+
           {errors.email && (
-            <span className={formstyle.errormessage}>
-              {errors.email.message}
-            </span>
+            <span className={styles.errorMessage}>{errors.email.message}</span>
           )}
-          <input
-            className={formstyle.input}
-            type='email'
-            {...register('email')}
-          />
+          <div className={styles.field_edit_flexbox}>
+            <label className={styles.field_edit}> Email: </label>
 
-          <label className={formstyle.label}> Phone* </label>
+            <input
+              className={styles.input}
+              type='email'
+              {...register('email')}
+            />
+          </div>
+
           {errors.phone && (
-            <span className={formstyle.errormessage}>
-              {errors.phone.message}
-            </span>
+            <span className={styles.errorMessage}>{errors.phone.message}</span>
           )}
-          <input
-            className={formstyle.input}
-            type='number'
-            {...register('phone', { valueAsNumber: true })}
-          />
+          <div className={styles.field_edit_flexbox}>
+            <label className={styles.field_edit}> Phone: </label>
+
+            <input
+              className={styles.inputNumber}
+              type='number'
+              {...register('phone', { valueAsNumber: true })}
+            />
+          </div>
 
           <label className={formstyle.label}>
             {' '}
             Which musical instruments would you like to learn?*{' '}
           </label>
           {errors.instruments && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.instruments.message}
             </span>
           )}
@@ -169,7 +177,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             How did you hear about us?*{' '}
           </label>
           {errors.leadSource && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.leadSource.message}
             </span>
           )}
@@ -195,7 +203,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
             What is your availability for music lessons?{' '}
           </label>
           {errors.availability && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.availability.message}
             </span>
           )}
@@ -208,7 +216,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
 
           <label className={formstyle.label}> Additional info </label>
           {errors.message && (
-            <span className={formstyle.errormessage}>
+            <span className={styles.errorMessage}>
               {errors.message.message}
             </span>
           )}
