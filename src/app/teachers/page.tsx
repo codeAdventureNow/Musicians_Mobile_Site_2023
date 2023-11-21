@@ -1,4 +1,5 @@
 import styles from './teachers.module.css';
+import { TeacherCard } from '../components/teacher-component/teacher-card';
 
 export default function Teachers() {
   return (
@@ -25,6 +26,17 @@ export default function Teachers() {
               a background check prior to being hired.
             </p>
           </div>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <h2 className={styles.section_heading}>Staff</h2>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <h2 className={styles.section_heading}>Music Teachers</h2>
+          <TeacherCard />
         </div>
       </section>
     </div>
