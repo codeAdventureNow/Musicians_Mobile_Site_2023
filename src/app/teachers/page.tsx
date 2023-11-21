@@ -1,6 +1,30 @@
 import styles from './teachers.module.css';
 import { TeacherCard } from '../components/teacher-component/teacher-card';
 
+interface Teacher {
+  name: string;
+  image: string;
+  role: string;
+  alt: string;
+  bio: string;
+}
+
+const teacher: Teacher = {
+  name: 'Nate Mueller',
+  image: '/images/Nate_Pic.jpg',
+  role: 'Front End Engineer',
+  alt: 'Nate in a blue shirt',
+  bio: `Nate Mueller is the president and founder of Musicians Mobile. He
+  has been teaching music at local schools throughout the Bay Area
+  since 2002. In 2003, Nate chose to take his teaching directly to
+  students by providing lessons in their own homes, providing an added
+  convenience for both the parents and students. Outside of teaching
+  music, Nate is a successful music producer. He has provided
+  entertainment for brands such as the Golden State Warriors and the
+  US Olympic Team. Additionally, his compositions have been licensed
+  to ABC,VH1, MTV, and featured on the hit show Modern Family.`,
+};
+
 export default function Teachers() {
   return (
     <div className={styles.page}>
@@ -32,9 +56,13 @@ export default function Teachers() {
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Staff</h2>
           <div className={styles.card_container}>
-            <TeacherCard />
-            <TeacherCard />
-            <TeacherCard />
+            <TeacherCard
+              name={teacher.name}
+              image={teacher.image}
+              role={teacher.role}
+              alt={teacher.alt}
+              bio={teacher.bio}
+            />
           </div>
         </div>
       </section>
