@@ -6,6 +6,11 @@
   margin: 4% 0;
 }
 
+.page {
+  background-color: #f9f6f0;
+  text-align: center;
+}
+
 .section {
   padding-top: 100px;
   color: #383838;
@@ -15,14 +20,13 @@
   width: 85%;
   max-width: 1170px;
   margin: 0 auto;
-  border: 1px solid blue;
+
   text-align: center;
 }
 
 .intro_paragraph_flex {
   margin: 0 auto;
   max-width: 650px;
-  border: 1px solid green;
 }
 
 .intro_paragraph {

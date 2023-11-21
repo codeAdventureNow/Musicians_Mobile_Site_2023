@@ -3,7 +3,7 @@ import { TeacherCard } from '../components/teacher-component/teacher-card';
 
 export default function Teachers() {
   return (
-    <div>
+    <div className={styles.page}>
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>
@@ -31,12 +31,13 @@ export default function Teachers() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Staff</h2>
+          <TeacherCard />
+          <TeacherCard />
         </div>
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Music Teachers</h2>
-          <TeacherCard />
         </div>
       </section>
     </div>

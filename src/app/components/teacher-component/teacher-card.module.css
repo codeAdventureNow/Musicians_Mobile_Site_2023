@@ -1,3 +1,50 @@
+.section_heading {
+  font-family: 'Kalam', cursive;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #3b0404;
+  margin: 4% 0;
+}
 
+.section {
+  padding-top: 100px;
+  color: #383838;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+  border: 1px solid blue;
+  text-align: center;
+}
 
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  background: #fbfbf9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
 
+.cardTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background: #fff9e3;
+  padding: 12px;
+  border-radius: 12px;
+  color: dark grey;
+}
+
+.image {
+  border-radius: 12px;
+}
+
+.cardBottom {
+  margin-top: 1rem;
+}
