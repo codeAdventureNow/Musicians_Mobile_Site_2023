@@ -31,8 +31,11 @@ export default function Teachers() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Staff</h2>
-          <TeacherCard />
-          <TeacherCard />
+          <div className={styles.card_container}>
+            <TeacherCard />
+            <TeacherCard />
+            <TeacherCard />
+          </div>
         </div>
       </section>
       <section className={styles.section}>

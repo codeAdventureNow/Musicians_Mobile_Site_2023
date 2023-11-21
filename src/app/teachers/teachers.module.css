@@ -37,3 +37,10 @@
 .hero_heading_highlight {
   color: #ff5a5f;
 }
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
