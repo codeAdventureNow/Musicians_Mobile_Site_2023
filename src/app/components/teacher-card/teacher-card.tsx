@@ -14,8 +14,8 @@ export const TeacherCard = ({ name, image, role, alt, bio }: Teacher) => {
     <div key={name} className={styles.card}>
       <div className={styles.cardTop}>
         <div>
-          <h3>{name}</h3>
-          <p>{role}</p>
+          <h3 className={styles.teacher_name}>{name}</h3>
+          <p className={styles.teacher_role}>{role}</p>
         </div>
         <Image
           className={styles.image}

@@ -5,7 +5,7 @@ import { staff, teachers } from './teacher-data';
 export default function Teachers() {
   return (
     <div className={styles.page}>
-      <section className={styles.section}>
+      <section className={styles.heading_section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>
             Music{' '}

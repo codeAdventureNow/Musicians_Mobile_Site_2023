@@ -10,7 +10,7 @@ export const staff: Array<Teacher> = [
   {
     name: 'Nate Mueller',
     image: '/images/Nate_Pic.jpg',
-    role: 'Front End Engineer',
+    role: 'Founder & Front End Engineer',
     alt: 'Nate in a blue shirt',
     bio: `Nate Mueller is the president and founder of Musicians Mobile. He
       has been teaching music at local schools throughout the Bay Area
