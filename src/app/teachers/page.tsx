@@ -49,7 +49,10 @@ export default function Teachers() {
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>Music Teachers</h2>
+          <h2 className={styles.section_heading}>
+            Music
+            <span className={styles.hero_heading_highlight}> Teachers</span>
+          </h2>
           <div className={styles.card_container}>
             {teachers.map((teacher) => {
               return (
