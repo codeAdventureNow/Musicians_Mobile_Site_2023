@@ -1,6 +1,6 @@
 import styles from './teachers.module.css';
 import { TeacherCard } from '../components/teacher-component/teacher-card';
-import { staff, teachers } from './teacher-data';
+import { staff } from './teacher-data';
 
 export default function Teachers() {
   return (
