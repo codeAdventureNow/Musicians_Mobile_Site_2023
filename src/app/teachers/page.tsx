@@ -1,6 +1,6 @@
 import styles from './teachers.module.css';
-import { TeacherCard } from '../components/teacher-component/teacher-card';
-import { staff } from './teacher-data';
+import { TeacherCard } from '../components/teacher-card/teacher-card';
+import { staff, teachers } from './teacher-data';
 
 export default function Teachers() {
   return (
@@ -50,6 +50,19 @@ export default function Teachers() {
       <section className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.section_heading}>Music Teachers</h2>
+          <div className={styles.card_container}>
+            {teachers.map((teacher) => {
+              return (
+                <TeacherCard
+                  name={teacher.name}
+                  image={teacher.image}
+                  role={teacher.role}
+                  alt={teacher.alt}
+                  bio={teacher.bio}
+                />
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>
