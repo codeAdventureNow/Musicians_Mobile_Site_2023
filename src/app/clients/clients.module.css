@@ -1,5 +1,5 @@
 .homepage {
-  background-color: #f9f6f0;
+  background-color: var(--background-primary);
   text-align: center;
 }
 

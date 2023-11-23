@@ -1,5 +1,6 @@
 // 'use client';
 import styles from './home-page.module.css';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import YouTubePlayer from '../components/youtube-player/youtube-player';
@@ -15,7 +16,7 @@ export default function HomePage() {
   const inHomePianoLesson = '/images/inhomepiano.jpg';
   const twoGuitarsVocalsOnStage = '/images/vocal_guitar_rock_edit.jpg';
   return (
-    <div className={styles.homepage}>
+    <div className='homepage'>
       {/*  Hero   */}
       <section className={styles.section}>
         <div className={styles.container}>

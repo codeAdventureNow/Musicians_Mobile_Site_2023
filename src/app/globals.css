@@ -7,3 +7,13 @@
   text-decoration: none;
   list-style: none;
 }
+
+:root {
+  --accent-color-light: #ff888d;
+  --background-primary: #f9f6f0;
+}
+
+.homepage {
+  background-color: var(--background-primary);
+  text-align: center;
+}
