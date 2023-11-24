@@ -1,5 +1,33 @@
-.paragraph {
-  color: green;
-  text-align: center;
-  padding-top: 250px;
+.question {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.question_container {
+  margin-bottom: 1rem;
+}
+
+.answer {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .question_container {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .answer {
+    margin-bottom: 1rem;
+  }
+
+  .howitworks {
+    display: flex;
+    justify-content: center;
+  }
 }
