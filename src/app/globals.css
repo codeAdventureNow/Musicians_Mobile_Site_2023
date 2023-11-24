@@ -9,11 +9,38 @@
 }
 
 :root {
+  --accent-color: #ff5a5f;
   --accent-color-light: #ff888d;
   --background-primary: #f9f6f0;
+  --section-heading: #3b0404;
+  --section: #383838;
 }
 
 .homepage {
   background-color: var(--background-primary);
   text-align: center;
+}
+
+.section {
+  padding-top: 100px;
+  color: var(--section);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section_heading {
+  font-family: 'Kalam', cursive;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--section-heading);
+  margin: 4% 0;
+}
+
+.hero_heading_highlight {
+  color: var(--accent-color);
 }

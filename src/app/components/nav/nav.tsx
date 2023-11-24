@@ -31,6 +31,10 @@ export default function Nav() {
       href: '/',
     },
     {
+      name: 'About',
+      href: '/about',
+    },
+    {
       name: 'Clients',
       href: '/clients',
     },
