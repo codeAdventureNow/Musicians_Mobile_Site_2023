@@ -105,6 +105,7 @@ export default function HomePage() {
                 teachers straight to your home.
               </p>
               <br />
+              <br />
               <p
                 className={`${styles.video_section_paragraph} ${styles.video_section_paragraph_two}`}
               >

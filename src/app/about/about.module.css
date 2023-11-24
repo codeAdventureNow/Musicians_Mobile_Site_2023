@@ -1,0 +1,32 @@
+.signature {
+  margin: 20px 0;
+}
+
+.intro_image_container {
+  margin-top: 2rem;
+}
+
+.intro_paragraph {
+  margin-bottom: 2rem;
+}
+
+.image {
+  border-radius: 1rem;
+}
+
+@media (min-width: 800px) {
+  .flex {
+    display: flex;
+    padding: 0 30px;
+  }
+
+  .intro_content {
+    width: 50%;
+  }
+
+  .intro_image_container {
+    width: 50%;
+    margin-top: 0;
+    border-radius: 1rem;
+  }
+}
