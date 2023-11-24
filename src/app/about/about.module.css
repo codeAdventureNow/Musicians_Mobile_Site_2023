@@ -1,12 +1,33 @@
 .signature {
-  margin: 20px 0;
+  margin: 30px 0;
+}
+
+.signature span {
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.paragraph span {
+  color: #36454f;
+  font-weight: 600;
+
+  /* background: #fbf719; */
+  border-radius: 12px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .intro_image_container {
   margin-top: 2rem;
 }
 
-.intro_paragraph {
+.paragraph {
   margin-bottom: 2rem;
 }
 
@@ -20,6 +41,16 @@
   text-align: center;
 }
 
+.margin_top {
+  margin-top: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 800px) {
   .flex {
     display: flex;
@@ -31,7 +62,7 @@
     flex-direction: row-reverse;
   }
 
-  .intro_content {
+  .content {
     width: 50%;
   }
 
@@ -39,5 +70,8 @@
     width: 50%;
     margin-top: 0;
     border-radius: 1rem;
+  }
+  .imageNate {
+    margin-top: 0;
   }
 }

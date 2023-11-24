@@ -11,8 +11,8 @@ const About = () => {
             About <span className='hero_heading_highlight'>Us</span>{' '}
           </h2>
           <div className={styles.flex}>
-            <div className={styles.intro_content}>
-              <p className={styles.intro_paragraph}>
+            <div className={styles.content}>
+              <p className={styles.paragraph}>
                 “We aim to save your family time for what matters most by
                 bringing high-quality music instructors to your home. We
                 specialize in tailoring our lessons to your child’s interests to
@@ -26,12 +26,14 @@ const About = () => {
                 to help every one of our students gain confidence within
                 themselves through the joy of music.”
               </p>
-              <p className={styles.signature}>Nate Mueller- Founder</p>
+              <p className={styles.signature}>
+                <span>Nate Mueller</span> Founder
+              </p>
               <ScheduleButton />
             </div>
             <div className={styles.intro_image_container}>
               <Image
-                className={styles.image}
+                className={`${styles.image} ${styles.margin_top}`}
                 src='/images/Nate_Pic.jpg'
                 alt='Nate Mueller'
                 width={200}
@@ -49,14 +51,17 @@ const About = () => {
             Musicians<span className='hero_heading_highlight'> Mobile</span>{' '}
           </h2>
           <div className={styles.flex_reverse}>
-            <div className={styles.intro_content}>
-              <p className={styles.intro_paragraph}>
+            <div className={styles.content}>
+              <p className={styles.paragraph}>
                 Musician’s Mobile provides professional music lessons in the
                 comfort of your home. Our music and voice instructors teach a
-                variety of instruments in many different styles. We pride
-                ourselves on teaching students of many ages how to play their
-                favorite songs while giving them the essential skills necessary
-                to become a well-rounded musician.
+                variety of instruments in many different styles.{' '}
+                <span>
+                  {' '}
+                  We pride ourselves on teaching students of many ages how to
+                  play their favorite songs while giving them the essential
+                  skills necessary to become a well-rounded musician.
+                </span>
               </p>
               <p>
                 Musicians Mobile was founded by Nate Mueller in 2009 with the
@@ -69,13 +74,51 @@ const About = () => {
             </div>
             <div className={styles.intro_image_container}>
               <Image
-                className={styles.image}
+                className={`${styles.image} ${styles.margin_top}`}
                 src='/images/Brandon_InHome_Piano.png'
-                alt='Nate Mueller'
+                alt='Brandon teaching'
                 width={255}
                 height={225}
                 layout='intrinsic'
               ></Image>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section'>
+        <div className='container'>
+          <h2 className='section_heading'>
+            Student<span className='hero_heading_highlight'> Success</span>{' '}
+          </h2>
+          <div className={styles.column}>
+            <div className={styles.intro_image_container}>
+              <Image
+                className={styles.image}
+                src='/images/Arch_Piano.jpg'
+                alt='student performing'
+                width={200}
+                height={225}
+                layout='intrinsic'
+              ></Image>
+            </div>
+
+            <div className={`${styles.content} ${styles.margin_top}`}>
+              <p className={`${styles.paragraph} ${styles.italic}`}>
+                “I must thank you for the opportunity to perform on Saturday.{' '}
+                <span className={styles.bold}>
+                  It felt nice to see smiles on the wonderful audience’s faces.
+                  Archis and Ronan worked hard and loved every minute.
+                </span>{' '}
+                Please do let us know of future opportunities like this. I would
+                love for them to participate. Archis is really loving the
+                singing part of it and Ronan being so little is enjoying sitting
+                at the piano for hours and practicing. Thanks again! You have a
+                great team. We absolutely love Liana and Jared is really great
+                .”
+              </p>
+              <p className={styles.signature}>
+                <span>Guarangi C. </span> Los Gatos, CA
+              </p>
             </div>
           </div>
         </div>
