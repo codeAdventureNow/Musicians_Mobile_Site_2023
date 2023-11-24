@@ -14,10 +14,21 @@
   border-radius: 1rem;
 }
 
+.middle_content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (min-width: 800px) {
   .flex {
     display: flex;
     padding: 0 30px;
+  }
+
+  .flex_reverse {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .intro_content {

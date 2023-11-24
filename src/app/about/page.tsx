@@ -34,8 +34,46 @@ const About = () => {
                 className={styles.image}
                 src='/images/Nate_Pic.jpg'
                 alt='Nate Mueller'
-                width={175}
-                height={175}
+                width={200}
+                height={200}
+                layout='intrinsic'
+              ></Image>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='section'>
+        <div className='container'>
+          <h2 className='section_heading'>
+            Musicians<span className='hero_heading_highlight'> Mobile</span>{' '}
+          </h2>
+          <div className={styles.flex_reverse}>
+            <div className={styles.intro_content}>
+              <p className={styles.intro_paragraph}>
+                Musician’s Mobile provides professional music lessons in the
+                comfort of your home. Our music and voice instructors teach a
+                variety of instruments in many different styles. We pride
+                ourselves on teaching students of many ages how to play their
+                favorite songs while giving them the essential skills necessary
+                to become a well-rounded musician.
+              </p>
+              <p>
+                Musicians Mobile was founded by Nate Mueller in 2009 with the
+                goal of providing enjoyable home music lessons. The company
+                offers a collection of music instructors who share a similar
+                passion for teaching. We work together to create a positive
+                musical environment that helps students grow through lessons,
+                recitals and musical workshops.
+              </p>
+            </div>
+            <div className={styles.intro_image_container}>
+              <Image
+                className={styles.image}
+                src='/images/Brandon_InHome_Piano.png'
+                alt='Nate Mueller'
+                width={255}
+                height={225}
                 layout='intrinsic'
               ></Image>
             </div>
