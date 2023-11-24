@@ -1,4 +1,5 @@
 import styles from './faq.module.css';
+import Link from 'next/link';
 
 const FAQ = () => {
   return (
@@ -27,23 +28,36 @@ const FAQ = () => {
             </div>
             <div className={styles.question_container}>
               <p className={styles.question}>What are your rates?</p>
-              <p className={styles.answer}>
-                Our base in-home lesson rates vary depending on the duration: 60
-                minutes: $110-140 45 minutes: $90-115 30 minutes: $70-90 Prices
-                may fluctuate based on the instructor and location. Additional
-                fees may apply for certain travel distances. For an accurate
-                quote, please call or email us.
-              </p>
+              <ul className={styles.rate_list}>
+                <li>
+                  Our base in-home lesson rates vary depending on the duration:
+                </li>
+                <li>60 minutes: $110-140</li>
+                <li>45 minutes: $90-115</li>
+                <li>30 minutes: $70-90</li>
+                <li>
+                  Prices may fluctuate based on the instructor and location.
+                  Additional fees may apply for certain travel distances. For an
+                  accurate quote, please{' '}
+                  <Link className={styles.link} href='/contact'>
+                    Contact
+                  </Link>{' '}
+                  us.
+                </li>
+              </ul>
             </div>
           </div>
           <div className={styles.flex}>
             <div className={styles.question_container}>
               <p className={styles.question}>How do we get started?</p>
               <p className={styles.answer}>
-                Click our ‘Contact Us’ page and fill in the required
-                information. We will then contact you to learn more about your
-                needs and to set up a mutually agreeable time to schedule your
-                free trial lesson
+                Click our{' '}
+                <Link className={styles.link} href='/contact'>
+                  Contact
+                </Link>{' '}
+                page and fill in the required information. We will then contact
+                you to learn more about your needs and to set up a mutually
+                agreeable time to schedule your free trial lesson
               </p>
             </div>
             <div className={styles.question_container}>
@@ -60,38 +74,58 @@ const FAQ = () => {
           <div className={`${styles.flex} ${styles.howitworks}`}>
             <div className={styles.question_container}>
               <p className={styles.question}>How does this work?</p>
-              <ol type='1'>
-                <li>Contact Us</li>
+
+              <ol className={styles.contact_steps} type='1'>
                 <li>
-                  Set up an initial phone consultation to learn about your music
-                  interests and needs. We can assess if we are a good fit for
-                  each other. E-mail consultations are available if you prefer.
+                  <span className={styles.margin_right}>1.</span>{' '}
+                  <Link className={styles.link} href='/contact'>
+                    Contact Us
+                  </Link>
                 </li>
                 <li>
-                  Schedule a free trial lesson to gauge teacher/student fit,
-                  discover your interests, and current playing abilities. We
-                  will make suggestions on books and supplies to pick up.
-                  Parents and students can ask questions about our services.
+                  <span className={styles.margin_right}>2.</span>{' '}
+                  <p className={styles.inline}>
+                    Set up an initial phone consultation to learn about your
+                    music interests and needs. We can assess if we are a good
+                    fit for each other. E-mail consultations are available if
+                    you prefer.
+                  </p>
                 </li>
                 <li>
-                  If you decide to continue with ongoing lessons after your free
-                  trial lesson, you will then schedule a standing weekly
-                  appointment at a mutually agreeable time with your teacher
-                  (for example, Mondays 4:30-5:15).{' '}
+                  <span className={styles.margin_right}>3.</span> Schedule a
+                  free trial lesson to gauge teacher/student fit, discover your
+                  interests, and current playing abilities. We will make
+                  suggestions on books and supplies to pick up. Parents and
+                  students can ask questions about our services.
                 </li>
                 <li>
-                  Opportunities arise throughout the year to participate in
-                  recitals and workshops. Online recitals are available for
-                  students outside of our local SF Bay Area.
+                  <span className={styles.margin_right}>4.</span> If you decide
+                  to continue with ongoing lessons after your free trial lesson,
+                  you will then schedule a standing weekly appointment at a
+                  mutually agreeable time with your teacher (for example,
+                  Mondays 4:30-5:15).{' '}
                 </li>
                 <li>
-                  Lessons are billed in advance two months at a time through an
-                  e-mail invoice.{' '}
+                  <span className={styles.margin_right}>5.</span> Opportunities
+                  arise throughout the year to participate in recitals and
+                  workshops. Online recitals are available for students outside
+                  of our local SF Bay Area.
+                </li>
+                <li>
+                  <span className={styles.margin_right}>6.</span> Lessons are
+                  billed in advance two months at a time through an e-mail
+                  invoice.{' '}
                 </li>
               </ol>
               <p className={styles.answer}>
-                For detailed school policies and billing questions read our
-                service agreement.
+                For detailed school policies and billing questions read our{' '}
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='/Musicians_Mobile_Service_Agreement-Bi_Monthly-May_2021.pdf'
+                >
+                  lesson policies.
+                </a>
               </p>
             </div>
           </div>
@@ -146,9 +180,22 @@ const FAQ = () => {
                 Where should I buy a guitar and supplies?
               </p>
               <p className={styles.answer}>
-                Guitar Center (www.guitarcenter.com) usually has the best deals
-                on guitars and amps. Guitar Showcase (www.guitarshowcase.com) is
-                also a great place to look for reasonably priced instruments.
+                <Link
+                  className={styles.link}
+                  href='https://www.guitarcenter.com/'
+                  target='_blank'
+                >
+                  Guitar Center
+                </Link>{' '}
+                usually has the best deals on guitars and amps.{' '}
+                <Link
+                  className={styles.link}
+                  href='https://www.guitarshowcase.com/'
+                  target='_blank'
+                >
+                  Guitar Showcase
+                </Link>{' '}
+                is also a great place to look for reasonably priced instruments.
               </p>
             </div>
           </div>

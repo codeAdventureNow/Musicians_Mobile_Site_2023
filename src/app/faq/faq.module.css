@@ -11,6 +11,29 @@
   margin-bottom: 3rem;
 }
 
+.contact_steps {
+  text-align: left;
+}
+
+.contact_steps li {
+  padding: 1rem 0;
+}
+
+.rate_list li {
+  padding: 4px 0;
+}
+
+.link {
+  color: #1c8cf2;
+}
+
+.margin_right {
+  margin-right: 4px;
+}
+
+.inline {
+  display: inline;
+}
 @media (min-width: 800px) {
   .flex {
     display: flex;
