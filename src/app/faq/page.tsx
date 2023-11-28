@@ -119,13 +119,14 @@ const FAQ = () => {
               </ol>
               <p className={styles.answer}>
                 For detailed school policies and billing questions read our{' '}
-                <a
+                <Link
+                  className={styles.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  href='/Musicians_Mobile_Service_Agreement-Bi_Monthly-May_2021.pdf'
+                  href='/images/Musicians_Mobile_Service_Agreement_Bi_Monthly_May_2021.pdf'
                 >
                   lesson policies.
-                </a>
+                </Link>
               </p>
             </div>
           </div>
