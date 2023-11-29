@@ -504,6 +504,49 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
           </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>
+              Disclosure of Your Personal Data
+            </h3>
+            <h4 className={styles.heading_Four}>Business Transactions</h4>
+            <p>
+              If the Company is involved in a merger, acquisition, or asset
+              sale, Your Personal Data may be transferred. We will provide
+              notice before Your Personal Data is transferred and becomes
+              subject to a different Privacy Policy.
+            </p>
+            <h4 className={styles.heading_Four}>Law Enforcement</h4>
+            <p>
+              Under certain circumstances, the Company may be required to
+              disclose Your Personal Data if required to do so by law or in
+              response to valid requests by public authorities (e.g., a court or
+              a government agency).
+            </p>
+            <h4 className={styles.heading_Four}>Other legal requirements</h4>
+            <p>
+              The Company may disclose Your Personal Data in the good faith
+              belief that such action is necessary to:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                Comply with a legal obligation
+              </li>
+              <li className={styles.list_Item}>
+                Protect and defend the rights or property of the Company
+              </li>
+              <li className={styles.list_Item}>
+                Prevent or investigate possible wrongdoing in connection with
+                the Service
+              </li>
+              <li className={styles.list_Item}>
+                Protect the personal safety of Users of the Service or the
+                public
+              </li>
+              <li className={styles.list_Item}>
+                Protect against legal liability
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
