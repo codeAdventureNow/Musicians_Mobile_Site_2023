@@ -39,7 +39,7 @@ const About = () => {
                 width={200}
                 height={200}
                 layout='intrinsic'
-              ></Image>
+              />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const About = () => {
                 width={255}
                 height={225}
                 layout='intrinsic'
-              ></Image>
+              />
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ const About = () => {
                 width={200}
                 height={225}
                 layout='intrinsic'
-              ></Image>
+              />
             </div>
 
             <div className={`${styles.content} ${styles.margin_top}`}>

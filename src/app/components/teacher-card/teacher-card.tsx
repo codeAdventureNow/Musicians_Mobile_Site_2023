@@ -24,7 +24,7 @@ export const TeacherCard = ({ name, image, role, alt, bio }: Teacher) => {
           width={150}
           height={150}
           layout='intrinsic'
-        ></Image>
+        />
       </div>
       <div className={styles.cardBottom}>
         <p>{bio}</p>

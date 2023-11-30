@@ -49,7 +49,7 @@ export default function HomePage() {
             width={500}
             height={500}
             layout='intrinsic'
-          ></Image>
+          />
 
           <ul className={styles.hero_lesson_links_list}>
             <li>
@@ -154,7 +154,7 @@ export default function HomePage() {
                 width={300}
                 height={300}
                 layout='intrinsic'
-              ></Image>
+              />
               <h3 className={styles.pillar_subheading}>
                 Save 4-8 hours a month in traffic and waiting for lessons.
               </h3>
@@ -182,7 +182,7 @@ export default function HomePage() {
                 width={300}
                 height={300}
                 layout='intrinsic'
-              ></Image>
+              />
               <h3 className={styles.pillar_subheading}>
                 Enjoy a friendly, focused approach from patient music teachers
               </h3>
@@ -216,7 +216,7 @@ export default function HomePage() {
                 width={300}
                 height={300}
                 layout='intrinsic'
-              ></Image>
+              />
               <h3 className={styles.pillar_subheading}>
                 We take the lessons to the home, and the students to the stage!
               </h3>
