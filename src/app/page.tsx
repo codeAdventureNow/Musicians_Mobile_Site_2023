@@ -4,7 +4,8 @@ import HomePage from './home-page/page';
 export default function Home() {
   return (
     <div>
-      <HomePage />
+      {/* <HomePage /> */}
+      <h2>Docs</h2>
     </div>
   );
 }
