@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import FAQ from '../page';
 
-it('should have Docs text', () => {
-  render(<FAQ />); //arrange
+describe('FAQ', () => {
+  it('should have Frequently Asked text', () => {
+    render(<FAQ />); //arrange
 
-  const myElem = screen.getByText('Frequently Asked'); //act
+    const myElem = screen.getByText('Frequently Asked'); //act
 
-  expect(myElem).toBeInTheDocument(); //assert
+    expect(myElem).toBeInTheDocument(); //assert
+  });
 });

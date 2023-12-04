@@ -65,6 +65,7 @@ export default function Nav() {
           />
         </Link>
       </div>
+      <h1>Dave</h1>
       <ul
         className={
           mobileMenuOpen
