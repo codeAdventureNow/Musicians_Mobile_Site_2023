@@ -7,6 +7,33 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ScheduleButton from '../schedule-button/schedule-button';
 
+export const navLinks = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'About',
+    href: '/about',
+  },
+  {
+    name: 'Clients',
+    href: '/clients',
+  },
+  {
+    name: 'Teachers',
+    href: '/teachers',
+  },
+  {
+    name: 'FAQ',
+    href: '/faq',
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+  },
+];
+
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [burgerIconOpen, setBurgerIconOpen] = useState(false);
@@ -25,37 +52,10 @@ export default function Nav() {
     }
   };
 
-  const navLinks = [
-    {
-      name: 'Home',
-      href: '/',
-    },
-    {
-      name: 'About',
-      href: '/about',
-    },
-    {
-      name: 'Clients',
-      href: '/clients',
-    },
-    {
-      name: 'Teachers',
-      href: '/teachers',
-    },
-    {
-      name: 'FAQ',
-      href: '/faq',
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-    },
-  ];
-
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link data-testid='nav-logo' href='/'>
+        <Link data-testid='nav-logo' href='/contact'>
           <Image
             width={100}
             height={100}
