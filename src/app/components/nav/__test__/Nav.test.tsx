@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Nav from '../nav';
 
 describe('Nav', () => {
-  it('should render "Dave" as a heading', async () => {
+  it('should render our logo', () => {
     render(<Nav />); // ARRANGE
 
     //ACT
-    const header = screen.getByRole('heading', {
-      name: 'Dave',
-    });
+    const logo = screen.getByTestId('nav-logo');
 
-    expect(header).toBeInTheDocument(); // ASSERT
+    expect(logo).toBeInTheDocument(); // ASSERT
   });
 });

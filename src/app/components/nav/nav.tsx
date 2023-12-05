@@ -55,7 +55,7 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href='/'>
+        <Link data-testid='nav-logo' href='/'>
           <Image
             width={100}
             height={100}
@@ -65,7 +65,7 @@ export default function Nav() {
           />
         </Link>
       </div>
-      <h1>Dave</h1>
+
       <ul
         className={
           mobileMenuOpen
