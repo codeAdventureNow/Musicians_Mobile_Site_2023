@@ -32,7 +32,6 @@ describe('Nav', () => {
     fireEvent.click(screen.getByText('Example Link'));
     expect(mockRouter.asPath).toEqual('/example');
   });
-
   describe('Nav Links', () => {
     it('tests that when a user click the "About" link it will route to the "About" page', () => {
       render(<Link href={navLinks[1].href}>{navLinks[1].name}</Link>, {
