@@ -3,21 +3,17 @@ import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import Nav from '../nav';
-import { navLinks } from '../nav';
-import ScheduleButton from '../../schedule-button/schedule-button';
-import NextLink from 'next/link';
-import Link from 'next/link';
+import renderer from 'react-test-renderer';
+
+jest.mock('next/router', () => require('next-router-mock'));
 
 describe('Nav', () => {
-  it('should render our logo', () => {
-    render(<Nav />); // ARRANGE
-
-    //ACT
-    const logo = screen.getByTestId('nav-logo');
-
-    expect(logo).toBeInTheDocument(); // ASSERT
+  it('should render the nav bar', () => {
+    const navBar = renderer.create(<Nav />).toJSON();
+    expect(navBar).toMatchSnapshot();
   });
 
+  //not sure why this doesn't work when I refactor as async/await, or as a fireEvent
   it('tests that when a user click the logo it will route to home page', () => {
     const user = userEvent.setup();
     render(<Nav />, { wrapper: MemoryRouterProvider });
@@ -25,36 +21,19 @@ describe('Nav', () => {
     expect(mockRouter.asPath).toEqual('/');
   });
 
-  it('tests that a NextLink can be rendered', () => {
-    render(<NextLink href='/example'>Example Link</NextLink>, {
-      wrapper: MemoryRouterProvider,
-    });
-    fireEvent.click(screen.getByText('Example Link'));
-    expect(mockRouter.asPath).toEqual('/example');
-  });
-  describe('Nav Links', () => {
-    it('tests that when a user click the "About" link it will route to the "About" page', () => {
-      render(<Link href={navLinks[1].href}>{navLinks[1].name}</Link>, {
-        wrapper: MemoryRouterProvider,
-      });
-      fireEvent.click(screen.getByText('About'));
-      expect(mockRouter.asPath).toEqual('/about');
-    });
-
-    it('tests that when a user click the "Clients" link it will route to the "Clients" page', () => {
-      render(<Link href='/clients'>Clients</Link>, {
-        wrapper: MemoryRouterProvider,
-      });
-      fireEvent.click(screen.getByText('Clients'));
-      expect(mockRouter.asPath).toEqual('/clients');
-    });
+  it('tests that nav link About when clicked routes to the about page', async () => {
+    const user = userEvent.setup();
+    render(<Nav />, { wrapper: MemoryRouterProvider });
+    await user.click(screen.getByTestId('About-id'));
+    expect(mockRouter.asPath).toEqual('/about');
   });
 
-  it('tests that when a user click the schedule button it will route to contact page', () => {
-    render(<ScheduleButton />, {
+  it('tests that when a user click the schedule button it will route to contact page', async () => {
+    const user = userEvent.setup();
+    render(<Nav />, {
       wrapper: MemoryRouterProvider,
     });
-    fireEvent.click(screen.getByTestId('schedule-button'));
+    await user.click(screen.getByTestId('schedule-button'));
     expect(mockRouter.asPath).toEqual('/contact');
   });
 });

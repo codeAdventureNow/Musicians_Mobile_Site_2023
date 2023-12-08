@@ -53,7 +53,7 @@ export default function Nav() {
   };
 
   return (
-    <header className={styles.header}>
+    <header data-testid='navbar' className={styles.header}>
       <div className={styles.logo}>
         <Link data-testid='nav-logo' href='/contact'>
           <Image
@@ -84,6 +84,7 @@ export default function Nav() {
               }
               href={link.href}
               key={link.name}
+              data-testid={`${link.name}-id`}
             >
               {link.name}
             </Link>

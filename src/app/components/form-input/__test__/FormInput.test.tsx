@@ -1,5 +1,6 @@
 import FormInput from '../form-input';
 import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('Form Input', () => {
   it('should render our Form', () => {
@@ -11,12 +12,12 @@ describe('Form Input', () => {
     expect(contactForm).toBeInTheDocument(); // ASSERT
   });
 
-  //   it('should have the ability to type in the input', () => {
-  //     render(<FormInput />);
-  //     const nameInput = screen.getByTestId('fullName');
-  //     fireEvent.click(nameInput);
-  //     fireEvent.change(nameInput, { target: { value: 'Hen' } });
+  // it('should have the ability to type in the input', () => {
+  //   render(<FormInput />);
+  //   const nameInput = screen.getByTestId('fullName');
+  //   fireEvent.click(nameInput);
+  //   fireEvent.change(nameInput, { target: { value: 'Hen' } });
 
-  //     expect(nameInput.getByDisplayValue('Hen')).toBe('Hen Roberts');
-  //   });
+  //   expect(nameInput.getByDisplayValue('Hen')).toBe('Hen Roberts');
+  // });
 });

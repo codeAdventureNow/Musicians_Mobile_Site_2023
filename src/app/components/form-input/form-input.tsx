@@ -165,7 +165,9 @@ const FormInput = () => {
             placeholder='Daughter is a beginner, 8 years old, likes Taylor Swift'
           />
 
-          <input className={styles.submit} type='submit' />
+          <button className={styles.submit} type='submit'>
+            Submit
+          </button>
         </form>
       )}
     </div>

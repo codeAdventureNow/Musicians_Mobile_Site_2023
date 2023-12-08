@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should render the nav bar 1`] = `
+<header
+  className="header"
+  data-testid="navbar"
+>
+  <div
+    className="logo"
+  >
+    <a
+      data-testid="nav-logo"
+      href="/contact"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      <img
+        alt="musicians mobile logo"
+        data-nimg="1"
+        decoding="async"
+        height={100}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FLogo.jpg&w=128&q=75 1x, /_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+            "height": "auto",
+            "maxWidth": "100%",
+          }
+        }
+        width={100}
+      />
+    </a>
+  </div>
+  <ul
+    className="navbar"
+  >
+    <a
+      className="link"
+      data-testid="Home-id"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="link"
+      data-testid="About-id"
+      href="/about"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      About
+    </a>
+    <a
+      className="link"
+      data-testid="Clients-id"
+      href="/clients"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Clients
+    </a>
+    <a
+      className="link"
+      data-testid="Teachers-id"
+      href="/teachers"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Teachers
+    </a>
+    <a
+      className="link"
+      data-testid="FAQ-id"
+      href="/faq"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      FAQ
+    </a>
+    <a
+      className="link"
+      data-testid="Contact-id"
+      href="/contact"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Contact
+    </a>
+  </ul>
+  <div
+    className="cta_burgerMenu"
+  >
+    <div
+      className="nav_cta"
+    >
+      <a
+        className="cta_button"
+        data-testid="schedule-button"
+        href="/contact"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        rel="noreferrer"
+      >
+        Schedule A Free Lesson!
+      </a>
+      <br />
+      <a
+        className="phone"
+        href="tel:408-960-1100"
+      >
+         
+        <img
+          alt="phone_icon"
+          className="phone_icon"
+          data-nimg="1"
+          decoding="async"
+          height={100}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+          srcSet="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+          style={
+            {
+              "color": "transparent",
+              "height": "auto",
+              "maxWidth": "100%",
+            }
+          }
+          width={20}
+        />
+        <p>
+          (408) 960-1100
+        </p>
+      </a>
+    </div>
+    <div
+      className="nav-icon1 "
+      id="nav_icon1"
+      onClick={[Function]}
+    >
+      <span />
+      <span />
+      <span />
+    </div>
+  </div>
+</header>
+`;
