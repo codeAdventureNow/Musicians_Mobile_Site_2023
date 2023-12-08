@@ -40,7 +40,11 @@ const FormInput = () => {
       {formSubmitted ? (
         <h2>Form successfully submitted!</h2>
       ) : (
-        <form onSubmit={handleSubmit(submitData)} className={styles.formInput}>
+        <form
+          data-testid='contact-form'
+          onSubmit={handleSubmit(submitData)}
+          className={styles.formInput}
+        >
           <label className={styles.label_hidden}>Date</label>
 
           <input
@@ -56,6 +60,7 @@ const FormInput = () => {
             </span>
           )}
           <input
+            data-testid='fullName'
             className={styles.input}
             type='text'
             {...register('fullName')}
