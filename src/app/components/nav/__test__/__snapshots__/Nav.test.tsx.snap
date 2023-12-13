@@ -10,7 +10,7 @@ exports[`Nav should render the nav bar 1`] = `
   >
     <a
       data-testid="nav-logo"
-      href="/contact"
+      href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onTouchStart={[Function]}

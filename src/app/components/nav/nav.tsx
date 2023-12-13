@@ -55,7 +55,7 @@ export default function Nav() {
   return (
     <header data-testid='navbar' className={styles.header}>
       <div className={styles.logo}>
-        <Link data-testid='nav-logo' href='/contact'>
+        <Link data-testid='nav-logo' href='/'>
           <Image
             width={100}
             height={100}
