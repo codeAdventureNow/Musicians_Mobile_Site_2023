@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Client Component should render the client component 1`] = `
+<div>
+  <ul
+    className="flex"
+  />
+</div>
+`;

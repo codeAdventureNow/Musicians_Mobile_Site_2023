@@ -14,15 +14,17 @@ import {
   InstrumentCheckbox,
   instrumentOptions,
 } from '../instrument-checkbox/instrument-checkbox';
-import {
-  PencilSquareIcon,
-  TrashIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
+// import {
+//   PencilSquareIcon,
+//   TrashIcon,
+//   XMarkIcon,
+// } from '@heroicons/react/24/outline';
+
+import { PencilAltIcon, TrashIcon, XIcon } from '@heroicons/react/solid';
 
 import { IoSaveOutline } from 'react-icons/io5';
 
-type DeleteClient = (id: string) => void;
+export type DeleteClient = (id: string) => void;
 
 interface ClientCard {
   client: Client;
@@ -89,7 +91,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
               onClick={() => deleteClient(client.id)}
               className={styles.reactIcons}
             />
-            <XMarkIcon
+            <XIcon
               onClick={() => toggleEdit(client.id)}
               className={styles.reactIcons}
             />
@@ -230,7 +232,7 @@ export const ClientCard = ({ client, deleteClient }: ClientCard) => {
         <li>
           <div className={styles.customerCard}>
             <div className={styles.deleteButtonFlex}>
-              <PencilSquareIcon
+              <PencilAltIcon
                 onClick={() => toggleEdit(client.id)}
                 className={styles.reactIcons}
               />
