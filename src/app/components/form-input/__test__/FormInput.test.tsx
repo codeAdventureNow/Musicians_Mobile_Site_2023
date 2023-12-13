@@ -4,6 +4,7 @@ import {
   fireEvent,
   waitFor,
   act,
+  getByTestId,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import FormInput from '../form-input';
@@ -18,29 +19,31 @@ describe('Form Input', () => {
 
   it('call the onSubmit function', async () => {
     const mockOnSubmit = jest.fn();
-    const { getByLabelText, getByRole } = render(
+    const { getByTestId, getByRole } = render(
       <FormInput onSubmit={mockOnSubmit} />
     );
 
     await act(async () => {
-      fireEvent.change(getByLabelText('First/Last Name*'), {
+      fireEvent.change(getByTestId('fullName'), {
         target: { value: 'Runberto Machna' },
       });
-      fireEvent.change(getByLabelText('Zip Code*'), {
+      fireEvent.change(getByTestId('fullName'), {
+        target: { value: 'Runberto Machna' },
+      });
+      fireEvent.change(getByTestId('zipCode'), {
         target: { value: 90210 },
       });
-      fireEvent.change(getByLabelText('Email*'), {
+      fireEvent.change(getByTestId('email'), {
         target: { value: 'runberto@gmail.com' },
       });
-      fireEvent.change(getByLabelText('Phone*'), {
+      fireEvent.change(getByTestId('phoneNumber'), {
         target: { value: 4087067554 },
       });
-      fireEvent.change(
-        getByLabelText('Which musical instruments would you like to learn?*'),
-        { target: { value: ['guitar'] } }
-      );
-      fireEvent.change(getByLabelText('How did you hear about us?*'), {
-        target: { value: 'Google Search' },
+      fireEvent.change(getByTestId('guitar'), {
+        target: { value: ['guitar'] },
+      });
+      fireEvent.change(getByTestId('Referral'), {
+        target: { value: 'Referral' },
       });
     });
 

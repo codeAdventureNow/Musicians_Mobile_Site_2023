@@ -21,12 +21,16 @@ exports[`Form Input should render the Form 1`] = `
     />
     <label
       className="label"
+      htmlFor="fullName"
     >
-       First/Last Name* 
+       
+      First/Last Name*
+       
     </label>
     <input
       className="input"
       data-testid="fullName"
+      id="fullName"
       name="fullName"
       onBlur={[Function]}
       onChange={[Function]}
@@ -34,11 +38,16 @@ exports[`Form Input should render the Form 1`] = `
     />
     <label
       className="label"
+      htmlFor="zipCode"
     >
-       Zip Code* 
+       
+      Zip Code*
+       
     </label>
     <input
       className="input"
+      data-testid="zipCode"
+      id="zipCode"
       name="zipCode"
       onBlur={[Function]}
       onChange={[Function]}
@@ -46,11 +55,16 @@ exports[`Form Input should render the Form 1`] = `
     />
     <label
       className="label"
+      htmlFor="email"
     >
-       Email* 
+       
+      Email*
+       
     </label>
     <input
       className="input"
+      data-testid="email"
+      id="email"
       name="email"
       onBlur={[Function]}
       onChange={[Function]}
@@ -58,11 +72,16 @@ exports[`Form Input should render the Form 1`] = `
     />
     <label
       className="label"
+      htmlFor="phoneNumber"
     >
-       Phone* 
+       
+      Phone*
+       
     </label>
     <input
       className="input"
+      data-testid="phoneNumber"
+      id="phoneNumber"
       name="phone"
       onBlur={[Function]}
       onChange={[Function]}
@@ -83,11 +102,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="piano"
         >
           piano
         </label>
         <input
           className="input"
+          data-testid="piano"
+          id="piano"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -100,11 +122,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="guitar"
         >
           guitar
         </label>
         <input
           className="input"
+          data-testid="guitar"
+          id="guitar"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -117,11 +142,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="voice"
         >
           voice
         </label>
         <input
           className="input"
+          data-testid="voice"
+          id="voice"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -134,11 +162,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="drums"
         >
           drums
         </label>
         <input
           className="input"
+          data-testid="drums"
+          id="drums"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -151,11 +182,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="violin"
         >
           violin
         </label>
         <input
           className="input"
+          data-testid="violin"
+          id="violin"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -168,11 +202,14 @@ exports[`Form Input should render the Form 1`] = `
       >
         <label
           className="label"
+          htmlFor="other"
         >
           other
         </label>
         <input
           className="input"
+          data-testid="other"
+          id="other"
           name="instruments"
           onBlur={[Function]}
           onChange={[Function]}
@@ -200,42 +237,49 @@ exports[`Form Input should render the Form 1`] = `
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Referral"
         value="Referral"
       >
         Referral
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Yelp!"
         value="Yelp!"
       >
         Yelp!
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Google Search"
         value="Google Search"
       >
         Google Search
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Google Sponsored Ad"
         value="Google Sponsored Ad"
       >
         Google Sponsored Ad
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Facebook"
         value="Facebook"
       >
         Facebook
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Instagram"
         value="Instagram"
       >
         Instagram
       </option>
       <option
         className="leadSourceOption"
+        data-testid="Other"
         value="Other"
       >
         Other

@@ -26,6 +26,7 @@ export function InstrumentCheckbox({ instrument, register }: Checkbox) {
       </label>
 
       <input
+        data-testid={instrument}
         id={instrument}
         className={styles.input}
         type='checkbox'

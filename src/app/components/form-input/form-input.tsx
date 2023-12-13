@@ -80,6 +80,7 @@ const FormInput = () => {
             </span>
           )}
           <input
+            data-testid='zipCode'
             id='zipCode'
             className={styles.input}
             type='number'
@@ -94,6 +95,7 @@ const FormInput = () => {
             <span className={styles.errormessage}>{errors.email.message}</span>
           )}
           <input
+            data-testid='email'
             id='email'
             className={styles.input}
             type='email'
@@ -108,6 +110,7 @@ const FormInput = () => {
             <span className={styles.errormessage}>{errors.phone.message}</span>
           )}
           <input
+            data-testid='phoneNumber'
             id='phoneNumber'
             className={styles.input}
             type='number'
@@ -127,6 +130,7 @@ const FormInput = () => {
             {instrumentOptions.map((instrument: string) => {
               return (
                 <InstrumentCheckbox
+                  
                   key={instrument}
                   register={register}
                   instrument={instrument}
@@ -147,6 +151,7 @@ const FormInput = () => {
             {leadSourceOptions.map((leadSource) => {
               return (
                 <option
+                  data-testid={leadSource}
                   key={leadSource}
                   className={styles.leadSourceOption}
                   value={leadSource}
