@@ -6,7 +6,7 @@ import Link from 'next/link';
 import YouTubePlayer from '../components/youtube-player/youtube-player';
 import GetYelpReviews from '../components/yelp-api/yelp-api';
 import navstyles from '../components/nav/nav.module.css';
-import { CheckIcon } from '@heroicons/react/24/outline';
+import { CheckIcon } from '@heroicons/react/solid';
 import ScheduleButton from '../components/schedule-button/schedule-button';
 
 export default function HomePage() {

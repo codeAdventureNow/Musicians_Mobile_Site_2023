@@ -1,7 +1,7 @@
 import styles from './yelp-api.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { UserCircleIcon, StarIcon } from '@heroicons/react/24/solid';
+import { UserCircleIcon, StarIcon } from '@heroicons/react/solid';
 
 const getPostsData = async () => {
   const res = await fetch(

@@ -14,11 +14,6 @@ import {
   InstrumentCheckbox,
   instrumentOptions,
 } from '../instrument-checkbox/instrument-checkbox';
-// import {
-//   PencilSquareIcon,
-//   TrashIcon,
-//   XMarkIcon,
-// } from '@heroicons/react/24/outline';
 
 import { PencilAltIcon, TrashIcon, XIcon } from '@heroicons/react/solid';
 
