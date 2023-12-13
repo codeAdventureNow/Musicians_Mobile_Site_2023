@@ -53,42 +53,62 @@ const FormInput = () => {
             {...register('date')}
           />
 
-          <label className={styles.label}> First/Last Name* </label>
+          <label htmlFor='fullName' className={styles.label}>
+            {' '}
+            First/Last Name*{' '}
+          </label>
           {errors.fullName && (
             <span className={styles.errormessage}>
               {errors.fullName.message}
             </span>
           )}
           <input
+            id='fullName'
             data-testid='fullName'
             className={styles.input}
             type='text'
             {...register('fullName')}
           />
 
-          <label className={styles.label}> Zip Code* </label>
+          <label htmlFor='zipCode' className={styles.label}>
+            {' '}
+            Zip Code*{' '}
+          </label>
           {errors.zipCode && (
             <span className={styles.errormessage}>
               {errors.zipCode.message}
             </span>
           )}
           <input
+            id='zipCode'
             className={styles.input}
             type='number'
             {...register('zipCode', { valueAsNumber: true })}
           />
 
-          <label className={styles.label}> Email* </label>
+          <label htmlFor='email' className={styles.label}>
+            {' '}
+            Email*{' '}
+          </label>
           {errors.email && (
             <span className={styles.errormessage}>{errors.email.message}</span>
           )}
-          <input className={styles.input} type='email' {...register('email')} />
+          <input
+            id='email'
+            className={styles.input}
+            type='email'
+            {...register('email')}
+          />
 
-          <label className={styles.label}> Phone* </label>
+          <label htmlFor='phoneNumber' className={styles.label}>
+            {' '}
+            Phone*{' '}
+          </label>
           {errors.phone && (
             <span className={styles.errormessage}>{errors.phone.message}</span>
           )}
           <input
+            id='phoneNumber'
             className={styles.input}
             type='number'
             {...register('phone', { valueAsNumber: true })}

@@ -21,9 +21,12 @@ export const instrumentOptions: string[] = [
 export function InstrumentCheckbox({ instrument, register }: Checkbox) {
   return (
     <div className={styles.checkbox}>
-      <label className={styles.label}>{instrument}</label>
+      <label htmlFor={instrument} className={styles.label}>
+        {instrument}
+      </label>
 
       <input
+        id={instrument}
         className={styles.input}
         type='checkbox'
         {...register('instruments')}
