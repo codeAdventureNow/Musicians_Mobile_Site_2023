@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should render the "client" page should render the client component 1`] = `
+<div
+  className="homepage"
+>
+  <h2
+    className="paragraph"
+  >
+    Clients page
+  </h2>
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+       
+      <p>
+        Loading...
+      </p>
+    </div>
+  </section>
+</div>
+`;
