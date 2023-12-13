@@ -1,0 +1,574 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should render the "Home" page 1`] = `
+<div
+  className="homepage"
+>
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="hero_pre_heading"
+      >
+        <p>
+          South Bay's Leading Service For
+          <br />
+          Home Music Lessons!
+        </p>
+      </div>
+      <h1
+        className="hero_heading"
+      >
+        Quality
+         
+        <span
+          className="hero_heading_highlight"
+        >
+          Music Teachers
+        </span>
+         
+        <br />
+        In-Home
+      </h1>
+      <h3
+        className="hero_subheading"
+      >
+        Happily helping hundreds of South Bay Area families
+        <br />
+         with music lessons since 2009.
+      </h3>
+      <img
+        alt="home music lesson"
+        className="hero_image"
+        data-nimg="1"
+        decoding="async"
+        height={500}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimages%2FHomeShy.jpg&w=1080&q=75"
+        srcSet="/_next/image?url=%2Fimages%2FHomeShy.jpg&w=640&q=75 1x, /_next/image?url=%2Fimages%2FHomeShy.jpg&w=1080&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+            "height": "auto",
+            "maxWidth": "100%",
+          }
+        }
+        width={500}
+      />
+      <ul
+        className="hero_lesson_links_list"
+      >
+        <li>
+          <a
+            className="lesson_link"
+            href="#"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Piano Lessons
+          </a>
+        </li>
+        <li>
+          <a
+            className="lesson_link"
+            href="#"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Guitar Lessons
+          </a>
+        </li>
+        <li>
+          <a
+            className="lesson_link"
+            href="#"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Voice Lessons
+          </a>
+        </li>
+        <li>
+          <a
+            className="lesson_link"
+            href="#"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Drum Lessons
+          </a>
+        </li>
+        <li>
+          <a
+            className="lesson_link"
+            href="#"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+          >
+            Violin Lessons
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section
+    className="section video_section"
+  >
+    <div
+      className="container"
+    >
+      <h2
+        className="section_heading"
+      >
+        Professional
+         
+        <span
+          className="hero_heading_highlight"
+        >
+          Music Teachers
+        </span>
+        <br />
+        In-Home
+      </h2>
+      <div
+        className="video_section_flex"
+      >
+        <div
+          className="you_tube_container"
+        >
+          <div
+            className=""
+            style={{}}
+          >
+            <div
+              className=""
+              id=""
+            />
+          </div>
+        </div>
+        <div
+          className="section_text"
+        >
+          <p
+            className="video_section_paragraph video_section_paragraph_one"
+          >
+            Musicians Mobile brings quality, background-checked music teachers straight to your home.
+          </p>
+          <br />
+          <br />
+          <p
+            className="video_section_paragraph video_section_paragraph_two"
+          >
+            Save the drive on highway 85 so your family can safely spend more time on what matters most.
+          </p>
+          <div
+            className="nav_cta"
+          >
+            <a
+              className="cta_button"
+              data-testid="schedule-button"
+              href="/contact"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+              rel="noreferrer"
+            >
+              Schedule A Free Lesson!
+            </a>
+            <br />
+            <a
+              className="phone"
+              href="tel:408-960-1100"
+            >
+              <img
+                alt="phone_icon"
+                className="phone_icon"
+                data-nimg="1"
+                decoding="async"
+                height={100}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+                style={
+                  {
+                    "color": "transparent",
+                    "height": "auto",
+                    "maxWidth": "100%",
+                  }
+                }
+                width={20}
+              />
+              <p>
+                (408) 960-1100
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <h2
+        className="section_heading"
+      >
+        <br
+          className="progress"
+        />
+        Three Pillars To
+        <span
+          className="hero_heading_highlight"
+        >
+           Progress
+        </span>
+      </h2>
+      <div
+        className="pillar_flex"
+      >
+        <div
+          className="pillar_column"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            1. Save
+            <span
+              className="hero_heading_highlight"
+            >
+               Time
+            </span>
+          </h2>
+          <img
+            alt="students learning drums, guitar and keyboards from teacher"
+            className="pillar_image"
+            data-nimg="1"
+            decoding="async"
+            height={300}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Fdrums_guitar_piano_inhome_edit.jpg&w=640&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fdrums_guitar_piano_inhome_edit.jpg&w=384&q=75 1x, /_next/image?url=%2Fimages%2Fdrums_guitar_piano_inhome_edit.jpg&w=640&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+                "height": "auto",
+                "maxWidth": "100%",
+              }
+            }
+            width={300}
+          />
+          <h3
+            className="pillar_subheading"
+          >
+            Save 4-8 hours a month in traffic and waiting for lessons.
+          </h3>
+          <ul>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Eliminate the frustration, inefficiency, fuel expense, and road risks of driving to and from lessons
+            </li>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Spend time doing what matters most to you
+            </li>
+          </ul>
+        </div>
+        <div
+          className="pillar_column"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            2. Quality
+            <span
+              className="hero_heading_highlight"
+            >
+               Teachers
+            </span>
+          </h2>
+          <img
+            alt="student learning drums from teacher"
+            className="pillar_image"
+            data-nimg="1"
+            decoding="async"
+            height={300}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Finhomepiano.jpg&w=640&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Finhomepiano.jpg&w=384&q=75 1x, /_next/image?url=%2Fimages%2Finhomepiano.jpg&w=640&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+                "height": "auto",
+                "maxWidth": "100%",
+              }
+            }
+            width={300}
+          />
+          <h3
+            className="pillar_subheading"
+          >
+            Enjoy a friendly, focused approach from patient music teachers
+          </h3>
+          <ul>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Learn the songs that excite you and keep you engaged in music lessons
+            </li>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Teachers pass background checks and tested for musical proficiency
+            </li>
+          </ul>
+        </div>
+        <div
+          className="pillar_column pillar_column_last"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            3. Perform
+             
+            <span
+              className="hero_heading_highlight"
+            >
+               
+              Confidently
+            </span>
+          </h2>
+          <img
+            alt="student learning drums from teacher"
+            className="pillar_image"
+            data-nimg="1"
+            decoding="async"
+            height={300}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimages%2Fvocal_guitar_rock_edit.jpg&w=640&q=75"
+            srcSet="/_next/image?url=%2Fimages%2Fvocal_guitar_rock_edit.jpg&w=384&q=75 1x, /_next/image?url=%2Fimages%2Fvocal_guitar_rock_edit.jpg&w=640&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+                "height": "auto",
+                "maxWidth": "100%",
+              }
+            }
+            width={300}
+          />
+          <h3
+            className="pillar_subheading"
+          >
+            We take the lessons to the home, and the students to the stage!
+          </h3>
+          <ul>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Encouraging recitals designed for students to gain stage confidence
+            </li>
+            <li
+              className="pillar_section_bullet_points"
+            >
+              <svg
+                aria-hidden="true"
+                className="check_mark"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              Learn to play well with others through team building rock band shows and workshops
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <h2
+        className="section_heading"
+      >
+        Check Out Our
+         
+        <span
+          className="hero_heading_highlight"
+        >
+          Reviews
+        </span>
+         
+      </h2>
+    </div>
+  </section>
+  <section
+    className="section cta_final"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="pillar_column"
+      >
+        <h2
+          className="section_heading"
+        >
+          Try Us
+           
+          <span
+            className="hero_heading_highlight"
+          >
+            Free!
+          </span>
+        </h2>
+        <p
+          className="free_lesson_paragraph"
+        >
+          Try a free no obligation 30-minute lesson in the comfort of your home. Choose from piano, guitar, voice, violin, and drums.
+        </p>
+        <div
+          className="nav_cta"
+        >
+          <a
+            className="cta_button"
+            data-testid="schedule-button"
+            href="/contact"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onTouchStart={[Function]}
+            rel="noreferrer"
+          >
+            Schedule A Free Lesson!
+          </a>
+          <br />
+          <a
+            className="phone"
+            href="tel:408-960-1100"
+          >
+             
+            <img
+              alt="phone_icon"
+              className="phone_icon"
+              data-nimg="1"
+              decoding="async"
+              height={100}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+              srcSet="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+              style={
+                {
+                  "color": "transparent",
+                  "height": "auto",
+                  "maxWidth": "100%",
+                }
+              }
+              width={20}
+            />
+            <p>
+              (408) 960-1100
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
