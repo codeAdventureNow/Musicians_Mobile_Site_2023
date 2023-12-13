@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact page should render the "Contact" page 1`] = `
+<div
+  className="homepage"
+>
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="hero_heading"
+      >
+        Contact Us
+      </h1>
+      <div
+        className="pillar_flex"
+      >
+        <div
+          className="pillar_column"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            Option 1
+          </h2>
+          <p
+            className="pillar_paragraph"
+          >
+            Schedule a 10-minute phone consultation. Talk to one of our team members so we can learn more about your music interests and answer any questions.
+          </p>
+        </div>
+        <div
+          className="pillar_column"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            Option 2 
+          </h2>
+          <p>
+            Call us directly
+          </p>
+          <div
+            className="nav_cta"
+          >
+            <br />
+            <a
+              className="phone"
+              href="tel:408-960-1100"
+            >
+               
+              <img
+                alt="phone_icon"
+                className="phone_icon"
+                data-nimg="1"
+                decoding="async"
+                height={100}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+                style={
+                  {
+                    "color": "transparent",
+                    "height": "auto",
+                    "maxWidth": "100%",
+                  }
+                }
+                width={20}
+              />
+              <p>
+                (408) 960-1100
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="pillar_flex"
+      >
+        <div
+          className="pillar_column"
+        >
+          <h2
+            className="pillar_heading"
+          >
+            Option 3 
+          </h2>
+          <p>
+            Fill out our contact form
+          </p>
+          <p
+            className="required"
+          >
+            (*Required)
+          </p>
+          <p>
+            Loading...
+          </p>
+        </div>
+        <div
+          className="pillar_column"
+        >
+          <div
+            className="logo"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
+            >
+              <img
+                alt="musicians mobile logo"
+                data-nimg="1"
+                decoding="async"
+                height={100}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75"
+                srcSet="/_next/image?url=%2Fimages%2FLogo.jpg&w=128&q=75 1x, /_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75 2x"
+                style={
+                  {
+                    "color": "transparent",
+                    "height": "auto",
+                    "maxWidth": "100%",
+                  }
+                }
+                width={100}
+              />
+            </a>
+          </div>
+          <p>
+            Office Hours: M-F 9am-6pm
+          </p>
+          <div
+            className="nav_cta"
+          >
+            <br />
+            <a
+              className="phone"
+              href="tel:408-960-1100"
+            >
+               
+              <img
+                alt="phone_icon"
+                className="phone_icon"
+                data-nimg="1"
+                decoding="async"
+                height={100}
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+                srcSet="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+                style={
+                  {
+                    "color": "transparent",
+                    "height": "auto",
+                    "maxWidth": "100%",
+                  }
+                }
+                width={20}
+              />
+              <p>
+                (408) 960-1100
+              </p>
+            </a>
+          </div>
+          <div
+            className="contact_info"
+          >
+            <p>
+              carl@musiciansmobile.com
+            </p>
+            <p>
+              1276 Lincoln Ave, suite 109
+            </p>
+            <p>
+              San Jose, CA 95125
+            </p>
+          </div>
+          <div
+            className="map"
+          >
+            <iframe
+              height="225"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.5629107149553!2d-121.90112832343421!3d37.30549173905257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e346eb98cff69%3A0x2e9270c56585f820!2sMusicians%20Mobile!5e0!3m2!1sen!2sus!4v1697230138264!5m2!1sen!2sus"
+              width="300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

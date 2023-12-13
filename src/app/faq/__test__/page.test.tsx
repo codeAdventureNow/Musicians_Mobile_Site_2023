@@ -1,11 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import { userEvent } from '@testing-library/user-event';
-import mockRouter from 'next-router-mock';
-import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
-
+import renderer from 'react-test-renderer';
 import FAQ from '../page';
 
 describe('FAQ', () => {
+  it('should render the "FAQ" page', () => {
+    const faq = renderer.create(<FAQ />).toJSON();
+    expect(faq).toMatchSnapshot();
+  });
+
   it('should have Frequently Asked text', () => {
     render(<FAQ />); //arrange
 
