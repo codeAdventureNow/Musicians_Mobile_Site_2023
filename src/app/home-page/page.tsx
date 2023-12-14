@@ -12,6 +12,7 @@ import homeGuitarShy from '../../../public/images/HomeShy.jpg';
 import drumsGuitarKeysFamily from '../../../public/images/drums_guitar_piano_inhome_edit.jpg';
 import inHomePianoLesson from '../../../public/images/inhomepiano.jpg';
 import twoGuitarsVocalsOnStage from '../../../public/images/vocal_guitar_rock_edit.jpg';
+import Header from '../components/header/header';
 
 export default function HomePage() {
   //youtube video id
@@ -86,14 +87,11 @@ export default function HomePage() {
       {/* Video Section */}
       <section className={`${styles.section} ${styles.video_section}`}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            Professional{' '}
-            <span className={styles.hero_heading_highlight}>
-              Music Teachers
-            </span>
+          <Header title='Professional' highlight=' Music Lessons'>
             <br />
             In-Home
-          </h2>
+          </Header>
+
           <div className={styles.video_section_flex}>
             <div className={styles.you_tube_container}>
               <YouTubePlayer videoId={promoVideo} />
@@ -138,11 +136,8 @@ export default function HomePage() {
       {/* Pillars of Progress */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            <br className={styles.progress} />
-            Three Pillars To
-            <span className={styles.hero_heading_highlight}> Progress</span>
-          </h2>
+          <Header title='Three Pillars To' highlight=' Progress' />
+
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>
@@ -242,20 +237,15 @@ export default function HomePage() {
       {/*  Reviews    */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            Check Out Our{' '}
-            <span className={styles.hero_heading_highlight}>Reviews</span>{' '}
-          </h2>
+          <Header title='Check Out Our' highlight=' Reviews' />
           <GetYelpReviews />
         </div>
       </section>
       <section className={`${styles.section} ${styles.cta_final}`}>
         <div className={styles.container}>
           <div className={styles.pillar_column}>
-            <h2 className={styles.section_heading}>
-              Try Us{' '}
-              <span className={styles.hero_heading_highlight}>Free!</span>
-            </h2>
+            <Header title='Try Us' highlight=' Free!' />
+
             <p className={styles.free_lesson_paragraph}>
               Try a free no obligation 30-minute lesson in the comfort of your
               home. Choose from piano, guitar, voice, violin, and drums.
