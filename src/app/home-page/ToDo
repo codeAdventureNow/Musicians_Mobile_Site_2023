@@ -1,0 +1,6 @@
+Change images to direct sources - import from public/images
+Look at creating a header component
+Look at other parts of the JSX that can be reused
+Look at how to create a dumb component for Yelp Reviews
+Consider mapping over the <Links /> for different lessons
+Look at how to test APIs - look at mocking API calls

@@ -75,7 +75,7 @@ const FormInput = () => {
             Zip Code*{' '}
           </label>
           {errors.zipCode && (
-            <span className={styles.errormessage}>
+            <span data-testid='zipError' className={styles.errormessage}>
               {errors.zipCode.message}
             </span>
           )}
@@ -130,7 +130,6 @@ const FormInput = () => {
             {instrumentOptions.map((instrument: string) => {
               return (
                 <InstrumentCheckbox
-                  
                   key={instrument}
                   register={register}
                   instrument={instrument}

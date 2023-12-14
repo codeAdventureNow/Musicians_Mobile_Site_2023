@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should render the "Home" page 1`] = `
+<DocumentFragment>
+  <div
+    class="homepage"
+  >
+    <section
+      class="section"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="hero_pre_heading"
+        >
+          <p>
+            South Bay's Leading Service For
+            <br />
+            Home Music Lessons!
+          </p>
+        </div>
+        <h1
+          class="hero_heading"
+        >
+          Quality 
+          <span
+            class="hero_heading_highlight"
+          >
+            Music Teachers
+          </span>
+           
+          <br />
+          In-Home
+        </h1>
+        <h3
+          class="hero_subheading"
+        >
+          Happily helping hundreds of South Bay Area families
+          <br />
+           with music lessons since 2009.
+        </h3>
+        <img
+          alt="home music lesson"
+          class="hero_image"
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=1080&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 1x, /_next/image?url=%2Fimg.jpg&w=1080&q=75 2x"
+          style="color: transparent; max-width: 100%; height: auto;"
+          width="500"
+        />
+        <ul
+          class="hero_lesson_links_list"
+        >
+          <li>
+            <a
+              class="lesson_link"
+              href="#"
+            >
+              Piano Lessons
+            </a>
+          </li>
+          <li>
+            <a
+              class="lesson_link"
+              href="#"
+            >
+              Guitar Lessons
+            </a>
+          </li>
+          <li>
+            <a
+              class="lesson_link"
+              href="#"
+            >
+              Voice Lessons
+            </a>
+          </li>
+          <li>
+            <a
+              class="lesson_link"
+              href="#"
+            >
+              Drum Lessons
+            </a>
+          </li>
+          <li>
+            <a
+              class="lesson_link"
+              href="#"
+            >
+              Violin Lessons
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section
+      class="section video_section"
+    >
+      <div
+        class="container"
+      >
+        <h2
+          class="section_heading"
+        >
+          Professional 
+          <span
+            class="hero_heading_highlight"
+          >
+            Music Teachers
+          </span>
+          <br />
+          In-Home
+        </h2>
+        <div
+          class="video_section_flex"
+        >
+          <div
+            class="you_tube_container"
+          >
+            <div
+              class=""
+            >
+              <div
+                class=""
+                id=""
+              />
+            </div>
+          </div>
+          <div
+            class="section_text"
+          >
+            <p
+              class="video_section_paragraph video_section_paragraph_one"
+            >
+              Musicians Mobile brings quality, background-checked music teachers straight to your home.
+            </p>
+            <br />
+            <br />
+            <p
+              class="video_section_paragraph video_section_paragraph_two"
+            >
+              Save the drive on highway 85 so your family can safely spend more time on what matters most.
+            </p>
+            <div
+              class="nav_cta"
+            >
+              <a
+                class="cta_button"
+                data-testid="schedule-button"
+                href="/contact"
+                rel="noreferrer"
+              >
+                Schedule A Free Lesson!
+              </a>
+              <br />
+              <a
+                class="phone"
+                href="tel:408-960-1100"
+              >
+                <img
+                  alt="phone_icon"
+                  class="phone_icon"
+                  data-nimg="1"
+                  decoding="async"
+                  height="100"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+                  srcset="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+                  style="color: transparent; max-width: 100%; height: auto;"
+                  width="20"
+                />
+                <p>
+                  (408) 960-1100
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section"
+    >
+      <div
+        class="container"
+      >
+        <h2
+          class="section_heading"
+        >
+          <br
+            class="progress"
+          />
+          Three Pillars To
+          <span
+            class="hero_heading_highlight"
+          >
+             Progress
+          </span>
+        </h2>
+        <div
+          class="pillar_flex"
+        >
+          <div
+            class="pillar_column"
+          >
+            <h2
+              class="pillar_heading"
+            >
+              1. Save
+              <span
+                class="hero_heading_highlight"
+              >
+                 Time
+              </span>
+            </h2>
+            <img
+              alt="students learning drums, guitar and keyboards from teacher"
+              class="pillar_image"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent; max-width: 100%; height: auto;"
+              width="300"
+            />
+            <h3
+              class="pillar_subheading"
+            >
+              Save 4-8 hours a month in traffic and waiting for lessons.
+            </h3>
+            <ul>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Eliminate the frustration, inefficiency, fuel expense, and road risks of driving to and from lessons
+              </li>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Spend time doing what matters most to you
+              </li>
+            </ul>
+          </div>
+          <div
+            class="pillar_column"
+          >
+            <h2
+              class="pillar_heading"
+            >
+              2. Quality
+              <span
+                class="hero_heading_highlight"
+              >
+                 Teachers
+              </span>
+            </h2>
+            <img
+              alt="student learning drums from teacher"
+              class="pillar_image"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent; max-width: 100%; height: auto;"
+              width="300"
+            />
+            <h3
+              class="pillar_subheading"
+            >
+              Enjoy a friendly, focused approach from patient music teachers
+            </h3>
+            <ul>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Learn the songs that excite you and keep you engaged in music lessons
+              </li>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Teachers pass background checks and tested for musical proficiency
+              </li>
+            </ul>
+          </div>
+          <div
+            class="pillar_column pillar_column_last"
+          >
+            <h2
+              class="pillar_heading"
+            >
+              3. Perform 
+              <span
+                class="hero_heading_highlight"
+              >
+                 Confidently
+              </span>
+            </h2>
+            <img
+              alt="student learning drums from teacher"
+              class="pillar_image"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=384&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+              style="color: transparent; max-width: 100%; height: auto;"
+              width="300"
+            />
+            <h3
+              class="pillar_subheading"
+            >
+              We take the lessons to the home, and the students to the stage!
+            </h3>
+            <ul>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Encouraging recitals designed for students to gain stage confidence
+              </li>
+              <li
+                class="pillar_section_bullet_points"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="check_mark"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Learn to play well with others through team building rock band shows and workshops
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section"
+    >
+      <div
+        class="container"
+      >
+        <h2
+          class="section_heading"
+        >
+          Check Out Our 
+          <span
+            class="hero_heading_highlight"
+          >
+            Reviews
+          </span>
+           
+        </h2>
+      </div>
+    </section>
+    <section
+      class="section cta_final"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="pillar_column"
+        >
+          <h2
+            class="section_heading"
+          >
+            Try Us 
+            <span
+              class="hero_heading_highlight"
+            >
+              Free!
+            </span>
+          </h2>
+          <p
+            class="free_lesson_paragraph"
+          >
+            Try a free no obligation 30-minute lesson in the comfort of your home. Choose from piano, guitar, voice, violin, and drums.
+          </p>
+          <div
+            class="nav_cta"
+          >
+            <a
+              class="cta_button"
+              data-testid="schedule-button"
+              href="/contact"
+              rel="noreferrer"
+            >
+              Schedule A Free Lesson!
+            </a>
+            <br />
+            <a
+              class="phone"
+              href="tel:408-960-1100"
+            >
+               
+              <img
+                alt="phone_icon"
+                class="phone_icon"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fphone_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fphone_icon.png&w=48&q=75 2x"
+                style="color: transparent; max-width: 100%; height: auto;"
+                width="20"
+              />
+              <p>
+                (408) 960-1100
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

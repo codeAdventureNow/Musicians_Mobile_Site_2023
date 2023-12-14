@@ -34,7 +34,7 @@ describe('Form Input', () => {
         target: { value: 'runberto@gmail.com' },
       });
       fireEvent.change(getByTestId('phoneNumber'), {
-        target: { value: 4087067554 },
+        target: { value: 14087067554 },
       });
       fireEvent.change(getByTestId('guitar'), {
         target: { value: ['guitar'] },
@@ -49,5 +49,47 @@ describe('Form Input', () => {
     });
 
     expect(mockOnSubmit).toHaveBeenCalled();
+  });
+
+  describe('validiation errors', () => {
+    it('renders the fullname validation error', async () => {
+      const { getByTestId, container, getByRole } = render(<FormInput />);
+
+      await act(async () => {
+        const nameInput = getByTestId('fullName');
+        fireEvent.change(nameInput, { target: { value: 'i' } });
+        fireEvent.click(getByRole('button'));
+      });
+
+      expect(container.innerHTML).toMatch('Name must be at least 2 letters.');
+    });
+
+    it('renders the zipCode validation error for not having ENOUGH digits', async () => {
+      const { getByTestId, container, getByRole } = render(<FormInput />);
+
+      await act(async () => {
+        const zipCode = getByTestId('zipCode');
+        fireEvent.change(zipCode, { target: { value: 8 } });
+        fireEvent.click(getByRole('button'));
+      });
+
+      expect(getByTestId('zipError').innerHTML).toMatch(
+        'Too few digits, please enter a 5 digit zip code.'
+      );
+    });
+
+    it('renders the zipCode validation error for not having ANY digits', async () => {
+      const { getByTestId, container, getByRole } = render(<FormInput />);
+
+      await act(async () => {
+        const zipCode = getByTestId('zipCode');
+        fireEvent.change(zipCode, { target: { value: '' } });
+        fireEvent.click(getByRole('button'));
+      });
+
+      expect(getByTestId('zipError').innerHTML).toMatch(
+        'Please enter a five digit zip code.'
+      );
+    });
   });
 });

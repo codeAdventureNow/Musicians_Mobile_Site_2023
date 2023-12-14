@@ -21,7 +21,7 @@ const getPostsData = async () => {
 export default async function Yelp_API() {
   const posts = await getPostsData();
 
-  function converDate(date: string) {
+  function convertDate(date: string) {
     const convertedDate = new Date(date);
     return new Intl.DateTimeFormat('en-US').format(convertedDate);
   }
@@ -149,7 +149,7 @@ export default async function Yelp_API() {
                   {starRating(post.rating)}
                 </Link>
                 <Link className={styles.date} target='_blank' href={post.url}>
-                  <p>{converDate(post.time_created)}</p>
+                  <p>{convertDate(post.time_created)}</p>
                 </Link>
               </div>
 
