@@ -8,13 +8,15 @@ import GetYelpReviews from '../components/yelp-api/yelp-api';
 import navstyles from '../components/nav/nav.module.css';
 import { CheckIcon } from '@heroicons/react/solid';
 import ScheduleButton from '../components/schedule-button/schedule-button';
+import homeGuitarShy from '../../../public/images/HomeShy.jpg';
+import drumsGuitarKeysFamily from '../../../public/images/drums_guitar_piano_inhome_edit.jpg';
+import inHomePianoLesson from '../../../public/images/inhomepiano.jpg';
+import twoGuitarsVocalsOnStage from '../../../public/images/vocal_guitar_rock_edit.jpg';
 
 export default function HomePage() {
-  const homeGuitarShy = '/images/HomeShy.jpg';
+  //youtube video id
   const promoVideo = 'ZZgqnipO-No';
-  const drumsGuitarKeysFamily = '/images/drums_guitar_piano_inhome_edit.jpg';
-  const inHomePianoLesson = '/images/inhomepiano.jpg';
-  const twoGuitarsVocalsOnStage = '/images/vocal_guitar_rock_edit.jpg';
+
   return (
     <div className='homepage'>
       {/*  Hero   */}

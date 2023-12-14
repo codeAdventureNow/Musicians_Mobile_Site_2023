@@ -7,11 +7,6 @@ import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 const user = userEvent.setup();
 
 describe('About', () => {
-  // it('should render the "About" page', () => {
-  //   const aboutPage = renderer.create(<About />).toJSON();
-  //   expect(aboutPage).toMatchSnapshot();
-  // });
-
   it('should render the "About" page', () => {
     const { asFragment } = render(<About />);
 

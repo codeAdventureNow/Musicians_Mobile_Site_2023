@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer';
 import HomePage from '../page';
 import { render } from '@testing-library/react';
 

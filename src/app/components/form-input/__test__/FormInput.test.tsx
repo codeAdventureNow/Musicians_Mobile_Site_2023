@@ -65,7 +65,7 @@ describe('Form Input', () => {
     });
 
     it('renders the zipCode validation error for not having ENOUGH digits', async () => {
-      const { getByTestId, container, getByRole } = render(<FormInput />);
+      const { getByTestId, getByRole } = render(<FormInput />);
 
       await act(async () => {
         const zipCode = getByTestId('zipCode');
@@ -79,7 +79,7 @@ describe('Form Input', () => {
     });
 
     it('renders the zipCode validation error for not having ANY digits', async () => {
-      const { getByTestId, container, getByRole } = render(<FormInput />);
+      const { getByTestId, getByRole } = render(<FormInput />);
 
       await act(async () => {
         const zipCode = getByTestId('zipCode');
