@@ -27,9 +27,6 @@ describe('Form Input', () => {
       fireEvent.change(getByTestId('fullName'), {
         target: { value: 'Runberto Machna' },
       });
-      fireEvent.change(getByTestId('fullName'), {
-        target: { value: 'Runberto Machna' },
-      });
       fireEvent.change(getByTestId('zipCode'), {
         target: { value: 90210 },
       });
