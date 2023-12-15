@@ -1,6 +1,5 @@
 // 'use client';
 import styles from './home-page.module.css';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import YouTubePlayer from '../components/youtube-player/youtube-player';
@@ -13,6 +12,7 @@ import drumsGuitarKeysFamily from '../../../public/images/drums_guitar_piano_inh
 import inHomePianoLesson from '../../../public/images/inhomepiano.jpg';
 import twoGuitarsVocalsOnStage from '../../../public/images/vocal_guitar_rock_edit.jpg';
 import Header from '../components/header/header';
+import lessonLinks from './home-page-data';
 
 export default function HomePage() {
   //youtube video id
@@ -55,31 +55,15 @@ export default function HomePage() {
           />
 
           <ul className={styles.hero_lesson_links_list}>
-            <li>
-              <Link className={styles.lesson_link} href='#'>
-                Piano Lessons
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.lesson_link} href='#'>
-                Guitar Lessons
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.lesson_link} href='#'>
-                Voice Lessons
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.lesson_link} href='#'>
-                Drum Lessons
-              </Link>
-            </li>
-            <li>
-              <Link className={styles.lesson_link} href='#'>
-                Violin Lessons
-              </Link>
-            </li>
+            {lessonLinks.map((lesson) => {
+              return (
+                <li>
+                  <Link className={styles.lesson_link} href={lesson.href}>
+                    {lesson.instrument} Lessons
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
