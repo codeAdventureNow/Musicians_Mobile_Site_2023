@@ -1,9 +1,10 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Contact from '../page';
 
 describe('Contact page', () => {
   it('should render the "Contact" page', () => {
-    const contact = renderer.create(<Contact />).toJSON();
-    expect(contact).toMatchSnapshot();
+    const { asFragment } = render(<Contact />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

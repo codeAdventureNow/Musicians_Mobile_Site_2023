@@ -3,14 +3,14 @@ import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
 import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 import Nav from '../nav';
-import renderer from 'react-test-renderer';
 
 const user = userEvent.setup();
 
 describe('Nav', () => {
   it('should render the nav bar', () => {
-    const navBar = renderer.create(<Nav />).toJSON();
-    expect(navBar).toMatchSnapshot();
+    const { asFragment } = render(<Nav />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('tests that when a user click the logo it will route to home page', async () => {

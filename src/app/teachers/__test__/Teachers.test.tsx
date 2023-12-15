@@ -1,9 +1,10 @@
-import renderer from 'react-test-renderer';
 import Teachers from '../page';
+import { render } from '@testing-library/react';
 
 describe('Teachers', () => {
-  it('should render the "FAQ" page', () => {
-    const teachers = renderer.create(<Teachers />).toJSON();
-    expect(teachers).toMatchSnapshot();
+  it('should render the "Teachers" page', () => {
+    const { asFragment } = render(<Teachers />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });
