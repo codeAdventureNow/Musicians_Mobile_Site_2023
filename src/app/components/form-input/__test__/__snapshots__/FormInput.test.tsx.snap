@@ -1,323 +1,284 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form Input should render the Form 1`] = `
-<div>
-  <form
-    className="formInput"
-    data-testid="contact-form"
-    onSubmit={[Function]}
-  >
-    <label
-      className="label_hidden"
+<DocumentFragment>
+  <div>
+    <form
+      class="formInput"
+      data-testid="contact-form"
     >
-      Date
-    </label>
-    <input
-      className="label_hidden"
-      name="date"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-    />
-    <label
-      className="label"
-      htmlFor="fullName"
-    >
-       
-      First/Last Name*
-       
-    </label>
-    <input
-      className="input"
-      data-testid="fullName"
-      id="fullName"
-      name="fullName"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-    />
-    <label
-      className="label"
-      htmlFor="zipCode"
-    >
-       
-      Zip Code*
-       
-    </label>
-    <input
-      className="input"
-      data-testid="zipCode"
-      id="zipCode"
-      name="zipCode"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="number"
-    />
-    <label
-      className="label"
-      htmlFor="email"
-    >
-       
-      Email*
-       
-    </label>
-    <input
-      className="input"
-      data-testid="email"
-      id="email"
-      name="email"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="email"
-    />
-    <label
-      className="label"
-      htmlFor="phoneNumber"
-    >
-       
-      Phone*
-       
-    </label>
-    <input
-      className="input"
-      data-testid="phoneNumber"
-      id="phoneNumber"
-      name="phone"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="number"
-    />
-    <label
-      className="label"
-    >
-       
-      Which musical instruments would you like to learn?*
-       
-    </label>
-    <div
-      className="flex"
-    >
+      <label
+        class="label_hidden"
+      >
+        Date
+      </label>
+      <input
+        class="label_hidden"
+        name="date"
+        type="text"
+      />
+      <label
+        class="label"
+        for="fullName"
+      >
+         First/Last Name* 
+      </label>
+      <input
+        class="input"
+        data-testid="fullName"
+        id="fullName"
+        name="fullName"
+        type="text"
+      />
+      <label
+        class="label"
+        for="zipCode"
+      >
+         Zip Code* 
+      </label>
+      <input
+        class="input"
+        data-testid="zipCode"
+        id="zipCode"
+        name="zipCode"
+        type="number"
+      />
+      <label
+        class="label"
+        for="email"
+      >
+         Email* 
+      </label>
+      <input
+        class="input"
+        data-testid="email"
+        id="email"
+        name="email"
+        type="email"
+      />
+      <label
+        class="label"
+        for="phoneNumber"
+      >
+         Phone* 
+      </label>
+      <input
+        class="input"
+        data-testid="phoneNumber"
+        id="phoneNumber"
+        name="phone"
+        type="number"
+      />
+      <label
+        class="label"
+      >
+         Which musical instruments would you like to learn?* 
+      </label>
       <div
-        className="checkbox"
+        class="flex"
       >
-        <label
-          className="label"
-          htmlFor="piano"
+        <div
+          class="checkbox"
         >
-          piano
-        </label>
-        <input
-          className="input"
-          data-testid="piano"
-          id="piano"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="piano"
-        />
-      </div>
-      <div
-        className="checkbox"
-      >
-        <label
-          className="label"
-          htmlFor="guitar"
+          <label
+            class="label"
+            for="piano"
+          >
+            piano
+          </label>
+          <input
+            class="input"
+            data-testid="piano"
+            id="piano"
+            name="instruments"
+            type="checkbox"
+            value="piano"
+          />
+        </div>
+        <div
+          class="checkbox"
         >
-          guitar
-        </label>
-        <input
-          className="input"
-          data-testid="guitar"
-          id="guitar"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="guitar"
-        />
-      </div>
-      <div
-        className="checkbox"
-      >
-        <label
-          className="label"
-          htmlFor="voice"
+          <label
+            class="label"
+            for="guitar"
+          >
+            guitar
+          </label>
+          <input
+            class="input"
+            data-testid="guitar"
+            id="guitar"
+            name="instruments"
+            type="checkbox"
+            value="guitar"
+          />
+        </div>
+        <div
+          class="checkbox"
         >
-          voice
-        </label>
-        <input
-          className="input"
-          data-testid="voice"
-          id="voice"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="voice"
-        />
-      </div>
-      <div
-        className="checkbox"
-      >
-        <label
-          className="label"
-          htmlFor="drums"
+          <label
+            class="label"
+            for="voice"
+          >
+            voice
+          </label>
+          <input
+            class="input"
+            data-testid="voice"
+            id="voice"
+            name="instruments"
+            type="checkbox"
+            value="voice"
+          />
+        </div>
+        <div
+          class="checkbox"
         >
-          drums
-        </label>
-        <input
-          className="input"
-          data-testid="drums"
-          id="drums"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="drums"
-        />
-      </div>
-      <div
-        className="checkbox"
-      >
-        <label
-          className="label"
-          htmlFor="violin"
+          <label
+            class="label"
+            for="drums"
+          >
+            drums
+          </label>
+          <input
+            class="input"
+            data-testid="drums"
+            id="drums"
+            name="instruments"
+            type="checkbox"
+            value="drums"
+          />
+        </div>
+        <div
+          class="checkbox"
         >
-          violin
-        </label>
-        <input
-          className="input"
-          data-testid="violin"
-          id="violin"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="violin"
-        />
-      </div>
-      <div
-        className="checkbox"
-      >
-        <label
-          className="label"
-          htmlFor="other"
+          <label
+            class="label"
+            for="violin"
+          >
+            violin
+          </label>
+          <input
+            class="input"
+            data-testid="violin"
+            id="violin"
+            name="instruments"
+            type="checkbox"
+            value="violin"
+          />
+        </div>
+        <div
+          class="checkbox"
         >
-          other
-        </label>
-        <input
-          className="input"
-          data-testid="other"
-          id="other"
-          name="instruments"
-          onBlur={[Function]}
-          onChange={[Function]}
-          type="checkbox"
-          value="other"
-        />
+          <label
+            class="label"
+            for="other"
+          >
+            other
+          </label>
+          <input
+            class="input"
+            data-testid="other"
+            id="other"
+            name="instruments"
+            type="checkbox"
+            value="other"
+          />
+        </div>
       </div>
-    </div>
-    <label
-      className="label"
-    >
-       How did you hear about us?* 
-    </label>
-    <select
-      className="leadSource"
-      name="leadSource"
-      onBlur={[Function]}
-      onChange={[Function]}
-    >
-      <option
-        className="leadSourceOption"
-        value=""
+      <label
+        class="label"
       >
-        Please choose an option
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Referral"
-        value="Referral"
+         How did you hear about us?* 
+      </label>
+      <select
+        class="leadSource"
+        name="leadSource"
       >
-        Referral
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Yelp!"
-        value="Yelp!"
+        <option
+          class="leadSourceOption"
+          value=""
+        >
+          Please choose an option
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Referral"
+          value="Referral"
+        >
+          Referral
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Yelp!"
+          value="Yelp!"
+        >
+          Yelp!
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Google Search"
+          value="Google Search"
+        >
+          Google Search
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Google Sponsored Ad"
+          value="Google Sponsored Ad"
+        >
+          Google Sponsored Ad
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Facebook"
+          value="Facebook"
+        >
+          Facebook
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Instagram"
+          value="Instagram"
+        >
+          Instagram
+        </option>
+        <option
+          class="leadSourceOption"
+          data-testid="Other"
+          value="Other"
+        >
+          Other
+        </option>
+      </select>
+      <label
+        class="label"
       >
-        Yelp!
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Google Search"
-        value="Google Search"
+         What is your availability for music lessons? 
+      </label>
+      <input
+        class="input"
+        name="availability"
+        placeholder="Mon 3-6pm, Sat 8-10am"
+        type="text"
+      />
+      <label
+        class="label"
       >
-        Google Search
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Google Sponsored Ad"
-        value="Google Sponsored Ad"
+         Additional info 
+      </label>
+      <textarea
+        class="textarea"
+        name="message"
+        placeholder="Daughter is a beginner, 8 years old, likes Taylor Swift"
+      />
+      <button
+        class="submit"
+        type="submit"
       >
-        Google Sponsored Ad
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Facebook"
-        value="Facebook"
-      >
-        Facebook
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Instagram"
-        value="Instagram"
-      >
-        Instagram
-      </option>
-      <option
-        className="leadSourceOption"
-        data-testid="Other"
-        value="Other"
-      >
-        Other
-      </option>
-    </select>
-    <label
-      className="label"
-    >
-       
-      What is your availability for music lessons?
-       
-    </label>
-    <input
-      className="input"
-      name="availability"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="Mon 3-6pm, Sat 8-10am"
-      type="text"
-    />
-    <label
-      className="label"
-    >
-       Additional info 
-    </label>
-    <textarea
-      className="textarea"
-      name="message"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="Daughter is a beginner, 8 years old, likes Taylor Swift"
-    />
-    <button
-      className="submit"
-      type="submit"
-    >
-      Submit
-    </button>
-  </form>
-</div>
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
 `;

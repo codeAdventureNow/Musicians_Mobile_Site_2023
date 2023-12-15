@@ -12,9 +12,10 @@ import renderer from 'react-test-renderer';
 
 describe('Form Input', () => {
   const user = userEvent.setup();
+
   it('should render the Form', () => {
-    const formInput = renderer.create(<FormInput />).toJSON();
-    expect(formInput).toMatchSnapshot();
+    const { asFragment } = render(<FormInput />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   // it('call the onSubmit function', async () => {
@@ -44,12 +45,12 @@ describe('Form Input', () => {
   //     });
   //   });
 
-    await act(async () => {
-      fireEvent.click(getByRole('button'));
-    });
+  //   await act(async () => {
+  //     fireEvent.click(getByRole('button'));
+  //   });
 
-    expect(mockOnSubmit).toHaveBeenCalled();
-  });
+  //   expect(mockOnSubmit).toHaveBeenCalled();
+  // });
 
   describe('validiation errors', () => {
     it('renders the fullname validation error', async () => {

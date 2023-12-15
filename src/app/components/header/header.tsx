@@ -1,9 +1,7 @@
-import { ReactNodeArray } from 'react';
-
 interface Header {
   title: string;
   highlight: string;
-  children?: any;
+  children?: React.ReactNode;
 }
 
 const Header = ({ title, highlight, children }: Header) => {
