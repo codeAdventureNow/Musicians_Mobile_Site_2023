@@ -39,8 +39,7 @@ export default function Yelp_API() {
     return new Intl.DateTimeFormat('en-US').format(convertedDate);
   }
 
-  // const posts = getPostsData();
-  const posts = 22;
+  const posts = getPostsData();
 
   function starRating(postRatings: number) {
     if (postRatings === 5) {
