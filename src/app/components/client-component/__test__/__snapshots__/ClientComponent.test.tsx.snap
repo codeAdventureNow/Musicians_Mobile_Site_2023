@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Client Component should render the client component 1`] = `
-<div>
-  <ul
-    className="flex"
-  />
-</div>
+exports[`Client Component should render the "Client Componenent" 1`] = `
+<DocumentFragment>
+  <div>
+    <ul
+      class="flex"
+    />
+  </div>
+</DocumentFragment>
 `;

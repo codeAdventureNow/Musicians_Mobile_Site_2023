@@ -1,279 +1,192 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer should render the Footer 1`] = `
-<footer
-  className="footer"
->
-  <ul
-    className="footer_nav"
+exports[`Footer should render the "Footer" component 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
   >
-    <li>
-      <a
-        className="nav_links"
-        href="/careers"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Careers
-      </a>
-    </li>
-    <li>
-      <a
-        className="nav_links"
-        href="/blog"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Blog
-      </a>
-    </li>
-  </ul>
-  <ul
-    className="footer_nav footer_navlegal"
-  >
-    <li>
-      <a
-        className="nav_links"
-        href="/terms-conditions"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Terms & Conditions
-      </a>
-    </li>
-    <li>
-      <a
-        className="nav_links"
-        href="/privacy-policy"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Privacy Policy
-      </a>
-    </li>
-  </ul>
-  <ul
-    className="social_media_list"
-  >
-    <li>
-      <a
-        href="https://www.facebook.com/musiciansmobile"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="facebook social media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Ffacebook_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Ffacebook_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Ffacebook_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.instagram.com/musiciansmobile/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="instagram social media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Finstagram_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Finstagram_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Finstagram_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.youtube.com/channel/UCgzb0Z2uKMQxmCRVR2dAY4Q"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="youtube social media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Fyoutube_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Fyoutube_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fyoutube_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.yelp.com/biz/musicians-mobile-san-jose"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="yelp social media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Fyelp_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Fyelp_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fyelp_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/company/musiciansmobile/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="linked in social media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Flinked_in_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Flinked_in_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Flinked_in_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://feeds.buzzsprout.com/1169933"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-        target="_blank"
-      >
-        <img
-          alt="podcast media link"
-          data-nimg="1"
-          decoding="async"
-          height={25}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimages%2Fpodcast_icon.png&w=64&q=75"
-          srcSet="/_next/image?url=%2Fimages%2Fpodcast_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fpodcast_icon.png&w=64&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-              "height": "auto",
-              "maxWidth": "100%",
-            }
-          }
-          width={25}
-        />
-      </a>
-    </li>
-  </ul>
-  <div
-    className="logo_address"
-  >
-    <a
-      className="logo"
-      href="/"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onTouchStart={[Function]}
+    <ul
+      class="footer_nav"
     >
-      <img
-        alt="musicians mobile logo"
-        data-nimg="1"
-        decoding="async"
-        height={100}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="/_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75"
-        srcSet="/_next/image?url=%2Fimages%2FLogo.jpg&w=128&q=75 1x, /_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75 2x"
-        style={
-          {
-            "color": "transparent",
-            "height": "auto",
-            "maxWidth": "100%",
-          }
-        }
-        width={100}
-      />
-    </a>
+      <li>
+        <a
+          class="nav_links"
+          href="/careers"
+        >
+          Careers
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav_links"
+          href="/blog"
+        >
+          Blog
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="footer_nav footer_navlegal"
+    >
+      <li>
+        <a
+          class="nav_links"
+          href="/terms-conditions"
+        >
+          Terms & Conditions
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav_links"
+          href="/privacy-policy"
+        >
+          Privacy Policy
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="social_media_list"
+    >
+      <li>
+        <a
+          href="https://www.facebook.com/musiciansmobile"
+          target="_blank"
+        >
+          <img
+            alt="facebook social media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Ffacebook_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Ffacebook_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Ffacebook_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/musiciansmobile/"
+          target="_blank"
+        >
+          <img
+            alt="instagram social media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Finstagram_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Finstagram_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Finstagram_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/channel/UCgzb0Z2uKMQxmCRVR2dAY4Q"
+          target="_blank"
+        >
+          <img
+            alt="youtube social media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fyoutube_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fyoutube_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fyoutube_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.yelp.com/biz/musicians-mobile-san-jose"
+          target="_blank"
+        >
+          <img
+            alt="yelp social media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fyelp_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fyelp_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fyelp_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/company/musiciansmobile/"
+          target="_blank"
+        >
+          <img
+            alt="linked in social media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Flinked_in_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Flinked_in_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Flinked_in_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://feeds.buzzsprout.com/1169933"
+          target="_blank"
+        >
+          <img
+            alt="podcast media link"
+            data-nimg="1"
+            decoding="async"
+            height="25"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fpodcast_icon.png&w=64&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fpodcast_icon.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fpodcast_icon.png&w=64&q=75 2x"
+            style="color: transparent; max-width: 100%; height: auto;"
+            width="25"
+          />
+        </a>
+      </li>
+    </ul>
     <div
-      className="address"
+      class="logo_address"
     >
-      <p>
-        1276 Lincoln Ave, suite 109
-      </p>
-      <p>
-        San Jose CA 95125
-      </p>
+      <a
+        class="logo"
+        href="/"
+      >
+        <img
+          alt="musicians mobile logo"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75"
+          srcset="/_next/image?url=%2Fimages%2FLogo.jpg&w=128&q=75 1x, /_next/image?url=%2Fimages%2FLogo.jpg&w=256&q=75 2x"
+          style="color: transparent; max-width: 100%; height: auto;"
+          width="100"
+        />
+      </a>
+      <div
+        class="address"
+      >
+        <p>
+          1276 Lincoln Ave, suite 109
+        </p>
+        <p>
+          San Jose CA 95125
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</DocumentFragment>
 `;

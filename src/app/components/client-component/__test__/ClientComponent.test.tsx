@@ -1,9 +1,10 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import ClientComponent from '../client-component';
 
 describe('Client Component', () => {
-  it('should render the client component', () => {
-    const clientComponent = renderer.create(<ClientComponent />).toJSON();
-    expect(clientComponent).toMatchSnapshot();
+  it('should render the "Client Componenent"', () => {
+    const { asFragment } = render(<ClientComponent />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

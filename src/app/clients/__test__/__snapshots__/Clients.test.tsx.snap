@@ -1,25 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`It should render the "client" page should render the client component 1`] = `
-<div
-  className="homepage"
->
-  <h2
-    className="paragraph"
+exports[`Clients should render the "Clients" page 1`] = `
+<DocumentFragment>
+  <div
+    class="homepage"
   >
-    Clients page
-  </h2>
-  <section
-    className="section"
-  >
-    <div
-      className="container"
+    <h2
+      class="paragraph"
     >
-       
-      <p>
-        Loading...
-      </p>
-    </div>
-  </section>
-</div>
+      Clients page
+    </h2>
+    <section
+      class="section"
+    >
+      <div
+        class="container"
+      >
+         
+        <p>
+          Loading...
+        </p>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
 `;

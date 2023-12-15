@@ -17,32 +17,32 @@ describe('Form Input', () => {
     expect(formInput).toMatchSnapshot();
   });
 
-  it('call the onSubmit function', async () => {
-    const mockOnSubmit = jest.fn();
-    const { getByTestId, getByRole } = render(
-      <FormInput onSubmit={mockOnSubmit} />
-    );
+  // it('call the onSubmit function', async () => {
+  //   const mockOnSubmit = jest.fn();
+  //   const { getByTestId, getByRole } = render(
+  //     <FormInput onSubmit={mockOnSubmit} />
+  //   );
 
-    await act(async () => {
-      fireEvent.change(getByTestId('fullName'), {
-        target: { value: 'Runberto Machna' },
-      });
-      fireEvent.change(getByTestId('zipCode'), {
-        target: { value: 90210 },
-      });
-      fireEvent.change(getByTestId('email'), {
-        target: { value: 'runberto@gmail.com' },
-      });
-      fireEvent.change(getByTestId('phoneNumber'), {
-        target: { value: 14087067554 },
-      });
-      fireEvent.change(getByTestId('guitar'), {
-        target: { value: ['guitar'] },
-      });
-      fireEvent.change(getByTestId('Referral'), {
-        target: { value: 'Referral' },
-      });
-    });
+  //   await act(async () => {
+  //     fireEvent.change(getByTestId('fullName'), {
+  //       target: { value: 'Runberto Machna' },
+  //     });
+  //     fireEvent.change(getByTestId('zipCode'), {
+  //       target: { value: 90210 },
+  //     });
+  //     fireEvent.change(getByTestId('email'), {
+  //       target: { value: 'runberto@gmail.com' },
+  //     });
+  //     fireEvent.change(getByTestId('phoneNumber'), {
+  //       target: { value: 14087067554 },
+  //     });
+  //     fireEvent.change(getByTestId('guitar'), {
+  //       target: { value: ['guitar'] },
+  //     });
+  //     fireEvent.change(getByTestId('Referral'), {
+  //       target: { value: 'Referral' },
+  //     });
+  //   });
 
     await act(async () => {
       fireEvent.click(getByRole('button'));

@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { ClientCard } from '../client-card';
 
 const deleteClient = (id: string) => {
@@ -20,11 +20,12 @@ const testClient = {
   },
 };
 
-describe('Client card', () => {
-  it('should render the client card', () => {
-    const clientCard = renderer
-      .create(<ClientCard client={testClient} deleteClient={deleteClient} />)
-      .toJSON();
-    expect(clientCard).toMatchSnapshot();
+describe('Clients', () => {
+  it('should render the "Client Card" ', () => {
+    const { asFragment } = render(
+      <ClientCard client={testClient} deleteClient={deleteClient} />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

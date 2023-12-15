@@ -1,5 +1,4 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import About from '../page';
 import userEvent from '@testing-library/user-event';
 import mockRouter from 'next-router-mock';
