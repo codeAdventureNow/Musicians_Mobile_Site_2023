@@ -1,31 +1,46 @@
+'use client';
 import styles from './yelp-api.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UserCircleIcon, StarIcon } from '@heroicons/react/solid';
 import YelpWidget from './yelp-widget';
+import { useState, useEffect } from 'react';
 
-const getPostsData = async () => {
-  const res = await fetch(
-    'https://api.yelp.com/v3/businesses/musicians-mobile-san-jose/reviews',
-    {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
-        Authorization:
-          'Bearer sE7J9a4whsAuirarCMct3DYLxYtgIVaJ5P6waWRiUD3lg1XnQgAtCYa-VsxQL0QiQNFg11evNbIiEID1gpMmG6BVa90Ww-PvpZTBKdz_Kr13kJOdFuPyE13T44wEZXYx',
-      },
-    }
-  );
-  return res.json();
+const getPostsData = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        'https://api.yelp.com/v3/businesses/musicians-mobile-san-jose/reviews',
+        {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+            Authorization:
+              'Bearer sE7J9a4whsAuirarCMct3DYLxYtgIVaJ5P6waWRiUD3lg1XnQgAtCYa-VsxQL0QiQNFg11evNbIiEID1gpMmG6BVa90Ww-PvpZTBKdz_Kr13kJOdFuPyE13T44wEZXYx',
+          },
+        }
+      );
+      console.log(response);
+      const json = await response.json();
+
+      setPosts(json);
+    };
+    fetchData();
+  }, []);
+
+  return posts;
 };
 
-export default async function Yelp_API() {
+export default function Yelp_API() {
   function convertDate(date: string) {
     const convertedDate = new Date(date);
     return new Intl.DateTimeFormat('en-US').format(convertedDate);
   }
 
-  const posts = await getPostsData();
+  // const posts = getPostsData();
+  const posts = 22;
 
   function starRating(postRatings: number) {
     if (postRatings === 5) {
@@ -84,6 +99,7 @@ export default async function Yelp_API() {
       name: string;
     };
   };
+  console.log('dog');
 
   return (
     <div className={styles.container}>
