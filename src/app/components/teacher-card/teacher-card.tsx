@@ -10,9 +10,11 @@ interface Teacher {
 }
 
 export const TeacherCard = ({ name, image, role, alt, bio }: Teacher) => {
+  const { card, cardTop } = styles;
+
   return (
-    <div key={name} className={styles.card}>
-      <div className={styles.cardTop}>
+    <div key={name} className={card}>
+      <div className={cardTop}>
         <div>
           <h3 className={styles.teacher_name}>{name}</h3>
           <p className={styles.teacher_role}>{role}</p>

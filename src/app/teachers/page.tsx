@@ -34,13 +34,14 @@ export default function Teachers() {
           <h2 className={styles.section_heading}>Staff</h2>
           <div className={styles.card_container}>
             {staff.map((person) => {
+              const { name, image, role, alt, bio } = person;
               return (
                 <TeacherCard
-                  name={person.name}
-                  image={person.image}
-                  role={person.role}
-                  alt={person.alt}
-                  bio={person.bio}
+                  name={name}
+                  image={image}
+                  role={role}
+                  alt={alt}
+                  bio={bio}
                 />
               );
             })}
@@ -55,13 +56,14 @@ export default function Teachers() {
           </h2>
           <div className={styles.card_container}>
             {teachers.map((teacher) => {
+              const { name, image, role, alt, bio } = teacher;
               return (
                 <TeacherCard
-                  name={teacher.name}
-                  image={teacher.image}
-                  role={teacher.role}
-                  alt={teacher.alt}
-                  bio={teacher.bio}
+                  name={name}
+                  image={image}
+                  role={role}
+                  alt={alt}
+                  bio={bio}
                 />
               );
             })}
