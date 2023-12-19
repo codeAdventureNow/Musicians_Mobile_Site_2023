@@ -1,15 +1,14 @@
 import styles from './faq.module.css';
 import Link from 'next/link';
+import Header from '../components/header/header';
 
 const FAQ = () => {
   return (
     <div className='homepage'>
       <section className='section'>
         <div className='container'>
-          <h2 className='section_heading'>
-            Frequently Asked{' '}
-            <span className='hero_heading_highlight'>Questions</span>{' '}
-          </h2>
+          <Header title='Frequently Asked' highlight=' Questions' />
+
           <div className={styles.flex}>
             <div className={styles.question_container}>
               <p className={styles.question}>

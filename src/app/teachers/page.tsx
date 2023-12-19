@@ -1,17 +1,17 @@
 import styles from './teachers.module.css';
 import { TeacherCard } from '../components/teacher-card/teacher-card';
 import { staff, teachers } from './teacher-data';
+import Header from '../components/header/header';
 
 export default function Teachers() {
   return (
     <div className={styles.page}>
       <section className={styles.heading_section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            Music{' '}
-            <span className={styles.hero_heading_highlight}>Teachers</span> +
-            Staff
-          </h2>
+          <Header title='Music' highlight=' Teachers'>
+            {' '}
+            + Staff
+          </Header>
           <div className={styles.intro_paragraph_flex}>
             <p className={styles.intro_paragraph}>
               We believe that when you enjoy your instrument, you stick with it.
@@ -31,7 +31,7 @@ export default function Teachers() {
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>Staff</h2>
+          <Header title='Staff' />
           <div className={styles.card_container}>
             {staff.map((person) => {
               const { name, image, role, alt, bio } = person;
@@ -50,10 +50,7 @@ export default function Teachers() {
       </section>
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.section_heading}>
-            Music
-            <span className={styles.hero_heading_highlight}> Teachers</span>
-          </h2>
+          <Header title='Music' highlight=' Teachers' />
           <div className={styles.card_container}>
             {teachers.map((teacher) => {
               const { name, image, role, alt, bio } = teacher;

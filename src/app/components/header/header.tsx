@@ -1,6 +1,6 @@
 interface Header {
   title: string;
-  highlight: string;
+  highlight?: string;
   children?: React.ReactNode;
 }
 
