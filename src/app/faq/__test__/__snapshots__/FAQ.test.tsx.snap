@@ -14,13 +14,12 @@ exports[`FAQ should render the "FAQ" page 1`] = `
         <h2
           class="section_heading"
         >
-          Frequently Asked 
+          Frequently Asked
           <span
             class="hero_heading_highlight"
           >
-            Questions
+             Questions
           </span>
-           
         </h2>
         <div
           class="flex"

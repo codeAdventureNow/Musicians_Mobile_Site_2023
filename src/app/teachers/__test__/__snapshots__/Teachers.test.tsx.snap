@@ -14,11 +14,11 @@ exports[`Teachers should render the "Teachers" page 1`] = `
         <h2
           class="section_heading"
         >
-          Music 
+          Music
           <span
             class="hero_heading_highlight"
           >
-            Teachers
+             Teachers
           </span>
            + Staff
         </h2>
@@ -48,6 +48,9 @@ exports[`Teachers should render the "Teachers" page 1`] = `
           class="section_heading"
         >
           Staff
+          <span
+            class="hero_heading_highlight"
+          />
         </h2>
         <div
           class="card_container"

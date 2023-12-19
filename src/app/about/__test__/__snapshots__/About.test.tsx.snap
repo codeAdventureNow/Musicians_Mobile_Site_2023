@@ -14,13 +14,12 @@ exports[`About should render the "About" page 1`] = `
         <h2
           class="section_heading"
         >
-          About 
+          About
           <span
             class="hero_heading_highlight"
           >
-            Us
+             Us
           </span>
-           
         </h2>
         <div
           class="flex"
@@ -87,7 +86,6 @@ exports[`About should render the "About" page 1`] = `
           >
              Mobile
           </span>
-           
         </h2>
         <div
           class="flex_reverse"
@@ -141,7 +139,6 @@ exports[`About should render the "About" page 1`] = `
           >
              Success
           </span>
-           
         </h2>
         <div
           class="column"

@@ -5,11 +5,18 @@ exports[`Clients should render the "Clients" page 1`] = `
   <div
     class="homepage"
   >
-    <h2
+    <div
       class="paragraph"
     >
-      Clients page
-    </h2>
+      <h2
+        class="section_heading"
+      >
+        Clients
+        <span
+          class="hero_heading_highlight"
+        />
+      </h2>
+    </div>
     <section
       class="section"
     >
