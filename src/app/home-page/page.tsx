@@ -124,10 +124,7 @@ export default function HomePage() {
 
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
-              <h2 className={styles.pillar_heading}>
-                1. Save
-                <span className={styles.hero_heading_highlight}> Time</span>
-              </h2>
+              <Header title='1. Save' highlight=' Time' size={22} />
               <Image
                 className={styles.pillar_image}
                 src={drumsGuitarKeysFamily}
@@ -152,10 +149,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className={styles.pillar_column}>
-              <h2 className={styles.pillar_heading}>
-                2. Quality
-                <span className={styles.hero_heading_highlight}> Teachers</span>
-              </h2>
+              <Header title='2. Quality' highlight=' Teachers' size={22} />
               <Image
                 className={styles.pillar_image}
                 src={inHomePianoLesson}
@@ -183,13 +177,8 @@ export default function HomePage() {
             <div
               className={`${styles.pillar_column} ${styles.pillar_column_last}`}
             >
-              <h2 className={styles.pillar_heading}>
-                3. Perform{' '}
-                <span className={styles.hero_heading_highlight}>
-                  {' '}
-                  Confidently
-                </span>
-              </h2>
+              <Header title='3. Perform' highlight=' Confidently' size={22} />
+
               <Image
                 className={styles.pillar_image}
                 src={twoGuitarsVocalsOnStage}
