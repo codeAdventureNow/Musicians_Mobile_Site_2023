@@ -1,15 +1,14 @@
 import styles from './about.module.css';
 import ScheduleButton from '../components/schedule-button/schedule-button';
 import Image from 'next/image';
+import Header from '../components/header/header';
 
 const About = () => {
   return (
     <div className='homepage'>
       <section className='section'>
         <div className='container'>
-          <h2 className='section_heading'>
-            About <span className='hero_heading_highlight'>Us</span>{' '}
-          </h2>
+          <Header title='About' highlight=' Us' />
           <div className={styles.flex}>
             <div className={styles.content}>
               <p className={styles.paragraph}>
@@ -47,9 +46,8 @@ const About = () => {
 
       <section className='section'>
         <div className='container'>
-          <h2 className='section_heading'>
-            Musicians<span className='hero_heading_highlight'> Mobile</span>{' '}
-          </h2>
+          <Header title='Musicians' highlight=' Mobile' />
+
           <div className={styles.flex_reverse}>
             <div className={styles.content}>
               <p className={styles.paragraph}>
@@ -87,9 +85,8 @@ const About = () => {
       </section>
       <section className='section'>
         <div className='container'>
-          <h2 className='section_heading'>
-            Student<span className='hero_heading_highlight'> Success</span>{' '}
-          </h2>
+          <Header title='Student' highlight=' Success' />
+
           <div className={styles.column}>
             <div className={styles.intro_image_container}>
               <Image
