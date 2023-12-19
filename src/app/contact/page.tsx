@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import navstyles from '../components/nav/nav.module.css';
 import dynamic from 'next/dynamic';
+import Header from '../components/header/header';
 
 const DynamicContactForm = dynamic(
   () => import('../components/form-input/form-input'),
@@ -18,7 +19,8 @@ export default function Contact() {
     <div className={styles.homepage}>
       <section className={styles.section}>
         <div className={styles.container}>
-          <h1 className={styles.hero_heading}>Contact Us</h1>
+          <Header title='Contact' highlight=' Us' />
+
           <div className={styles.pillar_flex}>
             <div className={styles.pillar_column}>
               <h2 className={styles.pillar_heading}>Option 1</h2>
