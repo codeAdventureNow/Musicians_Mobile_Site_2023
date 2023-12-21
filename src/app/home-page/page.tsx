@@ -56,10 +56,11 @@ export default function HomePage() {
 
           <ul className={styles.hero_lesson_links_list}>
             {lessonLinks.map((lesson) => {
+              const { instrument, href } = lesson;
               return (
                 <li>
-                  <Link className={styles.lesson_link} href={lesson.href}>
-                    {lesson.instrument} Lessons
+                  <Link className={styles.lesson_link} href={href}>
+                    {instrument} Lessons
                   </Link>
                 </li>
               );
