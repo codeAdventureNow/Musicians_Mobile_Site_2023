@@ -1,3 +1,16 @@
+type Post = {
+  id: string;
+  url: string;
+  time_created: string;
+  text: string;
+  rating: number;
+  user: {
+    profile_url: string;
+    image_url: string;
+    name: string;
+  };
+};
+
 const users = {
   4: { name: 'Mark' },
   5: { name: 'Paul' },

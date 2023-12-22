@@ -83,6 +83,8 @@ export default async function Yelp_API() {
     };
   };
 
+  console.log(posts);
+
   return (
     <div className={styles.container}>
       {posts.reviews.map((post: Post) => {
