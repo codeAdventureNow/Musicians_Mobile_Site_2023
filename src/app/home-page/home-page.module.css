@@ -11,20 +11,6 @@
   text-align: center;
 }
 
-.section {
-  padding-top: 100px;
-  color: #383838;
-  font-family: 'Poppins', sans-serif;
-  width: 85%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-.container {
-  width: 85%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
 .hero_pre_heading {
   font-family: 'Oxygen', sans-serif;
   font-size: 12px;

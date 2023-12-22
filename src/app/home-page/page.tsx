@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className='homepage'>
       {/*  Hero   */}
-      <section className={`${styles.section}`}>
+      <section className='section'>
         <div className={styles.hero_pre_heading}>
           <p>
             South Bay&apos;s Leading Service For
@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       {/* Video Section */}
-      <section className={`${styles.section} ${styles.video_section}`}>
+      <section className={`section ${styles.video_section}`}>
         <Header title='Professional' highlight=' Music Lessons'>
           <br />
           In-Home
@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* Pillars of Progress */}
-      <section className={styles.section}>
+      <section className='section'>
         <Header title='Three Pillars To' highlight=' Progress' />
 
         <div className={styles.pillar_flex}>
@@ -203,11 +203,11 @@ export default function HomePage() {
       </section>
 
       {/*  Reviews    */}
-      <section className={styles.section}>
+      <section className='section'>
         <Header title='Check Out Our' highlight=' Reviews' />
         <GetYelpReviews />
       </section>
-      <section className={`${styles.section} ${styles.cta_final}`}>
+      <section className={`section ${styles.cta_final}`}>
         <div className={styles.pillar_column}>
           <Header title='Try Us' highlight=' Free!' />
 
