@@ -53,13 +53,7 @@ export const teachers: Array<Teacher> = [
     alt: 'Avi sitting with guitar in living room',
     bio: `Avi has been a teacher of voice and guitar in the Bay Area for more than 10 years. His patient approach and inspiring lessons help students of all ages explore a variety of interests and techniques. His lessons display his deep passion for music balanced with a focus on note reading and the development of listening skills. Avi helps students easily to understand and access even the most challenging music. Through his vocal and guitar coaching, Avi’s students learn to sing and accompany themselves on guitar with confidence. He introduces students to a diverse array of genres, including rock, pop, musical theater and classical. Avi attended the University of California at Santa Cruz, where he studied vocal performance.`,
   },
-  {
-    name: 'Brandon L.',
-    image: '/images/BrandonL.jpg',
-    role: 'Piano Teacher',
-    alt: 'Brandon sitting in a living room smiling.',
-    bio: `Brandon is a passionate pianist who has played piano for 11 years. Aside from performing in piano recitals, he has performed in choir shows, dinner parties, and rock band performances. He can teach many genres like Jazz, Pop, Video Game/Film music, and Classical, emphasizing expression and musicality. His goal is to create a safe, productive learning setting where students can truly connect with music. Brandon is instructed under Gwendolyn Mok, studying for a degree in B.M. Piano Performance at San Jose State University.`,
-  },
+
   {
     name: 'Earnest L.',
     image: '/images/EarnestL.png',
@@ -67,13 +61,7 @@ export const teachers: Array<Teacher> = [
     alt: 'Earnest sitting in a living room smiling.',
     bio: `Earnest began studying music and playing the piano at the age of three. He has studied music at the San Francisco Conservatory of Music, University of Pacific and San Jose State University where he earned a B.M. in Piano Performance. In his career Earnest has won numerous statewide competitions, scholarships and grants. One such competition allowed him to perform Tchaikovsky’s Piano Concerto No. 1 with the Stockton Symphony. Earnest is currently pursuing a Masters degree under the mentorship of Dr. Gwendolyn Mok then will continue to work on a doctorate degree, with future plans to teach at a college/university. Earnest believes in smart practice habits to maximize time and effort with a lesson plan that engages the student in a fun and interesting way. In addition to classical music, Earnest can play and teach R&B, pop, top 40, Broadway and Disney songs.`,
   },
-  {
-    name: 'Joshua C.',
-    image: '/images/JoshC.jpeg',
-    role: 'Piano Teacher',
-    alt: 'Joshua sitting in a living room smiling.',
-    bio: `Joshua started playing piano at the age of 6 and took piano lessons for 8 years. Since then, he’s been a self-taught performer/composer who played in several orchestras, weddings, and public gigs. He is experienced in teaching students funk, gospel, classical, and video game/movie music. However, he is most specialized in teaching ear-playing, improvisation, music production, and composition theory. He highly believes that the student’s goals come first and will work his lessons around what his students want to achieve. He is also able to arrange custom sheet music for students, even for songs that have no existing piano sheets available. Joshua is currently pursuing a bachelor’s degree in Economics, with a minor in music and computer science at San Jose State University. `,
-  },
+
   {
     name: 'Jillian V.',
     image: '/images/JillianV.jpeg',
