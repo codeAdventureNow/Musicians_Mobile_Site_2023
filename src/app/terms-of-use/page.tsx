@@ -1,6 +1,6 @@
 import styles from './terms-conditions.module.css';
 
-export default function Teachers() {
+export default function Terms() {
   return (
     <div className='homepage'>
       <section className='section'>

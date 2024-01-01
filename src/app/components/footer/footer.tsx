@@ -21,8 +21,8 @@ export default function Footer() {
 
   const footerLinksLegal = [
     {
-      name: 'Terms & Conditions',
-      href: '/terms-conditions',
+      name: 'Terms Of Use',
+      href: '/terms-of-use',
     },
     {
       name: 'Privacy Policy',
