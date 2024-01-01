@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         <div className='container'>
           <h2 className='section_heading'>Privacy Policy</h2>
           <div className={styles.paragraph}>
-            <p>Last updated: October 08, 2020</p>
+            <p>Last updated: January 01, 2024</p>
             <br />
             <p>
               This Privacy Policy describes Our policies and procedures on the
@@ -824,6 +824,344 @@ export default function PrivacyPolicy() {
                 >
                   https://www.google.com/intl/en/policies/privacy/
                 </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>CCPA Privacy</h2>
+            <h3 className={styles.heading_Three}>Your Rights under the CCPA</h3>
+            <p>
+              Under this Privacy Policy, and by law if You are a resident of
+              California, You have the following rights:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>The right to notice. </span>You
+                must be properly notified which categories of Personal Data are
+                being collected and the purposes for which the Personal Data is
+                being used.
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>
+                  The right to access / the right to request.{' '}
+                </span>
+                The CCPA permits You to request and obtain from the Company
+                information regarding the disclosure of Your Personal Data that
+                has been collected in the past 12 months by the Company or its
+                subsidiaries to a third-party for the third party’s direct
+                marketing purposes.
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>
+                  The right to say no to the sale of Personal Data.
+                </span>{' '}
+                You also have the right to ask the Company not to sell Your
+                Personal Data to third parties. You can submit such a request by
+                visiting our “Do Not Sell My Personal Information” section or
+                web page.
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>
+                  The right to know about Your Personal Data.{' '}
+                </span>
+                You have the right to request and obtain from the Company
+                information regarding the disclosure of the following:
+                <ul>
+                  <li>- The categories of Personal Data collected</li>
+                  <li>
+                    - The sources from which the Personal Data was collected
+                  </li>
+                  <li>
+                    - The business or commercial purpose for collecting or
+                    selling the Personal Data
+                  </li>
+                  <li>
+                    - Categories of third parties with whom We share Personal
+                    Data
+                  </li>
+                  <li>
+                    - The specific pieces of Personal Data we collected about
+                    You
+                  </li>
+                </ul>
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>
+                  The right to delete Personal Data.{' '}
+                </span>
+                You also have the right to request the deletion of Your Personal
+                Data that have been collected in the past 12 months.
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>
+                  The right not to be discriminated against.{' '}
+                </span>
+                You have the right not to be discriminated against for
+                exercising any of Your Consumer’s rights, including by:
+                <ul>
+                  <li>- Denying goods or services to You</li>
+                  <li>
+                    - Charging different prices or rates for goods or services,
+                    including the use of discounts or other benefits or imposing
+                    penalties
+                  </li>
+                  <li>
+                    - Providing a different level or quality of goods or
+                    services to You
+                  </li>
+                  <li>
+                    - Suggesting that You will receive a different price or rate
+                    for goods or services or a different level or quality of
+                    goods or services.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>
+              Do Not Sell My Personal Information
+            </h3>
+            <p>
+              We do not sell personal information. However, the Service
+              Providers we partner with (for example, our advertising partners)
+              may use technology on the Service that “sells” personal
+              information as defined by the CCPA law.
+            </p>
+            <p>
+              If you wish to opt out of the use of your personal information for
+              interest-based advertising purposes and these potential sales as
+              defined under CCPA law, you may do so by following the
+              instructions below.
+            </p>
+            <p>
+              Please note that any opt out is specific to the browser You use.
+              You may need to opt out on every browser that you use.
+            </p>
+            <h4 className={styles.heading_Four}>Website</h4>
+            <p>
+              You can opt out of receiving ads that are personalized as served
+              by our Service Providers by following our instructions presented
+              on the Service:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                From Our “Cookie Consent” notice banner
+              </li>
+              <li className={styles.list_Item}>
+                Or from Our “CCPA Opt-out” notice banner
+              </li>
+              <li className={styles.list_Item}>
+                Or from Our “Do Not Sell My Personal Information” notice banner
+              </li>
+              <li className={styles.list_Item}>
+                Or from Our “Do Not Sell My Personal Information” linkOr from
+                Our “Do Not Sell My Personal Information” link
+              </li>
+            </ul>
+            <p>
+              The opt out will place a cookie on Your computer that is unique to
+              the browser You use to opt out. If you change browsers or delete
+              the cookies saved by your browser, you will need to opt out again.
+            </p>
+            <h4 className={styles.heading_Four}>Mobile Devices</h4>
+            <p>
+              Your mobile device may give you the ability to opt out of the use
+              of information about the apps you use in order to serve you ads
+              that are targeted to your interests:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                “Opt out of Interest-Based Ads” or “Opt out of Ads
+                Personalization” on Android devices
+              </li>
+              <li className={styles.list_Item}>
+                “Limit Ad Tracking” on iOS devices
+              </li>
+            </ul>
+            <p>
+              You can also stop the collection of location information from Your
+              mobile device by changing the preferences on your mobile device.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>
+              “Do Not Track” Policy as Required by California Online Privacy
+              Protection Act (CalOPPA)
+            </h2>
+            <p>Our Service does not respond to Do Not Track signals.</p>
+            <p>
+              However, some third party websites do keep track of Your browsing
+              activities. If You are visiting such websites, You can set Your
+              preferences in Your web browser to inform websites that You do not
+              want to be tracked. You can enable or disable DNT by visiting the
+              preferences or settings page of Your web browser.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>Children’s Privacy</h2>
+            <p>
+              The Service may contain content appropriate for children under the
+              age of 13. As a parent, you should know that through the Service
+              children under the age of 13 may participate in activities that
+              involve the collection or use of personal information. We use
+              reasonable efforts to ensure that before we collect any personal
+              information from a child, the child’s parent receives notice of
+              and consents to our personal information practices.
+            </p>
+            <p>
+              We also may limit how We collect, use, and store some of the
+              information of Users between 13 and 18 years old. In some cases,
+              this means We will be unable to provide certain functionality of
+              the Service to these Users. If We need to rely on consent as a
+              legal basis for processing Your information and Your country
+              requires consent from a parent, We may require Your parent’s
+              consent before We collect and use that information.
+            </p>
+            <p>
+              We may ask a User to verify its date of birth before collecting
+              any personal information from them. If the User is under the age
+              of 13, the Service will be either blocked or redirected to a
+              parental consent process
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>
+              Information Collected from Children Under the Age of 13
+            </h3>
+            <p>
+              The Company may collect and store persistent identifiers such as
+              cookies or IP addresses from Children without parental consent for
+              the purpose of supporting the internal operation of the Service.
+            </p>
+            <p>
+              We may collect and store other personal information about children
+              if this information is submitted by a child with prior parent
+              consent or by the parent or guardian of the child.
+            </p>
+            <p>
+              The Company may collect and store the following types of personal
+              information about a child when submitted by a child with prior
+              parental consent or by the parent or guardian of the child:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>First and/or last name</li>
+              <li className={styles.list_Item}>Date of birth</li>
+              <li className={styles.list_Item}>Gender</li>
+              <li className={styles.list_Item}>Grade level</li>
+              <li className={styles.list_Item}>Email address</li>
+              <li className={styles.list_Item}>Telephone number</li>
+              <li className={styles.list_Item}>Parent’s or guardian’s name</li>
+              <li className={styles.list_Item}>
+                Parent’s or guardian’s email address
+              </li>
+            </ul>
+            <p>
+              For further details on the information We might collect, You can
+              refer to the “Types of Data Collected” section of this Privacy
+              Policy. We follow our standard Privacy Policy for the disclosure
+              of personal information collected from and about children.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>Parental Access</h2>
+            <p>
+              A parent who has already given the Company permission to collect
+              and use his child personal information can, at any time:
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                Review, correct or delete the child’s personal information
+              </li>
+              <li className={styles.list_Item}>
+                Discontinue further collection or use of the child’s personal
+                information
+              </li>
+            </ul>
+            <p>
+              To make such a request, You can write to Us using the contact
+              information provided in this Privacy Policy.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>
+              Your California Privacy Rights (California’s Shine the Light law)
+            </h2>
+            <p>
+              Under California Civil Code Section 1798 (California’s Shine the
+              Light law), California residents with an established business
+              relationship with us can request information once a year about
+              sharing their Personal Data with third parties for the third
+              parties’ direct marketing purposes. If you’d like to request more
+              information under the California Shine the Light law, and if you
+              are a California resident, You can contact Us using the contact
+              information provided below.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>
+              California Privacy Rights for Minor Users (California Business and
+              Professions Code Section 22581)
+            </h2>
+            <p>
+              California Business and Professions Code section 22581 allow
+              California residents under the age of 18 who are registered users
+              of online sites, services or applications to request and obtain
+              removal of content or information they have publicly posted.
+            </p>
+            <p>
+              To request removal of such data, and if you are a California
+              resident, You can contact Us using the contact information
+              provided below, and include the email address associated with Your
+              account.
+            </p>
+            <p>
+              Be aware that Your request does not guarantee complete or
+              comprehensive removal of content or information posted online and
+              that the law may not permit or require removal in certain
+              circumstances.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>Links to Other Websites</h2>
+            <p>
+              Our Service may contain links to other websites that are not
+              operated by Us. If You click on a third party link, You will be
+              directed to that third party’s site. We strongly advise You to
+              review the Privacy Policy of every site You visit.
+            </p>
+            <p>
+              We have no control over and assume no responsibility for the
+              content, privacy policies or practices of any third party sites or
+              services.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>Changes to this Privacy Policy</h2>
+            <p>
+              We may update our Privacy Policy from time to time. We will notify
+              You of any changes by posting the new Privacy Policy on this page.
+            </p>
+            <p>
+              We will let You know via email and/or a prominent notice on Our
+              Service, prior to the change becoming effective and update the
+              “Last updated” date at the top of this Privacy Policy.
+            </p>
+            <p>
+              You are advised to review this Privacy Policy periodically for any
+              changes. Changes to this Privacy Policy are effective when they
+              are posted on this page.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>Contact Us</h2>
+            <p>
+              If you have any questions about this Privacy Policy, You can
+              contact us:
+            </p>
+            <ul>
+              <li className={`${styles.list_Item} ${styles.paddingBottom}`}>
+                By email: natem@musiciansmobile.com
               </li>
             </ul>
           </div>
