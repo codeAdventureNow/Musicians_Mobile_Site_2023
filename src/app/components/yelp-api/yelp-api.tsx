@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { UserCircleIcon, StarIcon } from '@heroicons/react/solid';
 
+
+//TODO: this function shouldn't be global scope
 const getPostsData = async () => {
   const res = await fetch(
     'https://api.yelp.com/v3/businesses/musicians-mobile-san-jose/reviews',
@@ -16,16 +18,20 @@ const getPostsData = async () => {
     }
   );
   return res.json();
+//TODO: consider adding a fallback ie. if the fetch fails, return an empty array or what happens if an error occurs?
 };
 
+//TODO: this component doesn't need async/await - you've used fetch on line 9 which would utilise NextJS's built in Data fetching - https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 export default async function Yelp_API() {
   const posts = await getPostsData();
 
+  // TODO: you can move this into a different file and import it as you can use this in multiple places 
   function convertDate(date: string) {
     const convertedDate = new Date(date);
     return new Intl.DateTimeFormat('en-US').format(convertedDate);
   }
 
+  // TODO: you can refactor this function better - you don't need to implicity return each StarIcon
   function starRating(postRatings: number) {
     if (postRatings === 5) {
       return (
@@ -70,6 +76,7 @@ export default async function Yelp_API() {
     }
   }
 
+  //NIT: consider moving this to the top of the file so it's clearer for other developers what the Post type is
   type Post = {
     id: string;
     url: string;
@@ -86,6 +93,7 @@ export default async function Yelp_API() {
   return (
     <div className={styles.container}>
       {posts.reviews.map((post: Post) => {
+        //NIT: you don't need another return here - you can just return the div
         return (
           <div className={styles.reviews_widget} key={post.id}>
             <div className={styles.widget_top}>
