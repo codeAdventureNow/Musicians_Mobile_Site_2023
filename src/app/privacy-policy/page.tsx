@@ -547,6 +547,286 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
           </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>
+              Security of Your Personal Data
+            </h3>
+            <p>
+              The security of Your Personal Data is important to Us, but
+              remember that no method of transmission over the Internet, or
+              method of electronic storage is 100% secure. While We strive to
+              use commercially acceptable means to protect Your Personal Data,
+              We cannot guarantee its absolute security.
+            </p>
+          </div>
+
+          <div className={styles.paragraph}>
+            <h2 className={styles.head_Two}>
+              Detailed Information on the Processing of Your Personal Data
+            </h2>
+            <p>
+              Service Providers have access to Your Personal Data only to
+              perform their tasks on Our behalf and are obligated not to
+              disclose or use it for any other purpose.
+            </p>
+            <h3 className={styles.heading_Three}>Analytics</h3>
+            <p>
+              We may use third-party Service providers to monitor and analyze
+              the use of our Service.
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>Google Analytics </span> Google
+                Analytics is a web analytics service offered by Google that
+                tracks and reports website traffic. Google uses the data
+                collected to track and monitor the use of our Service. This data
+                is shared with other Google services. Google may use the
+                collected data to contextualize and personalize the ads of its
+                own advertising network.
+                <p>
+                  You can opt-out of having made your activity on the Service
+                  available to Google Analytics by installing the Google
+                  Analytics opt-out browser add-on. The add-on prevents the
+                  Google Analytics JavaScript (ga.js, analytics.js and dc.js)
+                  from sharing information with Google Analytics about visits
+                  activity.
+                </p>
+                <p>
+                  For more information on the privacy practices of Google,
+                  please visit the Google Privacy & Terms web page:{' '}
+                  <Link
+                    target='_blank'
+                    href=' https://policies.google.com/privacy'
+                  >
+                    https://policies.google.com/privacy
+                  </Link>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>Email Marketing</h3>
+            <p>
+              We may use Your Personal Data to contact You with newsletters,
+              marketing or promotional materials and other information that may
+              be of interest to You. You may opt-out of receiving any, or all,
+              of these communications from Us by following the unsubscribe link
+              or instructions provided in any email We send or by contacting Us.
+            </p>
+            <p>
+              We may use Email Marketing Service Providers to manage and send
+              emails to You.
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}> IContact </span>
+                Their Privacy Policy can be viewed at:{' '}
+                <Link target='_blank' href=' https://www.icontact.com/'>
+                  https://www.icontact.com/
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>Payments</h3>
+            <p>
+              We may provide paid products and/or services within the Service.
+              In that case, we may use third-party services for payment
+              processing (e.g. payment processors).
+            </p>
+            <p>
+              We will not store or collect Your payment card details. That
+              information is provided directly to Our third-party payment
+              processors whose use of Your personal information is governed by
+              their Privacy Policy. These payment processors adhere to the
+              standards set by PCI-DSS as managed by the PCI Security Standards
+              Council, which is a joint effort of brands like Visa, Mastercard,
+              American Express and Discover. PCI-DSS requirements help ensure
+              the secure handling of payment information.
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>PayPal </span>Their Privacy Policy
+                can be viewed at{' '}
+                <Link
+                  target='_blank'
+                  href=' https://www.paypal.com/webapps/mpp/ua/privacy-full'
+                >
+                  https://www.paypal.com/webapps/mpp/ua/privacy-full
+                </Link>
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>Quickbooks</span>Their Privacy
+                Policy can be viewed at{' '}
+                <Link target='_blank' href='  https://www.intuit.com/privacy/'>
+                  https://www.intuit.com/privacy/
+                </Link>
+              </li>
+            </ul>
+            <p>
+              When You use Our Service to pay a product and/or service via bank
+              transfer, We may ask You to provide information to facilitate this
+              transaction and to verify Your identity.
+            </p>
+          </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>Behavioral Remarketing</h3>
+            <p>
+              The Company uses remarketing services to advertise on third party
+              websites to You after You visited our Service. We and Our
+              third-party vendors use cookies to inform, optimize and serve ads
+              based on Your past visits to our Service.
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>Google Ads (AdWords)</span>Google
+                Ads (AdWords) remarketing service is provided by Google Inc.
+                <p>
+                  You can opt-out of Google Analytics for Display Advertising
+                  and customise the Google Display Network ads by visiting the
+                  Google Ads Settings page:
+                </p>
+                <Link
+                  target='_blank'
+                  href=' hhttp://www.google.com/settings/ads'
+                >
+                  http://www.google.com/settings/ads
+                </Link>
+                <p>
+                  Google also recommends installing the Google Analytics Opt-out
+                  Browser Add-on –
+                </p>
+                <Link
+                  target='_blank'
+                  href=' https://tools.google.com/dlpage/gaoptout'
+                >
+                  https://tools.google.com/dlpage/gaoptout
+                </Link>
+                <p>
+                  – for your web browser. Google Analytics Opt-out Browser
+                  Add-on provides visitors with the ability to prevent their
+                  data from being collected and used by Google Analytics.
+                </p>
+                <p>
+                  For more information on the privacy practices of Google,
+                  please visit the Google Privacy & Terms web page:{' '}
+                </p>
+                <Link
+                  target='_blank'
+                  href=' https://policies.google.com/privacy'
+                >
+                  https://policies.google.com/privacy
+                </Link>
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>Facebook</span>
+                <p>
+                  Facebook remarketing service is provided by Facebook Inc. You
+                  can learn more about interest-based advertising from Facebook
+                  by visiting this page:
+                </p>
+                <Link
+                  target='_blank'
+                  href=' https://www.facebook.com/help/568137493302217'
+                >
+                  https://www.facebook.com/help/568137493302217
+                </Link>
+                <p>
+                  To opt-out from Facebook’s interest-based ads, follow these
+                  instructions from Facebook:
+                </p>
+                <Link
+                  target='_blank'
+                  href=' https://www.facebook.com/help/568137493302217'
+                >
+                  https://www.facebook.com/help/568137493302217
+                </Link>
+                <p>
+                  Facebook adheres to the Self-Regulatory Principles for Online
+                  Behavioural Advertising established by the Digital Advertising
+                  Alliance. You can also opt-out from Facebook and other
+                  participating companies through the Digital Advertising
+                  Alliance in the USA
+                </p>
+                <Link target='_blank' href=' http://www.aboutads.info/choices/'>
+                  http://www.aboutads.info/choices/
+                </Link>
+                <p>the Digital Advertising Alliance of Canada in Canada</p>
+                <Link target='_blank' href=' http://youradchoices.ca/ '>
+                  http://youradchoices.ca/
+                </Link>
+                <p>
+                  or the European Interactive Digital Advertising Alliance in
+                  Europe
+                </p>
+                <Link target='_blank' href=' http://www.youronlinechoices.eu/'>
+                  http://www.youronlinechoices.eu/
+                </Link>
+                <p>
+                  or opt-out using your mobile device settings. For more
+                  information on the privacy practices of Facebook, please visit
+                  Facebook’s Data Policy:{' '}
+                </p>
+                <Link
+                  target='_blank'
+                  href='  https://www.facebook.com/privacy/explanation'
+                >
+                  https://www.facebook.com/privacy/explanation
+                </Link>
+              </li>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>AdRoll</span>
+                <p>
+                  AdRoll remarketing service is provided by Semantic Sugar, Inc
+                </p>
+                <p>
+                  You can opt-out of AdRoll remarketing by visiting this AdRoll
+                  Advertising Preferences web page:
+                </p>
+                <Link
+                  target='_blank'
+                  href='  http://info.evidon.com/pub_info/573?v=1&nt=1&nw=false'
+                >
+                  http://info.evidon.com/pub_info/573?v=1&nt=1&nw=false
+                </Link>
+                <p>
+                  For more information on the privacy practices of AdRoll,
+                  please visit the AdRoll Privacy Policy web page:{' '}
+                </p>
+                <Link
+                  target='_blank'
+                  href='  http://www.adroll.com/about/privacy'
+                >
+                  http://www.adroll.com/about/privacy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.paragraph}>
+            <h3 className={styles.heading_Three}>
+              Usage, Performance and Miscellaneous
+            </h3>
+            <p>
+              We may use third-party Service Providers to provide better
+              improvement of our Service.
+            </p>
+            <ul>
+              <li className={styles.list_Item}>
+                <span className={styles.bold}>Google Places</span> Google Places
+                is a service that returns information about places using HTTP
+                requests. It is operated by GoogleGoogle Places service may
+                collect information from You and from Your Device for security
+                purposes.
+                <Link
+                  target='_blank'
+                  href=' https://www.google.com/intl/en/policies/privacy/'
+                >
+                  https://www.google.com/intl/en/policies/privacy/
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
