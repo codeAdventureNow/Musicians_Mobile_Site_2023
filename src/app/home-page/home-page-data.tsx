@@ -10,7 +10,7 @@ const lessonLinks: LessonsLinks[] = [
   },
   {
     instrument: 'Guitar',
-    href: '#',
+    href: '/guitar',
   },
   {
     instrument: 'Voice',

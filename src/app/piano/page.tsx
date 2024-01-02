@@ -17,6 +17,10 @@ export default function PianoLessons() {
             height={200}
             layout='intrinsic'
           />
+          <div className={styles.padding_top}>
+            <ScheduleButton />
+          </div>
+
           <p className={styles.subheading}>
             Available in Los Gatos, Saratoga, San Jose, Cupertino, Campbell,
             Sunnyvale, Los Altos and Mountain View
