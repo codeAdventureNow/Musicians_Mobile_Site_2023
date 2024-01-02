@@ -18,11 +18,11 @@ const lessonLinks: LessonsLinks[] = [
   },
   {
     instrument: 'Drums',
-    href: '#',
+    href: '/drums',
   },
   {
     instrument: 'Violin',
-    href: '#',
+    href: '/violin',
   },
 ];
 
