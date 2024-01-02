@@ -17,7 +17,7 @@ const lessonLinks: LessonsLinks[] = [
     href: '/voice',
   },
   {
-    instrument: 'Drums',
+    instrument: 'Drum',
     href: '/drums',
   },
   {

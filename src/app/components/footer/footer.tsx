@@ -13,10 +13,6 @@ export default function Footer() {
       name: 'Careers',
       href: '/careers',
     },
-    {
-      name: 'Blog',
-      href: '/blog',
-    },
   ];
 
   const footerLinksLegal = [
