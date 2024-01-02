@@ -6,7 +6,7 @@ interface LessonsLinks {
 const lessonLinks: LessonsLinks[] = [
   {
     instrument: 'Piano',
-    href: '#',
+    href: '/piano',
   },
   {
     instrument: 'Guitar',

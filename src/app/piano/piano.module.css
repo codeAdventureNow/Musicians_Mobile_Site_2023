@@ -1,0 +1,25 @@
+.image {
+  border-radius: 1rem;
+}
+
+.subheading {
+  margin: 40px 0;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.paragraph {
+  margin: 20px 0;
+}
+
+.padding_bottom {
+  padding-bottom: 40px;
+}
