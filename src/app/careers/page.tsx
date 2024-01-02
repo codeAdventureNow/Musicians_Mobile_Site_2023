@@ -14,7 +14,7 @@ export default function Careers() {
           <Header title='Music' highlight=' Careers' />
           <Image
             className={styles.image}
-            src='/images/HappyDrummer.png'
+            src='/images/drums_guitar_inhome.jpg'
             alt='Nate Mueller'
             width={350}
             height={200}
