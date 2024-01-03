@@ -16,14 +16,6 @@ exports[`Footer should render the "Footer" component 1`] = `
           Careers
         </a>
       </li>
-      <li>
-        <a
-          class="nav_links"
-          href="/blog"
-        >
-          Blog
-        </a>
-      </li>
     </ul>
     <ul
       class="footer_nav footer_navlegal"
@@ -31,9 +23,9 @@ exports[`Footer should render the "Footer" component 1`] = `
       <li>
         <a
           class="nav_links"
-          href="/terms-conditions"
+          href="/terms-of-use"
         >
-          Terms & Conditions
+          Terms Of Use
         </a>
       </li>
       <li>
