@@ -1,4 +1,3 @@
-import ScheduleButton from '../components/schedule-button/schedule-button';
 import Image from 'next/image';
 import Header from '../components/header/header';
 import styles from '../piano/piano.module.css';
