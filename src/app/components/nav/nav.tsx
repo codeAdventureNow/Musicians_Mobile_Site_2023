@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ScheduleButton from '../schedule-button/schedule-button';
+import { SignupButton } from '../../../components/buttons/signup-button';
 
 export const navLinks = [
   {
@@ -95,6 +96,7 @@ export default function Nav() {
       <div className={styles.cta_burgerMenu}>
         <div className={styles.nav_cta}>
           <ScheduleButton />
+          <SignupButton />
           <br />
 
           <a className={styles.phone} href='tel:408-960-1100'>
