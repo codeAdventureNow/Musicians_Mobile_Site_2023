@@ -107,10 +107,10 @@ export default function Footer() {
         })}
       </ul>
       {!user && (
-        <>
+        <div className={styles.flex}>
           <SignupButton />
           <LoginButton />
-        </>
+        </div>
       )}
       {user && (
         <>

@@ -64,3 +64,7 @@
 .nav_links:hover {
   color: #ff5a5f;
 }
+
+.flex {
+  display: flex;
+}
