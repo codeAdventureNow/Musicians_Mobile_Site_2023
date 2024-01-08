@@ -18,10 +18,6 @@ export const navLinks = [
     href: '/about',
   },
   {
-    name: 'Clients',
-    href: '/clients',
-  },
-  {
     name: 'Teachers',
     href: '/teachers',
   },
