@@ -4,9 +4,9 @@ import styles from './footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { SignupButton } from '../../../components/buttons/signup-button';
-import { LoginButton } from '@/components/buttons/login-button';
-import { LogoutButton } from '@/components/buttons/logout-button';
+import { SignupButton } from '../../components/buttons/signup-button';
+import { LoginButton } from '../../components/buttons/login-button';
+import { LogoutButton } from '../../components/buttons/logout-button';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
 export default function Footer() {
